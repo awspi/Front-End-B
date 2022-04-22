@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      margin: 200px auto;
+      width: 245px;
+      height: 138px;
+      background-color: pink;
+      background: url(../images/sb.jpg);
+      background-size:100%;
+      overflow: hidden;
+    }
+
+    .box .left, 
+    .box .right{
+      content: '';
+      float: left;
+      width: 50%;
+      height: 100%;
+
+      background: url(../images/sb1.jpg) no-repeat;
+      background-size:210%;
+    }
+    .box .left{
+      transition: .3s;  /* 谁做动画给谁加 */
+      background-color:aquamarine;
+      background-position: left;
+    }
+    .box .right{
+      transition: .3s;/* 谁做动画给谁加 */
+      background-color:bisque;
+      background-position: right;
+    }
+    .box:hover .left{
+      transform: translateY(-100%);
+    }
+    .box:hover .right{
+      transform: translateY(100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

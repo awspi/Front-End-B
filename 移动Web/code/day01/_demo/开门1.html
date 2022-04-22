@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      margin: 100px auto;
+      width: 400px;
+      height: 300px;
+      background-color: pink;
+      overflow: hidden;
+    }
+
+    .box::before, 
+    .box::after{
+      content: '';
+      float: left;
+      width: 50%;
+      height: 100%;
+
+    }
+    .box::before{
+      transition: .3s;  /* 谁做动画给谁加 */
+      background-color:aquamarine;
+    }
+    .box::after{
+      transition: .3s;/* 谁做动画给谁加 */
+      background-color:bisque;
+    }
+    .box:hover::before{
+      transform: translateX(-100%);
+    }
+    .box:hover::after{
+      transform: translateX(100%);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    
+  </div>
+</body>
+</html>

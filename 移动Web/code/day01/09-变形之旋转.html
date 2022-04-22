@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      transition: all .4s;
+      /* 设置旋转中心点 */
+      transform-origin: left bottom;
+    }
+
+    img:hover {
+      /* 变形： 旋转  如果是正值则是顺时针，如果是负值，则是逆时针 */
+      transform: rotate(-360deg);
+    }
+
+    .box {
+      /* 三角形 */
+      width: 10px;
+      height: 10px;
+      border-right: 1px solid red;
+      border-bottom: 1px solid red;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./images/p4-tx3.png" alt="">
+  <div class="box"></div>
+</body>
+
+</html>

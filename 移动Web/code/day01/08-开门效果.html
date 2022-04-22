@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      overflow: hidden;
+      width: 1366px;
+      height: 600px;
+      margin: 100px auto;
+      /* background-color: pink; */
+      background: url(./images/bg.jpg) no-repeat;
+    }
+
+    .box::before,
+    .box::after {
+      content: '';
+      float: left;
+      width: 50%;
+      height: 100%;
+      /* 谁做动画给谁加 */
+      transition: .3s;
+      background: url(./images/fm.jpg) no-repeat;
+    }
+
+
+    .box::after {
+      background-position: right;
+    }
+
+    /* 鼠标经过大盒子，左右盒子分别拉 */
+    .box:hover::before {
+      transform: translateY(-100%);
+    }
+
+    .box:hover::after {
+      transform: translateY(100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

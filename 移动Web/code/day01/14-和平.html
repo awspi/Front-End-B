@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      overflow: hidden;
+      position: relative;
+      width: 212px;
+      height: 119px;
+      background-color: pink;
+    }
+
+    .box img:first-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(4);
+      /* 盒子半透明 */
+      opacity: 0;
+      transition: all .3s;
+    }
+
+    .box img:nth-child(2) {
+      width: 100%;
+    }
+
+    .box:hover img:first-child {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <img src="./images/play.png" alt="">
+    <img src="./images/11.jpg" alt="">
+  </div>
+
+
+
+
+
+  <div class="box">
+    <img src="./images/play.png" alt="">
+    <img src="./images/11.jpg" alt="">
+  </div>
+  <div class="box">
+    <img src="./images/play.png" alt="">
+    <img src="./images/11.jpg" alt="">
+  </div>
+  <div class="box">
+    <img src="./images/play.png" alt="">
+    <img src="./images/11.jpg" alt="">
+  </div>
+</body>
+
+</html>

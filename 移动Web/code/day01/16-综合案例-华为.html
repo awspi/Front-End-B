@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_3234864_h0da2uig6lr.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .box {
+      width: 1400px;
+      margin: 100px auto;
+    }
+
+    .box .item {
+      overflow: hidden;
+      position: relative;
+      float: left;
+      width: 445px;
+      height: 315px;
+      background-color: pink;
+    }
+
+    .box .item:nth-child(2) {
+      margin: 0 32px;
+    }
+
+    .box .item img {
+      width: 100%;
+      height: 100%;
+      transition: all .3s;
+    }
+
+    .box .info {
+      position: absolute;
+      left: 0;
+      bottom: -55px;
+      font-size: 18px;
+      color: #fff;
+      padding: 25px 30px;
+      box-sizing: border-box;
+      transition: all .3s;
+    }
+
+    .info .name {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .info .text {
+      line-height: 30px;
+    }
+
+    .info .more {
+      margin-top: 10px;
+    }
+
+    .info .more .iconfont {
+      color: red;
+    }
+
+    /* 鼠标经过放大图片 */
+    .box .item:hover img {
+      /* 放大 */
+      transform: scale(1.1);
+    }
+
+    /* 鼠标经过 info 上移 */
+    .box .item:hover .info {
+      bottom: -10px;
+    }
+
+    /* 黑色遮罩 */
+    .box .item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(transparent, rgba(0, 0, 0, .3));
+      opacity: 0;
+    }
+
+    /* 鼠标经过大盒子，遮罩显示 */
+    .box .item:hover::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="item">
+      <a href="#">
+        <img src="./images/huawei.jpg" alt="">
+        <!-- 文字信息 -->
+        <div class="info">
+          <p>招聘</p>
+          <div class="name">华为面向全球招聘</div>
+          <p class="text">
+            诚邀东欧、中欧、亚太等全球的科学家、博士、竞赛人才、研发工程师、优秀大学生加盟
+          </p>
+          <p class="more">
+            了解更多
+            <i class="iconfont icon-a-10-you"></i>
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="#">
+        <img src="./images/huawei.jpg" alt="">
+        <!-- 文字信息 -->
+        <div class="info">
+          <p>招聘</p>
+          <div class="name">华为面向全球招聘</div>
+          <p class="text">
+            诚邀东欧、中欧、亚太等全球的科学家、博士、竞赛人才、研发工程师、优秀大学生加盟
+          </p>
+          <p class="more">
+            了解更多
+            <i class="iconfont icon-a-10-you"></i>
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="#">
+        <img src="./images/huawei.jpg" alt="">
+        <!-- 文字信息 -->
+        <div class="info">
+          <p>招聘</p>
+          <div class="name">华为面向全球招聘</div>
+          <p class="text">
+            诚邀东欧、中欧、亚太等全球的科学家、博士、竞赛人才、研发工程师、优秀大学生加盟
+          </p>
+          <p class="more">
+            了解更多
+            <i class="iconfont icon-a-10-you"></i>
+          </p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</body>
+
+</html>

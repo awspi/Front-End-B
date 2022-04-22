@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_3234864_h0da2uig6lr.css">
+  <title>whuawei</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration:none;
+      color:black;
+    }
+
+    .wrapper{
+      height: 400px;
+      margin: 50px auto;
+      background-color:wheat;
+    }
+    .wrapper .item{
+      overflow: hidden;
+      position: relative;
+      float: left;
+      height: 375px;
+      background-color:bisque;
+    }
+    .wrapper .item:hover img {/* 放大 */
+      transform: scale(1.1);
+    }
+    .wrapper .item::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:linear-gradient(transparent,rgba(0, 0, 0, 0.6 )) ;
+      opacity: 0;
+    }
+    .wrapper .item:hover::after{
+      opacity: 1;
+    }
+
+    .wrapper .item:hover .desc{
+      /* 上移 */
+      bottom: 0;
+    }
+    .wrapper .item .desc{
+      color:white;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+      font-size: 18px;
+      padding: 25px 30px;
+      z-index: 999;
+      transition: all .3s;
+    }
+    .wrapper .item .desc h2{
+      font-size: 22px;
+      font-weight: normal;
+    }
+    .wrapper .item .desc h1{
+      color:#fff;
+      margin: 10px 0;
+      line-height: 30px;
+    }
+    .wrapper .item .desc span{
+      margin: 10px 0;
+      line-height: 30px;
+      color:#fff;
+    }
+    .wrapper .item .desc .more{
+      margin-top: 10px;
+    }
+    .wrapper .item img{
+      width: 100%;
+      height: 100%;
+      transition: all .3s;
+    }
+
+
+    .wrapper .item1{
+      width: 780px;
+      margin-right: 32px;
+    }
+
+    .wrapper .item2{
+      width: 375px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="item item1">
+      <a href="#">
+        <div class="desc">
+          <h2>产品</h2>
+          <h1>华为全屋智能</h1>
+          <span>定义未来家</span>
+          <p class="more">
+            了解更多
+            <i class="iconfont icon-a-10-you" style="color:red;"></i>
+          </p>
+        </div>
+        <img src="../images/smart-home-p.jpeg" alt="">
+      </a>
+    </div>
+    <div class="item item2">
+      <a href="#">
+        <div class="desc">
+          <h2>产品</h2>
+          <h1>HUAWEI P50E</h1>
+          <span>万象新生</span>
+          <p class="more">
+            了解更多
+            <i class="iconfont icon-a-10-you" style="color:red;"></i>
+          </p>
+        </div>
+          <img src="../images/p50E-p2.jpeg" alt="">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
