@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://127.0.0.1:5500/day01/_demo/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color: #000
+    }
+    .cont-bottom .new-skin .skin-list{
+      float: left;
+      position: relative;
+      width: 340px;
+      height: 174px;
+      margin-right: 16px;
+      overflow: hidden;
+ 
+    }
+    .cont-bottom .new-skin .skin-list:after{
+      position: absolute;
+      content:"";
+      left: 0;
+      bottom: 0;
+      height: 50%;
+      width: 100%;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, .8));
+
+    }
+    .cont-bottom .new-skin .skin-list img{
+      width: 100%;
+      height: 100%;
+      
+    }
+    .cont-bottom .new-skin .skin-list .skin-name{
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: white;
+      z-index: 1;
+      
+    }
+    .cont-bottom .new-skin .skin-list:hover:after{
+      /* 加阴影 */
+      height: 100%;
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="cont-bottom">
+    <div class="new-skin">
+      <ul>
+        <li class="skin-list">
+          <a href="http://127.0.0.1:5500/day01/_demo/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80.html#">
+            <img src="./Document_files/skin-1.webp" alt="">
+            <p class="skin-name">匿光决锋者-夏侯惇</p>
+          </a>
+          </li>
+      </ul>
+    </div>
+  </div>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
