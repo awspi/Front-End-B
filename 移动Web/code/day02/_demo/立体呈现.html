@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .cube{
+      position: relative;
+      margin: 50px auto;
+      width: 300px;
+      height: 300px;
+      background-color: aqua;
+      transform-style: preserve-3d;
+      transition: all 1s;
+    }
+    .cube:hover{
+      transform: rotateY(120deg);
+    }
+    .cube div{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: white;
+      text-align: center;
+      font-size: 32px;
+      line-height: 300px;
+    }
+    .cube .front{
+      background-color:lightpink;
+      transform:translateZ(100px)
+    }
+    .cube .back{
+      background-color:wheat;
+      transform:translateZ(-100px);
+      /* transform:rotateY(180deg) */
+    }
+  </style>
+</head>
+<body>
+  <div class="cube">
+    <div class="front">front</div>
+    <div class="back">back</div>
+  </div>
+</body>
+</html>

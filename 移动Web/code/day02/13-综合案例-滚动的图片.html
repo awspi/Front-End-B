@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      /* box-sizing: border-box; */
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .box {
+      overflow: hidden;
+      margin: 100px auto;
+      width: 600px;
+      height: 150px;
+      border: 3px solid #000;
+    }
+
+
+
+    .box li {
+      float: left;
+      width: 200px;
+      height: 150px;
+    }
+
+    .box li img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 停止动画  鼠标经过box 但是停止的是 ul */
+    .box:hover ul {
+      animation-play-state: paused;
+    }
+
+    /* 让ul足够宽，小li就不会掉下来 */
+    /* ul 滚动 */
+    .box ul {
+      width: 2000px;
+      /* 调用动画 */
+      animation: move 5s linear infinite;
+    }
+
+    /* 定义动画 */
+    @keyframes move {
+      to {
+        transform: translateX(-1400px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li><a href="#"><img src="./images/1.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/2.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/3.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/4.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/5.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/6.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/7.jpg" alt=""></a></li>
+      <!-- 复制三张 -->
+      <li><a href="#"><img src="./images/1.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/2.jpg" alt=""></a></li>
+      <li><a href="#"><img src="./images/3.jpg" alt=""></a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

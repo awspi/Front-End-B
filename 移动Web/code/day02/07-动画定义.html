@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 200px;
+      /* 2. 调用动画 */
+      /* animation: 动画名称 持续时间; */
+      animation: move 2s;
+    }
+
+    /* 1. 定义动画 */
+    @keyframes move {
+      from {
+        transform: translateX(0px) rotate(0deg);
+      }
+
+      to {
+        /* 1turn == 360deg */
+        /* transform: translateX(500px) rotate(360deg); */
+        transform: translateX(500px) rotate(.5turn);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">123</div>
+</body>
+
+</html>

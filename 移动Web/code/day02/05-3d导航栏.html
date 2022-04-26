@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .nav {
+      margin: 100px;
+    }
+
+    .nav li {
+      perspective: 200px;
+      float: left;
+      width: 150px;
+      height: 50px;
+      background-color: pink;
+      margin: 0 20px;
+    }
+
+    .nav li a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      transition: all .3s;
+      /* 让子盒子立体空间展示 */
+      transform-style: preserve-3d;
+    }
+
+    .nav li a span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .nav li span:nth-child(1) {
+      background-color: orange;
+      /* 上面盒子  沿着x轴旋转90度， 往上走 y 25px 负值*/
+      transform: translateY(-25px) rotateX(90deg);
+    }
+
+    .nav li span:nth-child(2) {
+      background-color: green;
+      /* 往我们面前移动 25px， z轴   正值*/
+      transform: translateZ(25px);
+    }
+
+    .nav li a:hover {
+      transform: rotateX(-90deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="">
+          <span>index</span>
+          <span>首页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>index</span>
+          <span>首页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>index</span>
+          <span>首页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>index</span>
+          <span>首页</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

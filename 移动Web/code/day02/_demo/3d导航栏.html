@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ul{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+
+    .nav{
+      margin: 30px;
+
+    }
+
+    .nav li{
+      float: left;
+      margin: 10px 20px;
+      perspective: 200px;
+      width: 100px;
+      height: 50px;
+      color: #fff;
+    }
+    .nav li a{
+      position: relative;
+      display: block;
+      
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      font-size: 18px;
+      /* 给父元素添加 */
+      transform-style: preserve-3d;
+      transition: all 0.5s
+    }
+    .nav li a span{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      line-height:50px;
+    }
+    .nav li a span:nth-child(1){
+      background-color: coral;
+       /* 上面盒子  沿着x轴旋转90度， 往上走 y 25px 负值*/
+       /* 要写在一起且先旋转再往上移动,不然显示不正常 */
+      transform: translateY(-25px) rotateX(90deg);
+
+      /* rotateX(90deg) transform: translateY(-25px); */
+      /* transform:rotateX(90deg);
+        transform:rotateX(90deg) */
+    }
+    .nav li a span:nth-child(2){
+      /* 下面盒子 往我们面前移动 25px， z轴正值*/
+      background-color: aqua;
+      transform:translateZ(25px);
+    }
+    .nav li a:hover {
+      transform: rotateX(-90deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="#">
+        <span>index</span>
+        <span>home</span>
+      </a>
+    </li>
+      <li>
+        <a href="#">
+        <span>index</span>
+        <span>home</span>
+      </a>
+    </li>
+      <li>
+        <a href="#">
+        <span>index</span>
+        <span>home</span>
+      </a>
+    </li>
+    </ul>
+  </div>
+</body>
+</html>
