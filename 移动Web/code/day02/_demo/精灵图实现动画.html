@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 140px;
+      height: 140px;
+      background-image: url(../images/bg.png);
+      animation: move .5s steps(12) infinite,run 1s linear forwards;
+    }
+    /* 精灵动画的同时添加盒子位移动画。 */
+    @keyframes move {
+      to{
+        background-position: -1680px 0;
+      }
+    }
+    @keyframes run{
+    to{
+        transform: translateX(300px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

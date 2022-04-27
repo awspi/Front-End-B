@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .wrapper {
+    position: relative;
+    margin: 100px;
+    width: 200px;
+    height: 200px;
+    /* background-color: wheat; */
+    animation:spin 3s linear infinite;
+  }
+  .wrapper::after{
+    /* 伪元素居中 */
+    content:"🌞";
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color:plum;
+  }
+  .wrapper .item{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius:50%;
+  }
+  .wrapper .item:nth-child(1){
+    top: 0;
+    left: 0;
+    background-color:salmon;
+  }
+  .wrapper .item:nth-child(2){
+    top: 150px;
+    left: 150px;
+    background-color:steelblue;
+  }
+
+  @keyframes spin{
+    from{
+      transform:rotate(0deg);
+    }
+    to{
+      transform:rotate(1turn);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="item">🌕</div>
+    <div class="item">🌍</div>
+  </div>
+</body>
+</html>

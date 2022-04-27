@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      
+    }
+    ul{
+      list-style: none;
+      animation:move 5s linear infinite;
+    }
+    .box{
+      margin: 20px;
+      width: 450px;
+      height: 150px;
+      border: 2px solid steelblue;
+      overflow: hidden;
+      background-color: #000;
+    }
+    .box ul {
+      width: 1500px;
+    }
+    .box:hover ul{
+      animation-play-state: paused;
+    }
+    .box ul li{
+      float: left;
+      height: 150px;
+      width: 150px;
+    }
+    .box ul li img{
+      height: 100%;
+      width: 100%;
+    }
+    @keyframes move{
+      to{
+        transform: translateX(-1050px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <ul>
+      <li><a href="#"><img src="../images/1.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/2.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/3.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/4.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/5.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/6.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/7.jpg" alt=""></a></li>
+      <!-- 复制三张 -->
+      <li><a href="#"><img src="../images/1.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/2.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../images/3.jpg" alt=""></a></li>
+    </ul>
+  </div>
+</body>
+</html>
