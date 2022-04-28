@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 800px;
+      height: 600px;
+      background-color: pink;
+      display: flex;
+      /* 侧轴的对齐方式 */
+      /* 1. 默认的是拉伸，和父亲一样高 */
+      /* align-items: stretch; */
+      /* align-items: flex-start; */
+      /* align-items: flex-end; */
+      /* 2. 侧轴居中对齐 */
+      /* align-items: center; */
+
+    }
+
+    .box div {
+      width: 150px;
+      height: 150px;
+      background-color: purple;
+    }
+
+    .box div:nth-child(2) {
+      background-color: skyblue;
+      align-self: center;
+    }
+
+    .box div:nth-child(3) {
+      background-color: skyblue;
+      /* 单独控制某个子盒子  给 子盒子写  侧轴对齐 */
+      align-self: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+  </div>
+</body>
+
+</html>

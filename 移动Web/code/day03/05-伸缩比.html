@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 800px;
+      height: 150px;
+      margin: 100px auto;
+      border: 1px solid red;
+      display: flex;
+    }
+
+    /* 把大盒子平均分成3等份 */
+    .box div {
+      /* 给孩子加 */
+      flex: 1;
+      background-color: pink;
+    }
+
+    .box div:nth-child(2) {
+      background-color: skyblue;
+      flex: 2;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+
+</html>

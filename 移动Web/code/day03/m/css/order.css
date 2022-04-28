@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.pay-order {
+  display: flex;
+  /* 主轴对齐方式 */
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* 定位的盒子要写100% */
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+.sum {
+  font-size: 11px;
+}
+.sum span {
+  color: #cf4444;
+}
+.sum span em {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+}
+.pay a {
+  display: block;
+  width: 90px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-top: 22px;
+  font-size: 13px;
+  color: #fff;
+  background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+	border-radius: 3px;
+}
+/* 页面主体盒子 */
+.main {
+  padding: 10px 10px 90px;
+}
+.main>div {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+.main .order-msg {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+}
+.location {
+  width: 30px;
+	height: 30px;
+	background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+.more {
+  width: 44px;
+  height: 44px;
+  /* background-color: pink; */
+  text-align: center;
+  line-height: 44px;
+  color: #808080;
+}
+.info {
+  flex: 1;
+  font-size: 12px;
+  margin-left: 12px;
+}
+.info p {
+  line-height: 18px;
+}
+.info p span {
+  font-size: 15px;
+}
+.info p:nth-child(1) {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+/* 商品信息模块 */
+.goods {
+  display: flex;
+  justify-content: space-between;
+}
+.goods .pic {
+  width: 85px;
+  height: 85px;
+}
+.goods .pic img {
+  width: 100%;
+  height: 100%;
+}
+.goods .count {
+ width: 50px;
+ text-align: right;
+}
+.goods .goods-info {
+  font-size: 13px;
+  flex: 1;
+  margin-left: 10px;
+}
+.goods .goods-info h4 {
+  font-weight: 400;
+}
+.goods .goods-info p {
+  margin: 8px 0;
+}
+.goods .goods-info .color {
+  display: inline-block;
+  background-color: #f7f7f8;
+	border-radius: 2px;
+  padding: 5px;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 8px;
+}
+.goods .goods-info del {
+  font-size: 12px;
+  color: #999;
+}
+.goods .goods-info span {
+  color: #cf4444;
+  margin-right: 12px;
+}
+.goods .goods-info span em {
+  font-size: 16px;
+  font-style:  normal;
+}
+.panel {
+  font-size: 13px;
+}
+.panel>div {
+  display: flex;
+  justify-content: space-between;
+}
+.panel .remark {
+  margin: 30px 0;
+  justify-content: flex-start;
+}
+.panel .remark p:nth-child(2) {
+  font-size: 12px;
+  color: #989898;
+  margin-left: 15px;
+  flex: 1;
+}
