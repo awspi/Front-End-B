@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* c3盒子模型 */
+}
+
+a{
+  text-decoration: none;
+}
+em{
+  font-style: normal;
+}
+body{
+  background-color: #f7f7f7;
+  
+}
+/* buttom */
+.pay-order{
+  display: block;
+  /* fixed定位 */
+  position: fixed;
+  display: flex;
+  justify-content:space-between;
+  left: 0;
+  bottom: 0;
+  height: 88px;
+  line-height: 80px;
+  
+  /* 定位的盒子要写100% */
+  width: 100%;
+  padding: 0 10px;
+  background-color: #fff;
+}
+.pay-order .sum{
+  font-size: 11px;
+}
+.pay-order .sum em{
+  color: #cf4444;
+  font-weight: 700;
+  
+}
+.pay-order .sum em em{
+  font-size: 18px;
+}
+.pay-order .pay a{
+  display: block;
+  width: 90px;
+  height: 35px;
+  margin-top: 22px;
+  font-size: 13px;
+  text-align:center;
+  line-height: 35px;
+  color: white;
+  background-image:linear-gradient(90deg, #6fc2aa 5%, #54b196 100%); 
+  border-radius:3px;
+}
+
+/* main */
+.main{
+  padding:10px 10px 90px;
+  /* padding-bottom: 90;防止最下面内容被遮挡 */
+}
+.main>div{
+  background-color: #fff;
+  border-radius:5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.main .order-msg{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+}
+.main .order-msg .location{
+  width: 30px;
+  height: 30px;
+  background-image:linear-gradient(90deg,#6fc2aa 5%,#54b196 100%);
+  border-radius:50%;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+.main .order-msg .info{
+  margin-left: 12px;
+  flex:1;/* 圣杯 */
+  font-size: 12px;
+}
+.main .order-msg .info div{
+  line-height: 18px;
+}
+.main .order-msg .user-info {
+   font-size: 13px;
+   margin-bottom: 3px;
+}
+.main .order-msg .user-info span {
+    font-size: 15px;
+}
+.main .order-msg .more{
+  width: 44px;
+  height: 44px;
+  color: #808080;
+  line-height: 44px;
+  text-align: center;
+}
+
+.main .goods{
+  display: flex;
+  justify-content: space-between;
+}
+.main .goods .pic{
+  width: 85px;
+  height: 85px; 
+}
+.main .goods .pic img{
+  width: 100%;
+  height: 100%;
+}
+.main .goods .count{
+  text-align: right;
+  width: 50px;
+  line-height: 50px;
+}
+.main .goods .info{
+  flex: 1;
+  margin-left: 12px;
+  font-size: 13px;
+}
+.main .goods .info h4{
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.main .goods .info p{
+  margin: 5px 0;
+}
+.main .goods .info .tag{
+  display: inline-block;
+  background-color: #f7f7f8;
+  border-radius:2px;
+  padding:5px;
+  font-size:11px;
+  color: #888;
+}
+.main .goods .info .price .sale{
+  color: #cf4444;
+  font-size: 16px;
+}
+.main .goods .info .price .sale em{
+  font-size: 12px;
+}
+.main .goods .info .price .raw{
+  text-decoration:line-through;
+  font-size: 10px;
+  color: #999;
+}
+.main .goods .info .price .raw em{
+  font-size: 7px;
+  text-decoration: none;
+}
+
+.main .pannel{
+  font-size: 13px;
+}
+.main .pannel>div{
+  display: flex;
+  justify-content: space-between; 
+}
+.main .pannel .payment i{
+  font-size: 10px;
+}
+.main .pannel .remark{
+  margin: 30px 0;
+  justify-content: flex-start;
+}
+.main .pannel .remark p:nth-child(2){
+  font-size: 12px;
+  color: #989898;
+  margin-left: 15px;
+  /* 防止文字超出 */
+  flex: 1;
+}
