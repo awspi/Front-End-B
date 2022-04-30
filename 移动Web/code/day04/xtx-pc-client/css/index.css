@@ -1,0 +1,394 @@
+/* 这是首页的css文件 */
+.xtx-entry {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.swiper {
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+.prev, 
+.next {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 44px;
+    /* margin-top: -22px; */
+    /* transform: translate(x,y); */
+    /* transform: translateY(10px); */
+    /* transform: translateY(-50%); */
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    background: rgba(0,0,0,.2) url(../images/sprites.png) no-repeat;
+}
+.prev  {
+    left: 260px;
+    background-position: 14px -60px;
+}
+.next  {
+    right: 10px;
+    background-position: -22px -60px;
+}
+.pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.pagination li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,.43);
+    margin: 0 8px;
+    border-radius: 50%;
+    /* 鼠标变成小手 */
+    cursor: pointer;
+}
+.pagination li.active {
+    background-color: #fff;
+}
+/* 给这里添加相对定位 */
+.xtx-entry .container {
+    position: relative;
+}
+/* 分类模块 */
+.category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 500px;
+    background: rgba(0,0,0,.8);
+}
+.category ul li {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    /* background-color: pink; */
+    padding-left: 36px;
+    color: #fff;
+    transition: all .4s;
+}
+.category ul li:hover {
+    padding-left: 40px;
+    background-color: #27ba9b;
+}
+.category ul li::after {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    content: '';
+    width: 6px;
+    height: 11px;
+    background: url(../images/sprites.png) no-repeat -80px -110px;
+    transition: all .4s;
+}
+.category ul li:hover::after {
+    transform: rotate(360deg);
+}
+.category ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+.category ul li a:first-child {
+    margin-left: 15px;
+    margin-right: 4px;
+}
+/* 新鲜好物模块 */
+.goods-hd {
+    /* 不允许子盒子超过父盒子 */
+    /* 多余的部分切掉就不影响下面盒子 */
+    /* overflow: hidden; */
+    height: 114px;
+    line-height: 114px;
+    /* background-color: pink; */
+}
+.goods-hd h3 {
+    float: left;
+    height: 114px;
+    font-size: 29px;
+    font-weight: 400;
+}
+.goods-hd h3 span { 
+    
+    font-size: 16px;
+    color: #999;
+    margin-left: 30px;
+}
+.goods-hd .all {
+    float: right;
+    font-size: 16px;
+    color: #999;
+}
+.goods-list {
+    /* 给高度就不用清楚浮动 */
+    height: 406px;
+    /* background-color: purple; */
+}
+.goods-list li {
+    position: relative;
+    top: 0;
+    float: left;
+    width: 304px;
+    height: 406px;
+    background-color: #f0f9f4;
+    margin-right: 8px;
+    text-align: center;
+    transition: all .4s;
+}
+.goods-list li:hover {
+    top: -5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.goods-list li:last-child {
+    margin-right: 0;
+}
+.goods-list li img {
+    width: 100%;
+}
+.goods-list li h4 {
+    margin: 20px 0 8px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.goods-list li p {
+    color: #9a2e1f;
+}
+.goods-list li p span {
+    font-size: 23px;
+}
+.goods-list li i {
+    position: absolute;
+    top: 18px; 
+    left: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    color: #27ba9b;
+    border-radius: 3px;
+    /* 行高越小字越近 */
+    line-height: 18px;
+    font-size: 18px;
+    padding-top: 7px;
+}
+.renqi .goods-list li {
+    background-color: #fff;
+}
+/* 热门品牌 */
+.xtx-hot-remen {
+    height: 466px;
+    background-color: #f5f5f5;
+}
+.remen-list li {
+    float: left;
+    width: 244px;
+    height: 306px;
+    margin-right: 5px;
+}
+.remen-list li:last-child {
+    margin-right: 0;
+}
+.remen-list li img {
+    width: 244px;
+    height: 306px;
+}
+.xtx-hot-remen .arrow {
+    float: right;
+}
+.xtx-hot-remen .arrow li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background-color: #e2e2e2;
+    cursor: pointer;
+}
+.xtx-hot-remen .arrow li:hover {
+    background-color: #27ba9b;
+}
+.goods-hd .tab {
+    float: left;
+    margin-left: 700px;
+}
+.goods-hd .tab li {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.goods-hd .tab li:hover {
+    background-color: #27ba9b;
+    color: #fff;
+}
+.goods-hd .tab li.active {
+    background-color: #27ba9b;
+    color: #fff;
+}
+.goods-content {
+    height: 610px;
+}
+.goods-content-l {
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: pink;
+}
+.goods-content-r {
+    float: right;
+    width: 1000px;
+    height: 610px;
+    /* background-color: purple; */
+}
+.goods-content-r li {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid transparent;
+    float: left;
+    width: 242px;
+    height: 304px;
+    background-color: #fff;
+    margin: 0 0 3px 8px;
+}
+.goods-content-r li:hover {
+    border: 1px solid #27ba9b;
+}
+
+.goods-content-r li img {
+    display: block;
+    width: 184px;
+    height: 184px;
+    margin: 18px auto 12px;
+}
+.goods-content-r li h4 {
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 30px;
+    height: 50px;
+}
+.goods-content-r li p {
+    color: #9a2e1f;
+    margin-left: 30px;
+}
+.goods-content-r li p span {
+    font-size: 22px;
+}
+
+.baby {
+    position: absolute;
+    left: 0;
+    bottom: -84px;
+    width: 100%;
+    height: 84px;
+    text-align: center;
+    color: #fff;
+    transition: .4s;
+    background-color: #27ba9b;
+}
+/* 鼠标经过了li ， 发现宝贝盒子移动 */
+.goods-content-r li:hover .baby {
+    bottom: 0;
+}
+.baby h3 {
+    width: 125px;
+    height: 35px;
+    border-bottom: 2px solid #a9dbcc;
+    margin: 12px auto 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.baby a {
+    color: #fff;
+}
+/* 最新专题 */
+.news {
+    height: 510px;
+    background-color: #f5f5f5;
+    margin-top: 50px;
+}
+.news-list li {
+    float: left;
+    width: 405px;
+    height: 357px;
+    margin-right: 12px;
+    background-color: #fff;
+}
+.news-list li:last-child {
+    margin-right: 0;
+}
+.news-list .pic {
+    position: relative;
+    height: 288px;
+}
+.news-list .pic img {
+    height: 288px;
+    width: 405px;
+}
+.pic .info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 15px;
+   
+}
+.pic .info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.pic .info p {
+    color: #999;
+    font-size: 16px;
+}
+.pic .info span {
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    width: 80px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    color: #9a2e1f;
+    background-color: #fff;
+}
+
+.news-b {
+    padding: 25px 18px 0;
+}
+.news-b span {
+    display: inline-block;
+    height: 16px;  
+    font-size: 14px;
+}
+.news-b span:nth-child(2) {
+    margin-left: 24px;
+}
+.news-b span:nth-child(3) {
+    float: right;
+}
+.news-b span::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background: url(../images/sprites.png) no-repeat;
+}
+.news-b span:nth-child(1)::before {
+    background-position: -120px -110px;
+}
+.news-b span:nth-child(2)::before {
+   background-position: -160px -110px;
+}
+.news-b span:nth-child(3)::before {
+   background-position: -200px -110px;
+}

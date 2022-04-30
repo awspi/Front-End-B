@@ -1,0 +1,229 @@
+body {
+  background-color: #f6f6f6;
+}
+.center-wrapper {
+  display: flex;
+  /* 主轴对齐 */
+  justify-content: space-between;
+  width: 1240px;
+  margin: 30px auto 85px;
+
+}
+/* 侧边栏模块 */
+.center-wrapper .aside {
+  width: 227px;
+  background-color: #fff;
+}
+.center-wrapper .aside .user-meta {
+  display: flex;
+  /* 改变主轴方向 */
+  flex-direction: column;
+  /* 侧轴居中 */
+  align-items: center;
+  padding: 47px 0 32px 0;
+}
+.center-wrapper  .user-meta h4 {
+  font-size: 18px;
+  margin: 12px 0 10px 0;
+}
+.center-wrapper  .user-meta p {
+  width: 93px;
+	height: 26px;
+	background-image: linear-gradient(264deg, 
+		#e05e2f 0%, 
+		#ea745e 95%);
+	border-radius: 13px;
+  color: #f9f9f9;
+  line-height: 26px;
+  font-size: 14px;
+  text-align: center;
+}
+.center-wrapper  .user-meta p i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 16px;
+ background: url(../images/vip_gold.png) no-repeat;
+ background-size: 15px 16px;
+ margin-top: -3px;
+}
+.center-wrapper .aside .pic {
+  overflow: hidden;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+.center-wrapper .aside .pic img{
+  width: 100%;
+  height: 100%;
+}
+/* 我的账户 */
+.center-wrapper .user-manage {
+  border-top: 1px solid #f4f4f4;
+  padding: 30px 0 20px 50px;
+}
+.center-wrapper .user-manage h4 {
+  height: 35px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.center-wrapper .user-manage .links a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.center-wrapper .user-manage .links a::before {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #5cb99e;
+  border-radius: 50%;
+}
+.center-wrapper .user-manage .links a:hover {
+  color: #5cb99e;
+}
+.center-wrapper .user-manage .links a:hover::before {
+  display: block;
+}
+/* 页面主体 */
+.center-wrapper .main {
+  width: 999px;
+  
+}
+/* 概况模块 */
+
+.center-wrapper .overview {
+  display: flex;
+  background-color: #fff;
+  padding: 20px 0;
+}
+.center-wrapper .overview .item {
+  /* 给子盒子 */
+  flex: 1;
+  /* 给父盒子加 */
+  display: flex;
+  /* 平均分配剩余空间 */
+  justify-content: space-evenly;
+  /* 侧轴居中 */
+  align-items: center;
+  height: 90px;
+}
+.center-wrapper .overview  .item:nth-child(1) {
+  border-right: 1px solid #f4f4f4;
+}
+.center-wrapper .overview .item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-wrapper  .item a span:nth-child(1) {
+  width: 25px;
+  height: 22px;
+  background: url(../images/vip.png) no-repeat;
+  background-size: 25px 22px;
+  margin-bottom: 10px;
+}
+.center-wrapper .overview .item .address{
+  width: 18px;
+  height: 25px;
+  background: url(../images/address.png);
+  background-size: 18px 25px;
+}
+.center-wrapper .overview .item i {
+  font-size: 25px;
+  color: #e05e30;
+  margin-top: -8px;
+}
+/* 公共面板模块 */
+.center-wrapper .panel {
+  padding: 28px 20px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+/* 公共面板头部模块 */
+.center-wrapper .panel-header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+.center-wrapper .panel-header h4 {
+  font-size: 22px;
+  font-weight: 400;
+}
+.center-wrapper .panel-header a {
+  font-size: 16px;
+  color: #999;
+}
+.center-wrapper .orders li {
+  display: flex;
+  height: 137px;
+  border: 1px solid #f4f4f4;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.center-wrapper .orders .payment,
+.center-wrapper .orders .action {
+  width: 198px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.center-wrapper .orders .payment {
+  border-left: 1px solid #f4f4f4;
+  border-right: 1px solid #f4f4f4;
+}
+.center-wrapper  .action a:nth-child(1) {
+  width: 100px;
+	height: 30px;
+	background-color: #5eb69c;
+	border-radius: 2px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+
+.center-wrapper .orders .goods {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+}
+.center-wrapper  .goods-pic {
+  width: 107px;
+  height: 107px;
+}
+.center-wrapper  .goods-pic img {
+  width: 100%;
+  height: 100%;
+}
+.center-wrapper  .goods-pay {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.center-wrapper  .goods-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.center-wrapper  .goods-info h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.center-wrapper  .goods-info p {
+  font-size: 14px;
+  color: #999;
+}

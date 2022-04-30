@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      width: 102px;
+      height: 58px;
+      background-image: linear-gradient(180deg, #3c83fa, #50b2fa);
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      /* 改变主轴的方向 */
+      flex-direction: column;
+      /* 侧轴居中 */
+      align-items: center;
+      /* 主轴对齐 */
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    a span:nth-child(1) {
+      width: 28px;
+      height: 28px;
+      background-color: pink;
+      /* background: url(./images/mainnav.png) no-repeat; */
+      /* 缩放背景图片 */
+      /* background-size: x y; 宽度28px 高度 自动自适应 */
+      /* background-size: 28px auto; */
+      /* background-position: 0 -170px; */
+      background: url(./images/mainnav.png) no-repeat 0 -170px/28px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#">
+    <span></span>
+    <span>机票</span>
+  </a>
+  <a href="#">
+    <span></span>
+    <span>机票</span>
+  </a>
+  <a href="#">
+    <span></span>
+    <span>机票</span>
+  </a>
+</body>
+
+</html>

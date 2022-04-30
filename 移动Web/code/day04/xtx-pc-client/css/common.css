@@ -1,0 +1,299 @@
+/* 里面公共的头部和底部样式 */
+/* 版心  */
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+header {
+    background-color: #fff;
+}
+
+/* 头部模块 */
+.xtx-shortcut {
+    height: 52px;
+    background-color: #333;
+    color:#666;
+    line-height: 52px;
+}
+.xtx-shortcut  ul {
+    float: right;
+}
+.xtx-shortcut li {
+    float: left;
+}
+.xtx-shortcut li a {
+ color: #dcdcdc;
+}
+/* 小竖线 */
+.sep {
+    margin: 0 15px;
+}
+.xtx-shortcut li a:hover {
+    color: #fff;
+}
+/* 手机小图标 */
+.xtx-shortcut li a i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 6px;
+    width: 11px;
+    height: 16px;
+    background: url(../images/sprites.png) no-repeat -160px -70px;
+}
+
+/* 导航栏 */
+.xtx-main-nav {
+    height: 130px;
+    padding: 30px 0;
+    /* background-color: pink; */
+}
+
+/* logo */
+.logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+   
+}
+.logo a {
+    overflow: hidden;
+    text-indent: -9999em;
+    /* font-size: 0; */
+    display: block;
+    width: 207px;
+    height: 70px;
+    background: url(../images/logo.png) no-repeat;
+    /* 背景图片缩放 */
+    background-size: 207px 70px;
+    /* 隐藏文字 */
+
+}
+.nav {
+    float: left;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.nav ul li {
+    float: left;
+    margin-right: 45px;
+}
+.nav ul li a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+}
+.nav ul li a:hover {
+    border-bottom: 1px solid #27ba9b;
+    color: #27ba9b;
+}
+.search {
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.search input {
+    width: 172px;
+    height: 38px;
+    padding-left: 30px;
+    border-bottom: 2px solid #e7e7e7;
+}
+/* 修改placeholder的文字颜色 */
+.search input::placeholder {
+    color: #ccc;  
+}
+.search::before {
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: url(../images/sprites.png) no-repeat -80px -70px;
+}
+.car {
+    position: relative;
+    float: left;
+    width: 23px;
+    height: 23px;
+    margin-top: 35px; 
+    margin-left: 30px;
+    background: url(../images/sprites.png) no-repeat -119px -70px;
+}
+.car span {
+    position: absolute;
+    top: -6px;
+    left: 15px;
+    padding: 0 8px;
+    font-size: 13px;
+    color: #fff;
+    height: 15px;
+    line-height: 15px;
+    background-color: #e26237;
+    border-radius: 7px;
+}
+/* 底部模块 */
+.footer-t {
+    height: 300px;
+    padding-top: 80px;
+    /* background-color: pink; */
+}
+.footer-t dl {
+    float: left;
+    width: 25%;
+    text-align: center;
+
+}
+.footer-t dl a {
+    color: #999;
+    font-size: 14px;
+}
+.footer-t dl dt {
+    height: 50px;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+}
+.footer-b {
+    height: 340px;
+    background-color: #333;
+}
+.customer dd,
+.us dd {
+    display: inline-block;
+    width: 92px;
+    height: 92px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+.customer dd a,
+.us dd a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.customer dd a::before,
+.us dd a::before {
+    content: '';
+    display: inline-block;
+    width: 29px;
+    height: 28px;
+    margin-top: 22px;
+    background: url(../images/sprites.png) no-repeat;
+    /* 过渡效果 */
+    transition: all .4s;
+}
+.customer .zaixian a::before {
+    background-position: -250px -69px;
+}
+/* 鼠标经过的是a 变化的是 before */
+.customer .zaixian a:hover::before {
+    background-position: -205px -69px;
+}
+.customer .wenti a::before {
+    background-position: -350px -70px;
+}
+.us .gongzhonghao a::before {
+    background-position: -247px -14px;
+    width: 37px;
+    height: 29px;
+}
+.us .weibo a::before {
+    width: 37px;
+    height: 29px;
+    background-position: -348px -14px;
+}
+.download dd {
+    display: inline-block;
+    vertical-align: top;
+}
+.qrcode {
+    width: 116px;
+    height: 116px;
+    border: 1px solid #ccc;
+    padding: 7px;
+    /* margin-top: -10px; */
+}
+.qrcode img {
+    width: 100%;
+    height: 100%;
+}
+.down {
+    width: 103px;
+    height: 116px;
+    padding-top: 10px;
+    margin-left: 22px;
+    text-align: left;
+    font-size: 14px;
+    color: #999;
+}
+.down a {
+    display: block;
+    margin-top: 20px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #27ba9b;  
+    text-align: center; 
+    color: #fff!important;
+}
+.hotline {
+    height: 190px;
+    border-left: 1px solid #f2f2f2;
+}
+.hotline dd p:nth-child(1) {
+    font-size: 22px;
+    color: #666;
+    margin-top: 15px;
+    height: 40px;
+}
+.hotline dd p:nth-child(2) {
+    font-size: 15px;
+    color: #999;
+}
+
+.xtx-service {
+    width: 1400px;
+    height: 175px;
+    margin: 0 auto;
+    border-bottom: 1px solid #434343;
+}
+.xtx-service a {
+    float: left;
+    width: 33.33%;
+    height: 174px;
+    text-align: center;
+    line-height: 174px;
+    font-size: 28px;
+    color: #fff;
+}
+.xtx-service a::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 58px;
+    height: 58px;
+    background-color: pink;
+    margin-right: 20px;
+    background: url(../images/sprites.png) no-repeat;
+}
+.xtx-service a:nth-child(2)::before {
+    background-position: -65px 0;
+}
+.xtx-service a:nth-child(3)::before {
+    background-position: -130px 0;
+}
+.xtx-copyright {
+    padding-top: 40px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    line-height: 32px;
+}
+.xtx-copyright a {
+    color: #999;
+    margin: 0 5px;
+}
+
+
+
