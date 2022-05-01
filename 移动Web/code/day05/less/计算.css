@@ -1,0 +1,11 @@
+/*
+ 多行注释
+ 多行
+*/
+.box {
+  width: 200px;
+  height: 50px;
+  padding: 30px;
+  margin: 0.26666667rem;
+  background-color: pink;
+}

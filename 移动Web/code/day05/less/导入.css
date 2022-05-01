@@ -1,0 +1,23 @@
+/*
+ 多行注释
+ 多行
+*/
+.box {
+  width: 200px;
+  height: 50px;
+  padding: 30px;
+  margin: 0.26666667rem;
+  background-color: pink;
+}
+.box {
+  color: red;
+  background-color: blue;
+  border: 1px solid red;
+}
+.pay {
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+}
+body {
+  background-color: pink;
+}

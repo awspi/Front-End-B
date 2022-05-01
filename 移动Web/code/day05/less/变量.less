@@ -1,0 +1,14 @@
+// 声明变量  适合于页面出现次数比较多的时候才用
+@color: red;
+@border: 1px solid @color;
+.box {
+  // 使用变量
+  color: @color;
+  background-color: blue;
+  // border: 1px solid @color;
+  border: @border;
+}
+.pay {
+  border-left: @border;
+  border-right: @border;
+}

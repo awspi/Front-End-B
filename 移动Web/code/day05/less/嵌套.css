@@ -1,0 +1,23 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+.box p {
+  font-size: 16px;
+}
+.box p span {
+  color: red;
+}
+.nav::before {
+  content: '';
+}
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  color: red;
+}
+.footer a:hover::before {
+  content: '';
+}

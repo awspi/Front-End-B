@@ -1,0 +1,40 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  // 子盒子
+  p {
+    font-size: 16px;
+    // 孙盒子
+    span {
+      color: red;
+    }
+  }
+}
+.nav {
+  &::before {
+    content: '';
+  }
+}
+// .footer {
+//   a {
+//     text-decoration: none;
+//     &:hover {
+//       color: red;
+//       &::before {
+//         content: '';
+//       }
+//     }
+//   }
+// }
+.footer {
+  a {
+    text-decoration: none;
+    &:hover {
+      color: red;
+    }
+    &:hover::before {
+      content: '';
+    }
+  }
+}
