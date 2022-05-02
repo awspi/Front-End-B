@@ -362,6 +362,8 @@ transform: scale(1.2)；
 
 如果是伪元素before 要设置z-index
 
+## 倾斜skew
+
 # 渐变
 
 ## 线性渐变 linear-gradient
@@ -1775,7 +1777,7 @@ body {
 
 
 
-## Bootstrap 
+# Bootstrap 
 
 Bootstrap 是由 Twitter 公司开发维护的前端 **UI 框架**，它提供了大量编写好的 CSS 样式，允许开发者结合一定 HTML 结构及JavaScript，快速编写功能完善的网页及常见交互效果。
 
@@ -1815,13 +1817,23 @@ Bootstrap 是由 Twitter 公司开发维护的前端 **UI 框架**，它提供�
 
 ## 栅格系统
 
-栅格系统(gridsystems),也叫“网格系统，它就是通过一系列的行（row）与列（column）的组合创建页面布局。
+### container
+
+**.container**是 Bootstrap 中专门提供的类名，所有应用该类名的盒子，默认已被指定宽度且居中。
+
+.container-fluid也是 Bootstrap 中专门提供的类名，所有应用该类名的盒子，宽度均为 100%。
+
+分别使用**.row**类名和 **.col**类名定义栅格布局的行和列。
+
+
+
+栅格系统(gridsystems),也叫“网格系统，它就是通过一系列的**行（row）与列（column）**的组合创建页面布局。
 
 简单说，栅格系统也是一种布局方式。 BootStrap 给咱们内置好了一套布局系统。
 
-BootStrap3默认将网页分成12等份
+BootStrap3默认将网页**分成12等份**
 
-比如，超大屏幕下我们想要一个通栏的大盒子
+![bs-grid](/Users/wsp/Documents/Front-End-b/Front-End-b/移动Web/笔记/bs-grid.png)比如，超大屏幕下我们想要一个通栏的大盒子
 
 ~~~html
  <div class="container">
@@ -1864,8 +1876,6 @@ BootStrap3默认将网页分成12等份
   </div>
 ~~~
 
-
-
 还是这4个盒子，如果在小屏幕下放2个怎么做呢？
 
 ~~~css
@@ -1876,8 +1886,6 @@ BootStrap3默认将网页分成12等份
     <div class="col-lg-3 col-md-4 col-sm-6">盒子内容</div>
   </div>
 ~~~
-
-
 
 还是这4个盒子，如果在超小屏幕下放1个怎么做呢？
 
@@ -1892,6 +1900,11 @@ BootStrap3默认将网页分成12等份
 
 
 
+**注意:**
+
+1. **container类自带间距15px;** 
+2. **row类自带间距-15px**
+
 ### row 类
 
 row 可以去掉container默认的内边距
@@ -1900,7 +1913,7 @@ row 可以去掉container默认的内边距
 
 ## 列偏移
 
-列偏移 通过  col-lg-offset-*  
+列偏移 通过  col-lg-**offset**-*  
 
 让盒子往右侧走，左边有几份
 

@@ -1,0 +1,127 @@
+
+.carousel-indicators li,
+.carousel-indicators .active{
+width: 50px;
+height: 4px;
+border: 0;
+margin: 0 2px;
+background-color: rgba(255,255,255,0.4);
+}
+.carousel-indicators .active{
+background-color: rgba(255,255,255,1);
+}
+// 
+.navbar-default{
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+  border: 0;
+}
+.navbar-default .navbar-nav{
+  margin-top: 10px;
+  margin-right: 50px;
+}
+.navbar-default .navbar-nav>li>a{
+  color: #fff;
+  font-size: 14px;
+  margin: 0 10px;
+  &:hover{
+    color: orange;
+  }
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-collapse{
+  margin-top: 10px;
+}
+@media (max-width:768px){
+  .navbar-default .navbar-collapse{
+    background-color: #333;
+    border: 0;
+  }
+}
+// 
+.title{
+  margin-top: 70px;
+  text-align: center;
+  p{
+    margin-top: 5px ;
+    font-size: 16px;
+    color: #919191;
+  }
+}
+//
+.items {
+  >div{
+    height: 179px;
+    margin-bottom: 10px;
+    a {
+      position: absolute;
+      display: block;
+      height: 179px;
+      width: 200px;
+      border-radius:5px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      padding-top: 20px;
+      transition:all 0.2s;
+      overflow: hidden;
+      // 闪光特效 skew
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -110%;
+        background-image: linear-gradient(to right,transparent,rgba(255,255,255,.6),transparent);
+        transform: skew(-30deg);
+      }
+      &:hover::before{
+        left: 110%;
+      }
+      &:hover{
+        transform: translateY(-6px);
+        box-shadow:0 26px 40px -24px rgb(0 36 100 / 50%);
+        // 写在hover上,离开就结束动画,速度很快相当于动画不重复
+        transition:all 0.2s
+      }
+      img{
+        height: 60px;
+      }
+      h3{
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+    }
+    &:nth-child(1) a{
+      background-color: #7ec3ff;
+    }
+    &:nth-child(2) a{
+      background-color: #f36c80;
+    }
+    &:nth-child(3) a{
+      background-color: #818ea0;
+    }
+    &:nth-child(4) a{
+      background-color: #91cf49;
+    }
+  }
+
+}
+//
+.more{
+  display: block;
+  width:200px;
+  text-align: center;
+  padding:10px;
+  margin: 0 auto;
+  a{
+    background-color: #e1e1e1;
+    color: #616161;
+    font-size: 14px;
+  }
+}
