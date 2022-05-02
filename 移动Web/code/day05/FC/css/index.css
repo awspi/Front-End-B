@@ -432,7 +432,19 @@ template {
   display: none;
 }
 body {
+  max-width: 540px;
+  margin: 0 auto;
   background-color: #f0f0f0;
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 54px!important;
+  }
+  .toolbar {
+    width: 540px !important;
+    left: 50%!important;
+    transform: translateX(-50%);
+  }
 }
 .toolbar {
   position: fixed;

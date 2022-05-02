@@ -1,0 +1,157 @@
+// 导入base.less
+@import url(base.less);
+// 声明基准值变量
+@baseSize:3.75vw;
+.suspension{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color:#fff;
+  .m-navbar{
+    padding: 0 (12/@baseSize) 0 (12/@baseSize);
+    display: flex;
+    justify-content: space-between;
+    height: (44/@baseSize);
+    align-items: center;
+    .logo{
+      i{
+        font-size: (28/@baseSize);
+        color: #fb7299;
+      }
+    }
+    .right{
+      display: flex;
+      .search{
+        font-size: (22/@baseSize);
+        color: #ccc;
+        line-height:  (22/@baseSize); 
+      }
+      .face{
+        width: (24/@baseSize);
+        height: (24/@baseSize);
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 (20/@baseSize);
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .app-btn{
+        width: (72/@baseSize);
+        height: (24/@baseSize);
+        background-color:#fb7299;
+        border-radius: 3px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .channel-menu{
+    display: flex;
+    justify-content: space-between;
+    height: (40/@baseSize);
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    .tabs{
+      flex: 1;
+      overflow: hidden; 
+      .tabs-list{
+        display: flex;
+        white-space: nowrap;// 文字不换行
+        a{
+          height: (40/@baseSize);
+          line-height:(40/@baseSize);
+          padding: 0 (16/@baseSize);
+        }
+        .line{
+          position: absolute;
+          left: (16/@baseSize);
+          bottom: 0;
+          width:(30/@baseSize);
+          height:(2/@baseSize);
+          background-color: #fb7299;
+        }
+      }
+
+    }
+    .after{
+      width: (40/@baseSize);
+      height: (40/@baseSize);
+      color:#aaa;
+      line-height: (40/@baseSize); 
+      i{
+        font-size: (20/@baseSize); 
+      }
+    }
+  }
+}
+// m-home
+.m-home{
+  padding:(85/@baseSize) (5/@baseSize) 0;
+  .video-list{
+    display: flex;
+    flex-wrap: wrap;//换行
+    .video-item{
+      width: 50%;
+      height:(150/@baseSize);
+      // background-color: aqua;
+      padding: (8/@baseSize) (5/@baseSize);//box之间设置空隙
+      .card{
+        position: relative;
+        height: (97/@baseSize);
+        .count{
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 (5/@baseSize);;
+          left: 0;
+          bottom: 0;
+          height:(27/@baseSize);
+          font-size: (12/@baseSize);
+          line-height:(27/@baseSize);
+          color: #fff;
+          width: 100%;
+          background-image: linear-gradient(0deg,rgba(0,0,0,.85),transparent);
+          i{
+            font-size: (16/@baseSize);
+            position: relative;
+            bottom:  (-1/@baseSize);
+            // margin-right:  (5/@baseSize);
+          }
+        }
+      }
+      .title{
+        font-size: (12/@baseSize);
+        color: #121212;
+        margin-top:(5/@baseSize);
+      }
+    }
+  }
+
+}
+.float{
+  position: fixed;
+  left: 0;
+  height: (38/@baseSize);
+  width: 100%;
+  bottom:(30/@baseSize);
+  .openapp{
+    margin:0 (20/@baseSize);
+    height: (38/@baseSize);
+    border-radius: (19/@baseSize);
+    background-color:#fb7299;
+    text-align: center;
+    font-size: (14/@baseSize);
+    line-height: (38/@baseSize);
+    color: #fff;
+    i{
+      margin-right: (10/@baseSize);
+    }
+  }
+  
+}
