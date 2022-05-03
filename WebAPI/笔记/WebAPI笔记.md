@@ -24,7 +24,7 @@
 
 ### DOM树
 
-![1550731974575](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550731974575.png)
+![1550731974575](images/1550731974575.png)
 
 DOM树 又称为文档树模型，把文档映射成树形结构，通过节点对象对其处理，处理的结果可以加入到当前的页面。
 
@@ -113,11 +113,11 @@ DOM树 又称为文档树模型，把文档映射成树形结构，通过节点�
 
 注意：getElementsByTagName()获取到是动态集合，即：当页面增加了标签，这个集合中也就增加了元素。
 
-### H5新增获取元素方式
+### H5新增获取元素方式 querySelector
 
 1. getElementsByClassName 根据类名获得某些元素集合
-2. querySelector 返回指定选择器的第一个元素对象  切记 里面的选择器需要加符号 .box  #nav
-3. querySelectorAll返回指定选择器的所有元素对象集合
+2. **querySelector** 返回指定选择器的第一个元素对象  切记 里面的选择器需要加符号 .box  #nav
+3. **querySelectorAll**返回指定选择器的所有元素对象集合
 
 ![1550733518278](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550733518278.png)
 
@@ -1059,11 +1059,15 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 
 
-### 1.1.2 案例：删除留言
+### 案例：删除留言
 
 ![1551163586475](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163586475.png)
 
-![1551163635501](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163635501.png)
+![1551163635501](/Users/wsp/Documents/Front-End-b/%E8%B5%84%E6%96%99/02-WebAPI%E7%BC%96%E7%A8%8B%E8%B5%84%E6%96%99/Web%20APIs-day03%EF%BC%886-8%E5%B0%8F%E8%8A%82%EF%BC%89/4-%E7%AC%94%E8%AE%B0/images/1551163635501.png)
+
+
+
+- 阻止链接跳转 `javascript:;`
 
 ```js
     <textarea name="" id=""></textarea>
@@ -1103,9 +1107,12 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
     </script>
 ```
 
-### 1.1.3 复制（克隆）节点
+### 复制（克隆）节点 cloneNode
 
 ![1551163763825](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163763825.png)
+
+-  node.cloneNode(); <u>括号内为空或者里面是false</u> **浅拷贝** 只复制标签不复制里面的内容
+-  node.cloneNode(true); 括号内为<u>true</u> **深拷贝** 复制标签复制里面的内容
 
 ```js
     <ul>
@@ -1122,7 +1129,7 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
     </script>
 ```
 
-### 1.1.4 案例：动态生成表格
+### 案例：动态生成表格
 
 ![1551163900675](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163900675.png)
 
@@ -1187,9 +1194,11 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 
 
-### 1.1.5 创建元素的三种方式
+### 创建元素的三种方式
 
 ![1551164214925](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164214925.png)
+
+
 
 ```js
     <script>
@@ -1221,7 +1230,7 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 
 
-### 1.1.6 innerTHML和createElement效率对比
+### innerTHML和createElement效率对比
 
 **innerHTML字符串拼接方式（效率低）**
 
@@ -1281,7 +1290,7 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 
 
-## 1.2. DOM的核心总结
+## DOM的核心总结
 
 ![1551164669434](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164669434.png)
 
@@ -1291,41 +1300,48 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 关于dom操作，我们主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作。
 
-### 1.2.1. 创建
+### 创建
 
 ![1551164797164](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164797164.png)
 
-### 1.2.2. 增加
+### 增加
 
 ![1551164829832](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164829832.png)
 
-### 1.2.3. 删
+### 删
 
 ![1551164872533](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164872533.png)
 
-### 1.2.4. 改
+### 改
 
 ![1551164907830](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164907830.png)
 
-### 1.2.5. 查
+### 查
 
 ![1551164936214](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164936214.png)
 
-### 1.2.6. 属性操作
+### 属性操作
 
 ![1551164985383](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164985383.png)
 
-### 1.2.7. 事件操作（重点）
+### 事件操作（重点）
 
+- **onclick** 鼠标点击左键触发
+- onmouseover 鼠标经过触发
+- onmouseout 鼠标离开触发
+- **onfocus** 获得鼠标焦点触发
+- **onblur** 失去鼠标焦点触发
+- onmousemove 鼠标移动触发
+- onmouseup 鼠标弹起触发
+- onmousedown 鼠标按下触发
 
+## 事件高级
 
-## 1.3. 事件高级
-
-### 1.3.1. 注册事件（2种方式）
+### 注册事件（2种方式）
 
 ![1551165252019](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551165252019.png)
 
-### 1.3.2 事件监听
+### 事件监听
 
 #### addEventListener()事件监听（IE9以后支持）
 
@@ -1378,7 +1394,7 @@ eventTarget.addEventListener()方法将指定的监听器注册到 eventTarget�
 
 ![1551166023885](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166023885.png)
 
-### 1.3.3. 删除事件（解绑事件）
+### 删除事件（解绑事件）
 
 ![1551166185410](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166185410.png)
 
@@ -1413,7 +1429,7 @@ eventTarget.addEventListener()方法将指定的监听器注册到 eventTarget�
 
 ![1551166332453](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166332453.png)
 
-### 1.3.4. DOM事件流
+### DOM事件流
 
 > ```
 > html中的标签都是相互嵌套的，我们可以将元素想象成一个盒子装一个盒子，document是最外面的大盒子。
@@ -1532,6 +1548,13 @@ DOM 事件流会经历3个阶段：
 
 ![1551169537789](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551169537789.png)
 
+```js
+    div.addEventListener('click',fn);
+    function fn(e){
+        console.log(e);
+    }
+```
+
 #### 事件对象的兼容性处理
 
 事件对象本身的获取存在兼容问题：
@@ -1565,16 +1588,15 @@ DOM 事件流会经历3个阶段：
 
 #### e.target 和 this 的区别
 
--  this 是事件绑定的元素（绑定这个事件处理函数的元素） 。
+-  this 是事件绑定的元素（绑定这个事件**处理函数的元素**） 。
+   -  =e.currentTarget
 
 -  e.target 是事件触发的元素。
 
-> ```
-> 常情况下terget 和 this是一致的，
-> 但有一种情况不同，那就是在事件冒泡时（父子元素有相同事件，单击子元素，父元素的事件处理函数也会被触发执行），
-> 	这时候this指向的是父元素，因为它是绑定事件的元素对象，
-> 	而target指向的是子元素，因为他是触发事件的那个具体元素对象。
-> ```
+> 通常情况下target 和 this是一致的，
+> 但有一种情况不同，那就是在**事件冒泡**时（父子元素有相同事件，单击子元素，父元素的事件处理函数也会被触发执行），
+> 这时候this指向的是父元素，因为它是绑定事件的元素对象，
+> 而target指向的是子元素，因为他是触发事件的那个具体元素对象。
 
 ```js
     <div>123</div>
@@ -1589,9 +1611,9 @@ DOM 事件流会经历3个阶段：
     </script>
 ```
 
-事件冒泡下的e.target和this
+**事件冒泡**下的e.target和this
 
-```js
+```html
     <ul>
         <li>abc</li>
         <li>abc</li>
@@ -1609,7 +1631,7 @@ DOM 事件流会经历3个阶段：
     </script>
 ```
 
-### 1.3.6 阻止默认行为
+### 阻止默认行为preventDefault
 
 > html中一些标签有默认行为，例如a标签被单击后，默认会进行页面跳转。
 
@@ -1627,7 +1649,7 @@ DOM 事件流会经历3个阶段：
             e.preventDefault();
             // 低版本浏览器 ie678  returnValue  属性
             e.returnValue = false;
-            // 我们可以利用return false 也能阻止默认行为 没有兼容性问题
+            // 我们可以利用return false 也能阻止默认行为 没有兼容性问题 只限于传统方法绑定事件
             return false;
         }
     </script>
@@ -1668,7 +1690,7 @@ DOM 事件流会经历3个阶段：
 
 ![1551171657513](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551171657513.png)
 
-### 1.3.8 事件委托
+### 事件委托
 
 事件冒泡本身的特性，会带来的坏处，也会带来的好处。
 
@@ -1680,7 +1702,8 @@ DOM 事件流会经历3个阶段：
 
 事件委托也称为事件代理，在 jQuery 里面称为事件委派。
 
-> 说白了就是，不给子元素注册事件，给父元素注册事件，把处理代码在父元素的事件中执行。
+- 说白了就是，不给子元素注册事件，给父元素注册事件，把处理代码在父元素的事件中执行。
+- e.target 这个可以得到我们点击的对象(子元素)
 
 
 
@@ -1694,7 +1717,7 @@ DOM 事件流会经历3个阶段：
 
 #### 事件委托的原理
 
-​	给父元素注册事件，利用事件冒泡，当子元素的事件触发，会冒泡到父元素，然后去控制相应的子元素。
+- **给父元素注册事件，利用事件冒泡，当子元素的事件触发，会冒泡到父元素，然后去控制相应的子元素。**
 
 #### 事件委托的作用
 
@@ -1720,11 +1743,11 @@ DOM 事件流会经历3个阶段：
     </script>
 ```
 
-## 1.4. 常用鼠标事件
+## 常用鼠标事件
 
 ![1551172699854](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551172699854.png)
 
-### 1.4.1 案例：禁止选中文字和禁止右键菜单
+### 案例：禁止选中文字和禁止右键菜单
 
 ![1551172755484](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551172755484.png)
 
@@ -1744,11 +1767,11 @@ DOM 事件流会经历3个阶段：
 </body>
 ```
 
-### 1.4.2 鼠标事件对象
+### 鼠标事件对象
 
 ![1551173103741](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551173103741.png)
 
-### 1.4.3 获取鼠标在页面的坐标
+### 获取鼠标在页面的坐标
 
 ```js
     <script>
@@ -1772,7 +1795,7 @@ DOM 事件流会经历3个阶段：
     </script>
 ```
 
-### 1.4.4 案例：跟随鼠标的天使
+### 案例：跟随鼠标的天使
 
 ![1551173172613](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551173172613.png)
 
