@@ -6,11 +6,11 @@
 
 1. 字体图标的 **选择，上传** UI美工她们来做的，我们了解即可。
 
-   ![63780822443](/Users/wsp/Documents/Front-End-b/移动web资料/day01/08-笔记/assets/1637808224435.png)
+   ![63780822443](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day01/08-笔记/assets/1637808224435.png)
 
 具体的步骤：
 
-![63780825652](/Users/wsp/Documents/Front-End-b/移动web资料/day01/08-笔记/assets/1637808256526.png)
+![63780825652](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day01/08-笔记/assets/1637808256526.png)
 
 ## 使用字体图标（重点）
 
@@ -18,7 +18,7 @@
 
 1. 复制相关的文件，到 `fonts`文件夹里面。
 
-   ![63783459080](/Users/wsp/Documents/Front-End-b/移动web资料/day01/08-笔记/assets/1637834590800.png)
+   ![63783459080](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day01/08-笔记/assets/1637834590800.png)
 
 2. 引入 css 
 
@@ -229,7 +229,7 @@ transform: translateY(y);
 
 ### 开门大吉案例
 
-效果：![图片1](/Users/wsp/Documents/Front-End-b/移动web资料/day01/08-笔记/assets/图片1.gif)
+效果：![图片1](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day01/08-笔记/assets/图片1.gif)
 
 
 
@@ -382,7 +382,7 @@ background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
 
 3D 坐标系比2D 多了一个Z轴。
 
-![63791714017](/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1637917140179.png)
+![63791714017](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1637917140179.png)
 
 >**一定要记住3个坐标轴取值的正反：**
 >
@@ -433,7 +433,7 @@ transform: translateZ(100px);
    - 其中 d 为透视的距离
    - z 是 `translateZ` 的距离， 这个距离靠近我们，盒子越大
 
-   ![63791754918](/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1637917549182.png)
+   ![63791754918](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1637917549182.png)
 
 ## 3D旋转
 
@@ -445,7 +445,7 @@ transform: translateZ(100px);
 
 类似单杠旋转。
 
- <img src="/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1.gif">
+ <img src="/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1.gif">
 
 > 注意：默认的旋转中心在盒子的中心位置。
 
@@ -466,13 +466,13 @@ img:hover {
 
 效果展示：
 
- ![63791792216](/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1637917922165.png)
+ ![63791792216](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1637917922165.png)
 
 ### rotateY 
 
 类似钢管舞。
 
- ![63791795887](/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1637917958877.png)
+ ![63791795887](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1637917958877.png)
 
 ~~~css
 body {
@@ -490,13 +490,13 @@ img:hover {
 
 效果如下：
 
- ![63791801317](/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1637918013174.png)
+ ![63791801317](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1637918013174.png)
 
 ## 左手法则
 
 一定要搞清楚X轴和Y轴如何旋转的，旋转的度数是正值还是负值。
 
- ![63791808340](/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1637918083401.png)
+ ![63791808340](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1637918083401.png)
 
 规则：
 
@@ -661,7 +661,7 @@ img:hover {
 
 ## 动画属性 animation
 
-![63791846861](/Users/wsp/Documents/Front-End-b/移动web资料/day02/08-笔记/assets/1637918468617.png)
+![63791846861](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day02/08-笔记/assets/1637918468617.png)
 
 **重要!**
 
@@ -691,7 +691,7 @@ img:hover {
 
 ~~~css
 /* 我们想要2个动画一起执行  animation: 动画1, 动画2, ... 动画n */
-animation: run 1s steps(12) infinite, move 5s linear forwards;
+animation: run 1s steps(12) infinite, m  ove 5s linear forwards;
 ~~~
 
 ### 逐帧动画
@@ -755,15 +755,15 @@ PC端
 
 1. 布局视口 。  iOS, Android基本都将这个视口分辨率设置为980px。
 
- ![63800512844](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638005128444.png)
+ ![63800512844](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638005128444.png)
 
 2. 视觉视口。用户正在看到的网站的区域。
 
- ![63800516674](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638005166746.png)
+ ![63800516674](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638005166746.png)
 
 3. 理想视口。 设备有多宽，我的网页就显示有多宽
 
- ![63800520565](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638005205656.png)
+ ![63800520565](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638005205656.png)
 
 ## 视口标签
 
@@ -791,9 +791,9 @@ PC端
 > 1. 网页美工的设计稿基本是 750px
 > 2. 我们前端工程师拿到设计稿利用像素大厨**选择 2X**， 进行缩小一半，按照提示的单位开发即可。
 
- ![63800549386](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638005493860.png)
+ ![63800549386](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638005493860.png)
 
-![63800551240](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638005512404.png)
+![63800551240](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638005512404.png)
 
 
 
@@ -812,7 +812,7 @@ PC端
 
 flex布局极大的提高了我们布局的效率，更简单、灵活。
 
-![63800561629](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638005616290.png)
+![63800561629](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638005616290.png)
 
 > display: flex;  一定要给**亲爸爸**加。
 
@@ -850,7 +850,7 @@ justify-content: space-between;
 
 显示效果：**两侧没缝隙**
 
-![63800582917](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638005829176.png)
+![63800582917](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638005829176.png)
 
 ~~~css
 justify-content: space-around;
@@ -858,7 +858,7 @@ justify-content: space-around;
 
 效果如下：  **记住2倍**
 
-![63800603827](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638006038279.png)
+![63800603827](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638006038279.png)
 
 ~~~css
 justify-content: space-evenly;
@@ -866,7 +866,7 @@ justify-content: space-evenly;
 
 效果如下： **记住空隙一样大**
 
-![63800611991](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638006119912.png)
+![63800611991](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638006119912.png)
 
 ~~~css
  justify-content: center;
@@ -874,7 +874,7 @@ justify-content: space-evenly;
 
 效果如下： **经常用于让一个盒子水平居中**
 
-![63800615173](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638006151730.png)
+![63800615173](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638006151730.png)
 
 记忆：
 
@@ -884,7 +884,7 @@ justify-content: space-evenly;
 
 **小技巧：**
 
- ![64069442849](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1640694428494.png)
+ ![64069442849](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1640694428494.png)
 
 见到这个效果，最简单的做法就是： 给大盒一个 左右的padding， 然后在加 `justify-content: space-between`
 
@@ -909,7 +909,7 @@ align-items: center;
 
 我们可以通过flex让一个子盒子水平和垂直居中。
 
- ![63800636092](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638006360929.png)
+ ![63800636092](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638006360929.png)
 
 ~~~css
 .father {
@@ -977,7 +977,7 @@ html 结构
 
 显示效果：
 
-![63800701573](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638007015731.png)
+![63800701573](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638007015731.png)
 
 >1. 一定要给子盒子添加。
 >2. 子盒子默认高度会和父盒子一样高。（前提是不给高度）
@@ -999,7 +999,7 @@ html 结构
 
 一般这种布局方式适用于各种移动端顶部搜索部分，这是最常见的，如京东手机版主页面顶部搜索
 
-![63800721880](/Users/wsp/Documents/Front-End-b/移动web资料/day03/04-笔记/assets/1638007218802.png)
+![63800721880](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day03/04-笔记/assets/1638007218802.png)
 
 核心思路：
 
@@ -1071,9 +1071,9 @@ flex-direction：column;
 
 比如：
 
- ![63814422549](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638144225490.png)
+ ![63814422549](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638144225490.png)
 
- ![63814419734](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638144197349.png)
+ ![63814419734](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638144197349.png)
 
 ~~~css
 
@@ -1093,7 +1093,7 @@ flex-direction：column;
 flex-wrap: wrap;
 ~~~
 
- ![63814467912](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638144679122.png)
+ ![63814467912](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638144679122.png)
 
 ## 设置侧轴对齐方式
 
@@ -1128,23 +1128,23 @@ flex 它是一种布局方式。 主要目的是通过父盒子控制子盒子�
 
 1. 如果给父盒子添加 display: flex 
 
-   ![63815370734](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638153707345.png)
+   ![63815370734](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638153707345.png)
 
 2. justify-content: center;
 
-   ![63815375813](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638153758135.png)
+   ![63815375813](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638153758135.png)
 
 3. justify-content: **space-between;** 左右两侧无缝隙
 
-   ![63815379669](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638153796691.png)
+   ![63815379669](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638153796691.png)
 
 4. justify-content: space-around;   两倍关系
 
-   ![63815385707](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638153857078.png)
+   ![63815385707](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638153857078.png)
 
 5. justify-content: space-evenly;   缝隙均等
 
-   ![63815390752](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638153907523.png)
+   ![63815390752](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638153907523.png)
 
 ### 侧轴对齐方式-单行对齐（重点）
 
@@ -1152,29 +1152,29 @@ flex 它是一种布局方式。 主要目的是通过父盒子控制子盒子�
 
 2. 顶对齐  flex-start
 
-   ![63815398806](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638153988067.png)
+   ![63815398806](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638153988067.png)
 
 3. align-items: center;   (重点)
 
-   ![63815403693](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638154036934.png)
+   ![63815403693](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638154036934.png)
 
 ### 侧轴对齐方式-多行
 
 1. align-content: space-between;
 
-   ![63815410074](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638154100744.png)
+   ![63815410074](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638154100744.png)
 
 2. align-content: space-around; 
 
-   ![63815414978](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638154149785.png)
+   ![63815414978](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638154149785.png)
 
 3. align-content: space-evenly; 
 
-   ![63815418652](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638154186521.png)
+   ![63815418652](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638154186521.png)
 
 4. align-content: center;
 
-   ![63815423184](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1638154231843.png)
+   ![63815423184](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1638154231843.png)
 
 ### 弹性盒子换行（重点）flex-wrap 
 
@@ -1192,7 +1192,7 @@ flex-direction: column;
 
 让我们的主轴设置为垂直。 默认的是 row  水平的。
 
- ![64722514425](/Users/wsp/Documents/Front-End-b/移动web资料/day04/05-笔记/assets/1647225144252.png)
+ ![64722514425](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day04/05-笔记/assets/1647225144252.png)
 
 # LESS
 
@@ -1237,7 +1237,7 @@ Less是一个CSS预处理器, Less文件后缀是.less
 
 ##  less 嵌套
 
-![63832837039](/Users/wsp/Documents/Front-End-b/移动web资料/day05/04-笔记/assets/1638328370396.png)
+![63832837039](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day05/04-笔记/assets/1638328370396.png)
 
 可以生成后代选择器
 
@@ -1613,7 +1613,7 @@ height: (29 / 3.75vw);
 
 ### tabs 布局分析
 
-![64118199048](/Users/wsp/Documents/Front-End-b/移动web资料/day06/05-笔记/assets/1641181990488.png)
+![64118199048](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day06/05-笔记/assets/1641181990488.png)
 
 里面需要放一个 tabs-list 盒子   这个盒子放 a 
 
@@ -1791,7 +1791,7 @@ Bootstrap 是由 Twitter 公司开发维护的前端 **UI 框架**，它提供�
 
 1. 复制 css文件
 
-   ![63837279259](/Users/wsp/Documents/Front-End-b/移动web资料/day07/04-笔记/assets/1638372792594.png)
+   ![63837279259](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day07/04-笔记/assets/1638372792594.png)
 
    并且引入到html文件中
 
@@ -1801,7 +1801,7 @@ Bootstrap 是由 Twitter 公司开发维护的前端 **UI 框架**，它提供�
 
 2. 复制字体图标文件夹
 
-   ![63837284310](/Users/wsp/Documents/Front-End-b/移动web资料/day07/04-笔记/assets/1638372843102.png)
+   ![63837284310](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day07/04-笔记/assets/1638372843102.png)
 
 3. 如果需要js，则复制js文件，并引入html文件中
 
@@ -1850,7 +1850,7 @@ BootStrap3默认将网页**分成12等份**
 </div>
 ~~~
 
-![63837547481](/Users/wsp/Documents/Front-End-b/移动web资料/day07/04-笔记/assets/1638375474814.png)
+![63837547481](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day07/04-笔记/assets/1638375474814.png)
 
 超大屏下，如果一行放4个，怎么做呢？
 
@@ -1956,7 +1956,7 @@ row 可以去掉container默认的内边距
 
 效果如下：
 
-![63849848929](/Users/wsp/Documents/Front-End-b/移动web资料/day07/04-笔记/assets/1638498489298.png)
+![63849848929](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day07/04-笔记/assets/1638498489298.png)
 
 ## 列嵌套
 
@@ -1984,7 +1984,7 @@ row 可以去掉container默认的内边距
 
 效果：
 
-![63850012795](/Users/wsp/Documents/Front-End-b/移动web资料/day07/04-笔记/assets/1638500127956.png)
+![63850012795](/Users/wsp/Documents/Front-End-b/资料/移动web资料/day07/04-笔记/assets/1638500127956.png)
 
 
 
