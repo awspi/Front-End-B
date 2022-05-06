@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      margin: 0;
+      padding: 0;
+      position: relative;
+      left: 200px;
+      width: 50px;
+      height: 50px;
+      background-color:wheat;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn">123</button>
+  <div class="box"></div>
+  <script>
+    let btn= document.querySelector('.btn');
+    let box= document.querySelector('.box');
+    btn.addEventListener('click',()=>{
+      animate(box,150,()=>{
+        alert('ok');
+      })
+    })
+  </script>
+  <script src="./animate.js"></script>
+</body>
+</html>
