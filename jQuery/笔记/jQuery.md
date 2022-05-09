@@ -127,6 +127,10 @@ $("选择器")   //  里面选择器直接写 CSS 选择器即可，但是要加
 
 ![筛选选择器](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/筛选选择器.png)
 
+```
+:checked 选择器      :checked 查找被选中的表单元素。
+```
+
 **案例代码**
 
 ```js
@@ -166,7 +170,9 @@ $("选择器")   //  里面选择器直接写 CSS 选择器即可，但是要加
 
 ![筛选方法](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/relation.png)
 
-偏重于记忆，演示代码略。
+- `.parents()`返回所有祖先
+
+
 
 ### 知识铺垫
 
@@ -303,7 +309,7 @@ $("div").toggleClass("current");
 >
 > jQuery为我们提供另一个方法，可以停止动画排队：stop() ;
 
-### 显示隐藏
+### 显示隐藏 show/ hide/toggle
 
 ​	显示隐藏动画，常见有三个方法：**show() / hide() / toggle() ;**
 
@@ -344,7 +350,7 @@ $("div").toggleClass("current");
 </body>
 ```
 
-### 滑入滑出
+### 滑入滑出 slide
 
 ​	滑入滑出动画，常见有三个方法：**slideDown() / slideUp() / slideToggle() ;** 
 
@@ -385,7 +391,7 @@ $("div").toggleClass("current");
 
 > 小案例：下拉菜单略（详情参看源码）。
 
-### 淡入淡出
+### 淡入淡出 fade
 
 ​	淡入淡出动画，常见有四个方法**：fadeIn() / fadeOut() / fadeToggle() / fadeTo() ;** 
 
@@ -431,9 +437,11 @@ $("div").toggleClass("current");
 </body>
 ```
 
-### 自定义动画
+### 自定义动画 animate()
 
-​	自定义动画非常强大，通过参数的传递可以模拟以上所有动画，方法为：animate() ;
+​	自定义动画非常强大，通过参数的传递可以模拟以上所有动画，方法为：**animate()** ;
+
+- 对dom元素设置动画,**必须是元素,**不能是document
 
 ​	语法规范如下:
 
@@ -542,31 +550,21 @@ hover([over,]out)     // 其中over和out为两个函数
 
 
 
+## jQuery 属性操作
 
+​	jQuery 常用属性操作有三种：**prop() / attr() / data() ;**
 
-# day02 - jQuery
+### 元素固有属性值 prop()
 
-> 学习目标：
->
-> 能够操作  jQuery 属性 
-> 能够操作  jQuery 元素
-> 能够操作  jQuery 元素尺寸、位置
-
-## 1.1. jQuery 属性操作
-
-​	jQuery 常用属性操作有三种：prop() / attr() / data() ;
-
-### 1.1.1 元素固有属性值 prop()
-
-​	所谓元素固有属性就是元素本身自带的属性，比如 <a> 元素里面的 href ，比如 <input> 元素里面的 type。 
+​	所谓元素固有属性就是元素本身自带的属性，比如 `<a>` 元素里面的 href ，比如 `<input>` 元素里面的 type。 
 
 **语法**
 
 ![prop](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/prop.png)
 
-​	注意：prop() 除了普通属性操作，更适合操作表单属性：disabled / checked / selected 等。
+​	注意：prop() 除了普通属性操作，**更适合操作表单属性：disabled / checked / selected 等。**
 
-### 1.1.2 元素自定义属性值 attr()
+### 元素自定义属性值 attr()
 
 ​	用户自己给元素添加的属性，我们称为自定义属性。 比如给 div 添加 index =“1”。 
 
@@ -574,9 +572,9 @@ hover([over,]out)     // 其中over和out为两个函数
 
 ![attr](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/attr.png)
 
-​	注意：attr() 除了普通属性操作，更适合操作自定义属性。（该方法也可以获取 H5 自定义属性）
+​	注意：`attr()` 除了普通属性操作**，更适合操作自定义属性。**（该方法也可以获取 **H5** 自定义属性）
 
-### 1.1.3 数据缓存 data()
+### 数据缓存 data()
 
 ​	data() 方法可以在指定的元素上存取数据，并不会修改 DOM 元素结构。一旦页面刷新，之前存放的数据都将被移除。 
 
@@ -617,30 +615,32 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-### 1.1.4 案例：购物车案例模块-全选
+### 案例：购物车案例模块-全选
 
 > 1.全选思路：里面3个小的复选框按钮（j-checkbox）选中状态（checked）跟着全选按钮（checkall）走。
 > 2.因为checked 是复选框的固有属性，此时我们需要利用prop()方法获取和设置该属性。
 > 3.把全选按钮状态赋值给3小复选框就可以了。
 > 4.当我们每次点击小的复选框按钮，就来判断：
 > 5.如果小复选框被选中的个数等于3 就应该把全选按钮选上，否则全选按钮不选。
-> 6.:checked 选择器      :checked 查找被选中的表单元素。
+> 6.**:checked 选择器      :checked 查找被选中的表单元素。**
 
-​	代码实现略。(详情参考源代码)
 
-## 1.2. jQuery 文本属性值
+
+
+
+## jQuery 文本属性值
 
 ​	jQuery的文本属性值常见操作有三种：html() / text() / val() ; 分别对应JS中的 innerHTML 、innerText 和 value 属性。
 
-### 1.2.1 jQuery内容文本值
+### jQuery内容文本值 html/ text / val
 
-​	常见操作有三种：html() / text() / val() ; 分别对应JS中的 innerHTML 、innerText 和 value 属性，主要针对元素的内容还有表单的值操作。
+​	常见操作有三种**：html() / text() / val() ;** 分别对应JS中的 innerHTML 、innerText 和 value 属性，主要针对元素的内容还有表单的值操作。
 
 **语法**
 
 ![html](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/html.png)
 
-​	注意：html() 可识别标签，text() 不识别标签。
+​	注意：**html() 可识别标签**，text() 不识别标签。
 
 **演示代码**
 
@@ -664,7 +664,7 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-### 1.2.2. 案例：购物车案例模块-增减商品数量
+### 案例：购物车案例模块-增减商品数量
 
 > 1.核心思路：首先声明一个变量，当我们点击+号（increment），就让这个值++，然后赋值给文本框。
 > 2.注意1： 只能增加本商品的数量， 就是当前+号的兄弟文本框（itxt）的值。 
@@ -672,40 +672,50 @@ hover([over,]out)     // 其中over和out为两个函数
 > 4.注意2： 这个变量初始值应该是这个文本框的值，在这个值的基础上++。要获取表单的值
 > 5.减号（decrement）思路同理，但是如果文本框的值是1，就不能再减了。
 
-​	代码实现略。(详情参考源代码)
 
-### 1.2.3. 案例：购物车案例模块-修改商品小计
+
+###  案例：购物车案例模块-修改商品小计
 
 > 1.核心思路：每次点击+号或者-号，根据文本框的值 乘以 当前商品的价格  就是 商品的小计
 > 2.注意1： 只能增加本商品的小计， 就是当前商品的小计模块（p-sum）  
 > 3.修改普通元素的内容是text() 方法
 > 4.注意2： 当前商品的价格，要把￥符号去掉再相乘 截取字符串 substr(1)
-> 5.parents(‘选择器’) 可以返回指定祖先元素  
+> 5.**parents(‘选择器’) 可以返回指定祖先元素**  
 > 6.最后计算的结果如果想要保留2位小数 通过 toFixed(2)  方法
-> 7.用户也可以直接修改表单里面的值，同样要计算小计。 用表单change事件
+> 7.用户也可以直接修改表单里面的值，同样要计算小计。 用表单**change**事件
 > 8.用最新的表单内的值 乘以 单价即可  但是还是当前商品小计
 
-​	代码实现略。(详情参考源代码)
 
-## 1.3. jQuery 元素操作
+
+## jQuery 元素操作
 
 ​	jQuery 元素操作主要讲的是用jQuery方法，操作标签的遍历、创建、添加、删除等操作。
 
-### 1.3.1. 遍历元素
+### 遍历元素 each
 
 ​	jQuery 隐式迭代是对同一类元素做了同样的操作。 如果想要给同一类元素做不同操作，就需要用到遍历。
 
-**语法1**
+​	注意：用于遍历 jQuery 对象中的每一项，回调函数中元素为 DOM 对象，想要使用 jQuery 方法需要转换。
+
+`.each(callback);`
+
+- 遍历dom对象
 
 ![each1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/each1.png)
 
-​	注意：此方法用于遍历 jQuery 对象中的每一项，回调函数中元素为 DOM 对象，想要使用 jQuery 方法需要转换。
 
-**语法2**
+
+
+
+`$.each(obj,callback)`
+
+- 遍历数据对象(key,val)
 
 ![each2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/each2.png)
 
-​	注意：此方法用于遍历 jQuery 对象中的每一项，回调函数中元素为 DOM 对象，想要使用 jQuery 方法需要转换。
+
+
+
 
 **演示代码**
 
@@ -750,18 +760,40 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-### 1.3.2. 案例：购物车案例模块-计算总计和总额
+### 案例：购物车案例模块-计算总计和总额
 
 > 1.把所有文本框中的值相加就是总额数量，总计同理。
 > 2.文本框里面的值不同，如果想要相加需要用 each() 遍历，声明一个变量做计数器，累加即可。
 
 ​	代码实现略。(详情参考源代码)
 
-### 1.3.3. 创建、添加、删除
+### 创建、添加、删除
 
 ​	jQuery方法操作元素的创建、添加、删除方法很多，则重点使用部分，如下：
 
 **语法总和**
+
+创建
+
+- $()
+
+内部添加 (父子)
+
+- ele.append()
+- ele.prepend()
+
+外部添加 (兄弟)
+
+- ele.before()
+- ele.after()
+
+删除
+
+- ele.remove() 删除自身
+- ele.empty()删除子节点
+- ele.html('') 删除子节点
+
+
 
 ![create](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/create.png)
 
@@ -804,7 +836,7 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-### 1.3.4 案例：购物车案例模块-删除商品模块
+### 案例：购物车案例模块-删除商品模块
 
 > 1.核心思路：把商品remove() 删除元素即可
 > 2.有三个地方需要删除： 1. 商品后面的删除按钮 2. 删除选中的商品 3. 清理购物车
@@ -814,7 +846,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 ​	代码实现略。(详情参考源代码)
 
-### 1.3.5 案例：购物车案例模块-选中商品添加背景
+### 案例：购物车案例模块-选中商品添加背景
 
 > 1.核心思路：选中的商品添加背景，不选中移除背景即可
 > 2.全选按钮点击：如果全选是选中的，则所有的商品添加背景，否则移除背景
@@ -823,15 +855,20 @@ hover([over,]out)     // 其中over和out为两个函数
 
 ​	代码实现略。(详情参考源代码)
 
-## 1.4.  jQuery 尺寸、位置操作
+## jQuery 尺寸、位置操作
 
 ​	jQuery中分别为我们提供了两套快速获取和设置元素尺寸和位置的API，方便易用，内容如下。
 
-### 1.4.1.  jQuery 尺寸操作
+### jQuery 尺寸操作
 
 ​	 jQuery 尺寸操作包括元素宽高的获取和设置，且不一样的API对应不一样的盒子模型。
 
 **语法**
+
+- width/height
+- innerWidth/innerheight 包含padding
+- outerWidth/outerHeight 包含padding border
+  - (true) 包含padding border margin
 
 ![size](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/size.png)
 
@@ -861,11 +898,29 @@ hover([over,]out)     // 其中over和out为两个函数
 
 ​	注意：有了这套 API 我们将可以快速获取和子的宽高，至于其他属性想要获取和设置，还要使用 css() 等方法配合。
 
-### 1.4.2. jQuery 位置操作
+### jQuery 位置操作
 
-​	jQuery的位置操作主要有三个： offset()、position()、scrollTop()/scrollLeft() , 具体介绍如下: 
+​	jQuery的位置操作主要有三个： **offset()、position()、scrollTop()/scrollLeft()** , 具体介绍如下: 
 
 **语法**
+
+**相对于文档**
+
+- offset().top
+- offset().left
+- offset({left:10,top:10})
+
+**相对于有定位的父级**
+
+- positon().left
+- positon(),top
+- **只能获取,不能设置**
+
+**被卷去的**
+
+- scrollTop()
+- scrollLeft()
+- 可以设置
 
 ![offset](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/offset.png)
 
@@ -931,15 +986,15 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-### 1.4.3. 案例：带有动画的返回顶部
+### 案例：带有动画的返回顶部
 
 > 1.核心原理： 使用animate动画返回顶部。
-> 2.animate动画函数里面有个scrollTop 属性，可以设置位置
+> 2.animate动画函数里面有个**scrollTop 属性**，可以设置位置
 > 3.但是是元素做动画，因此 $(“body,html”).animate({scrollTop: 0})
 
 ​	代码实现略。(详情参考源代码)
 
-### 1.4.4. 案例： 品优购电梯导航（上）
+### 案例： 品优购电梯导航（上）
 
 > 1.当我们滚动到 今日推荐 模块，就让电梯导航显示出来
 > 2.点击电梯导航页面可以滚动到相应内容区域
@@ -948,9 +1003,9 @@ hover([over,]out)     // 其中over和out为两个函数
 > 5.就可以把animate要移动的距离求出来：当前索引号内容区模块它的offset().top
 > 6.然后执行动画即可
 
-​	代码实现略。(详情参考源代码)
 
-### 1.4.5. 案例：品优购电梯导航（下）
+
+### 案例：品优购电梯导航（下）
 
 > 1.当我们点击电梯导航某个小li， 当前小li 添加current类，兄弟移除类名
 > 2.当我们页面滚动到内容区域某个模块， 左侧电梯导航，相对应的小li模块，也会添加current类， 兄弟移除current类。
@@ -960,9 +1015,663 @@ hover([over,]out)     // 其中over和out为两个函数
 > 6.就利用这个索引号找到相应的电梯导航小li添加类。
 
 
+
+
+
+
+# day03 - jQuery
+
+> 学习目标：
+>
+> 能够说出4种常见的注册事件 
+> 能够说出 on 绑定事件的优势
+> 能够说出 jQuery 事件委派的优点以及方式
+> 能够说出绑定事件与解绑事件
+> 能够说出 jQuery 对象的拷贝方法
+> 能够说出 jQuery 多库共存的2种方法
+> 能够使用 jQuery 插件
+
+## 1.1. jQuery 事件注册
+
+​	jQuery 为我们提供了方便的事件注册机制，是开发人员抑郁操作优缺点如下：
+
+- 优点: 操作简单，且不用担心事件覆盖等问题。
+- 缺点: 普通的事件注册不能做事件委托，且无法实现事件解绑，需要借助其他方法。
+
+**语法**
+
+![register](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/register.png)
+
+**演示代码**
+
+```javascript
+<body>
+    <div></div>
+    <script>
+        $(function() {
+            // 1. 单个事件注册
+            $("div").click(function() {
+                $(this).css("background", "purple");
+            });
+            $("div").mouseenter(function() {
+                $(this).css("background", "skyblue");
+            });
+        })
+    </script>
+</body>
+```
+
+## 1.2. jQuery 事件处理
+
+​	因为普通注册事件方法的不足，jQuery又开发了多个处理方法，重点讲解如下：
+
+- on(): 用于事件绑定，目前最好用的事件绑定方法
+- off(): 事件解绑
+- trigger() / triggerHandler(): 事件触发
+
+### 1.2.1 事件处理 on() 绑定事件
+
+​	因为普通注册事件方法的不足，jQuery又创建了多个新的事件绑定方法bind() / live() / delegate() / on()等，其中最好用的是: on()
+
+**语法**
+
+![on1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on1.png)
+
+![on2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on2.png)
+
+![on3](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on3.png)
+
+**演示代码**
+
+```javascript
+<body>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <ol></ol>
+
+    <script>
+        $(function() {
+            // (1) on可以绑定1个或者多个事件处理程序
+            // $("div").on({
+            //     mouseenter: function() {
+            //         $(this).css("background", "skyblue");
+            //     },
+            //     click: function() {
+            //         $(this).css("background", "purple");
+            //     }
+            // });
+            $("div").on("mouseenter mouseleave", function() {
+                $(this).toggleClass("current");
+            });
+  
+            // (2) on可以实现事件委托（委派）
+            // click 是绑定在ul 身上的，但是 触发的对象是 ul 里面的小li
+            // $("ul li").click();
+            $("ul").on("click", "li", function() {
+                alert(11);
+            });
+
+            // (3) on可以给未来动态创建的元素绑定事件
+            $("ol").on("click", "li", function() {
+                alert(11);
+            })
+            var li = $("<li>我是后来创建的</li>");
+            $("ol").append(li);
+        })
+    </script>
+</body>
+
+```
+
+### 1.2.2. 案例：发布微博案例
+
+> 1.点击发布按钮， 动态创建一个小li，放入文本框的内容和删除按钮， 并且添加到ul 中。
+> 2.点击的删除按钮，可以删除当前的微博留言。
+
 ​	代码实现略。(详情参考源代码)
 
-## 1.5. 今日总结
+### 1.2.3. 事件处理 off() 解绑事件
 
-![总结](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/总结.png)
+​	当某个事件上面的逻辑，在特定需求下不需要的时候，可以把该事件上的逻辑移除，这个过程我们称为事件解绑。jQuery 为我们提供 了多种事件解绑方法：die() / undelegate() / off() 等，甚至还有只触发一次的事件绑定方法 one()，在这里我们重点讲解一下 off() ;
+
+**语法**
+
+![off](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/off.png)
+
+
+
+**演示代码**
+
+```javascript
+<body>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <p>我是一个P标签</p>
+	<script>
+        $(function() {
+  			// 事件绑定
+            $("div").on({
+                click: function() {
+                    console.log("我点击了");
+                },
+                mouseover: function() {
+                    console.log('我鼠标经过了');
+                }
+            });
+            $("ul").on("click", "li", function() {
+                alert(11);
+            });
+  
+            // 1. 事件解绑 off 
+            // $("div").off();  // 这个是解除了div身上的所有事件
+            $("div").off("click"); // 这个是解除了div身上的点击事件
+            $("ul").off("click", "li");
+  
+            // 2. one() 但是它只能触发事件一次
+            $("p").one("click", function() {
+                alert(11);
+            })
+        })
+    </script>
+</body>
+```
+
+### 1.2.4. 事件处理 trigger() 自动触发事件
+
+​	有些时候，在某些特定的条件下，我们希望某些事件能够自动触发, 比如轮播图自动播放功能跟点击右侧按钮一致。可以利用定时器自动触发右侧按钮点击事件，不必鼠标点击触发。由此 jQuery 为我们提供了两个自动触发事件 trigger() 和 triggerHandler() ; 
+
+**语法**
+
+![t1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/t1.png)
+
+![t2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/t2.png)
+
+**演示代码**
+
+```javascript
+<body>
+    <div></div>
+    <input type="text">
+      
+    <script>
+    $(function() {
+      // 绑定事件
+      $("div").on("click", function() {
+        alert(11);
+      });
+
+      // 自动触发事件
+      // 1. 元素.事件()
+      // $("div").click();会触发元素的默认行为
+      
+      // 2. 元素.trigger("事件")
+      // $("div").trigger("click");会触发元素的默认行为
+      $("input").trigger("focus");
+      
+      // 3. 元素.triggerHandler("事件") 就是不会触发元素的默认行为
+      $("input").on("focus", function() {
+        $(this).val("你好吗");
+      });
+      // 一个会获取焦点，一个不会
+      $("div").triggerHandler("click");
+      // $("input").triggerHandler("focus");
+    });
+    </script>
+</body>
+```
+
+## 1.3. jQuery 事件对象
+
+​	jQuery 对DOM中的事件对象 event 进行了封装，兼容性更好，获取更方便，使用变化不大。事件被触发，就会有事件对象的产生。
+
+**语法**
+
+![event](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/event.png)
+
+**演示代码**
+
+```javascript
+<body>
+    <div></div>
+
+	<script>
+        $(function() {
+            $(document).on("click", function() {
+                console.log("点击了document");
+            })
+            $("div").on("click", function(event) {
+                // console.log(event);
+                console.log("点击了div");
+                event.stopPropagation();
+            })
+        })
+    </script>
+</body>
+```
+
+注意：jQuery中的 event 对象使用，可以借鉴 API 和 DOM 中的 event 。
+
+## 1.4.  jQuery 拷贝对象
+
+​	jQuery中分别为我们提供了两套快速获取和设置元素尺寸和位置的API，方便易用，内容如下。
+
+**语法**
+
+![extend](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/extend.png)
+
+**演示代码**
+
+```javascript
+ <script>
+        $(function() {
+   			// 1.合并数据
+            var targetObj = {};
+            var obj = {
+                id: 1,
+                name: "andy"
+            };
+            // $.extend(target, obj);
+            $.extend(targetObj, obj);
+            console.log(targetObj);
+   
+   			// 2. 会覆盖 targetObj 里面原来的数据
+            var targetObj = {
+                id: 0
+            };
+            var obj = {
+                id: 1,
+                name: "andy"
+            };
+            // $.extend(target, obj);
+            $.extend(targetObj, obj);
+            console.log(targetObj); 
+        })
+    </script>
+```
+
+## 1.5.  jQuery 多库共存
+
+​	实际开发中，很多项目连续开发十多年，jQuery版本不断更新，最初的 jQuery 版本无法满足需求，这时就需要保证在旧有版本正常运行的情况下，新的功能使用新的jQuery版本实现，这种情况被称为，jQuery 多库共存。
+
+**语法**
+
+![noconfig](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/noconfig.png)
+
+**演示代码**
+
+```javascript
+<script>
+	$(function() {
+  		// 让jquery 释放对$ 控制权 让用自己决定
+  		var suibian = jQuery.noConflict();
+  		console.log(suibian("span"));
+	})
+</script>
+```
+
+## 1.6.  jQuery 插件
+
+​	jQuery 功能比较有限，想要更复杂的特效效果，可以借助于 jQuery 插件完成。 这些插件也是依赖于jQuery来完成的，所以必须要先引入
+
+jQuery文件，因此也称为 jQuery 插件。
+
+​	jQuery 插件常用的网站：
+
+1. jQuery 插件库  http://www.jq22.com/     
+
+2. jQuery 之家   http://www.htmleaf.com/ 
+
+   jQuery 插件使用步骤：
+
+3. 引入相关文件。（jQuery 文件 和 插件文件）    
+
+4. 复制相关html、css、js (调用插件)。
+
+### 1.4.1.  瀑布流插件（重点讲解）
+
+​	我们学习的第一个插件是jQuery之家的开源插件，瀑布流。我们将重点详细讲解，从找到插件所在网页，然后点击下载代码，到插件的使用等，后面的插件使用可参考瀑布流插件的使用。
+
+**下载位置**
+
+![water](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/water.png)
+
+![](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/download.png)
+
+**代码演示**
+
+​	插件的使用三点：   1. 引入css.           2.引入JS            3.引入html。 （有的简单插件只需引入html和js，甚至有的只需引入js）
+
+- 1.引入css.
+
+```javascript
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+  
+<!-- 下面的样式代码为页面布局，可以引入，也可以自己写，自己设计页面样式，一般为直接引入，方便 -->
+<style type="text/css">
+  #gallery-wrapper {
+    position: relative;
+    max-width: 75%;
+    width: 75%;
+    margin: 50px auto;
+  }
+
+  img.thumb {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .white-panel {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+
+  .white-panel h1 {
+    font-size: 1em;
+  }
+
+  .white-panel h1 a {
+    color: #A92733;
+  }
+
+  .white-panel:hover {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    margin-top: -5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+```
+
+- 2.引入js.
+
+```javascript
+<!-- 前两个必须引入 -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/pinterest_grid.js"></script>
+<!-- 下面的为启动瀑布流代码，参数可调节属性，具体功能可参考readme.html -->
+<script type="text/javascript">
+	$(function() {
+      $("#gallery-wrapper").pinterest_grid({
+          no_columns: 5,
+          padding_x: 15,
+          padding_y: 10,
+          margin_bottom: 50,
+          single_column_breakpoint: 700
+      });
+	});
+</script>
+```
+
+- 3.引入html.
+
+```javascript
+	<!-- html结构一般为事先写好，很难修改结构，但可以修改内容及图片的多少（article标签） -->
+	<section id="gallery-wrapper">
+        <article class="white-panel">
+            <img src="images/P_000.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_005.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_006.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_007.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+    </section>
+```
+
+总结：jQuery插件就是引入别人写好的：html 、css、js  （有时也可以只引入一部分，读懂后也可以修改部分内容）
+
+### 1.4.2. 图片懒加载插件
+
+​	图片的懒加载就是：当页面滑动到有图片的位置，图片才进行加载，用以提升页面打开的速度及用户体验。（下载略）
+
+**代码演示**
+
+​	懒加载只需引入html 和 js操作 即可，此插件不涉及css。
+
+- 1.引入js
+
+```javascript
+<script src="js/EasyLazyload.min.js"></script>
+<script>
+   	lazyLoadInit({
+   		showTime: 1100,
+   		onLoadBackEnd: function(i, e) {
+     		console.log("onLoadBackEnd:" + i);
+   		},
+   		onLoadBackStart: function(i, e) {
+     		console.log("onLoadBackStart:" + i);
+   		}
+ 	});
+</script>
+```
+
+- 2.引入html
+
+```javascript
+ <img data-lazy-src="upload/floor-1-3.png" alt="">
+```
+
+### 1.4.3. 全屏滚动插件
+
+​	全屏滚动插件比较大，所以，一般大型插件都会有帮助文档，或者网站。全屏滚动插件介绍比较详细的网站为：
+
+http://www.dowebok.com/demo/2014/77/
+
+**代码演示**
+
+​	全屏滚动因为有多重形式，所以不一样的风格html和css也不一样，但是 js 变化不大。所以下面只演示js的引入，html和css引入根据自己实际
+
+项目需要使用哪种风格引入对应的HTML和CSS。
+
+```javascript
+<script src="js/jquery.min.js"></script>
+<script src="js/fullpage.min.js"></script>
+<script>
+  	$(function() {
+  		$('#dowebok').fullpage({
+    		sectionsColor: ['pink', '#4BBFC3', '#7BAABE', '#f90'],
+    		navigation: true
+  		});
+	});
+</script>
+```
+
+注意：实际开发，一般复制文件，然后在文件中进行修改和添加功能。
+
+### 1.4.4. bootstrap组件
+
+​	Bootstrap是 Twitter 公司设计的基于HTML、CSS、JavaScript开发的简洁、直观、强悍的前端开发框架，他依靠jQuery实现，且支持响应式
+
+布局，使得 Web 开发更加方便快捷。
+
+​	**凡是在软件开发中用到了软件的复用，被复用的部分都可以称为组件，凡是在应用程序中已经预留接口的组件就是插件**。Bootstrap组件使
+
+用非常方便:  1.引入bootstrap相关css和js        2.去官网复制html
+
+**代码演示**
+
+1. 引入bootstrap相关css和js
+
+```javascript
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+```
+
+2. 去官网复制html的功能模块
+
+```javascript
+    <div class="container">
+        <!-- Single button -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      		Action <span class="caret"></span>
+    		</button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+     	</div>
+	</div>
+```
+
+### 1.4.5. bootstrap插件（JS）
+
+​	bootstrap中的js插件其实也是组件的一部分，只不过是需要js调用功能的组件，所以一般bootstrap的js插件一般会伴随着js代码（有的也可以
+
+省略js，用属性实现）。
+
+​	步骤： 1.引入bootstrap相关css和js        2.去官网复制html        3.复制js代码，启动js插件。
+
+**代码演示**
+
+1. 引入bootstrap相关css和js
+
+```javascript
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+```
+
+2. 去官网复制html的功能模块
+
+```javascript
+<!-- 模态框 -->
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            里面就是模态框
+        </div>
+    </div>
+</div>
+```
+
+3. 复制js代码，启动js插件。
+
+```javascript
+<script>
+	// 当我们点击了自己定义的按钮，就弹出模态框
+	$(".myBtn").on("click", function() {
+		// alert(11);
+		$('#btn').modal()
+	})
+</script>
+
+```
+
+### 1.4.6. bootstrap案例-阿里百秀
+
+> 1.通过调用组件实现导航栏
+> 2.通过调用插件实现登录
+> 3.通过调用插件标签页实现 tab 栏
+
+​	代码实现略。(详情参考源代码)
+
+## 1.7. 综合案例: toDoList案例分析（代码略）
+
+### 1.7.1 案例：案例介绍
+
+```javascript
+// 1. 文本框里面输入内容，按下回车，就可以生成待办事项。
+// 2. 点击待办事项复选框，就可以把当前数据添加到已完成事项里面。
+// 3. 点击已完成事项复选框，就可以把当前数据添加到待办事项里面。
+// 4. 但是本页面内容刷新页面不会丢失。
+```
+
+### 1.7.2 案例：toDoList 分析
+
+```javascript
+// 1. 刷新页面不会丢失数据，因此需要用到本地存储 localStorage
+// 2. 核心思路： 不管按下回车，还是点击复选框，都是把本地存储的数据加载到页面中，这样保证刷新关闭页面不会丢失数据
+// 3. 存储的数据格式：var todolist =  [{ title : ‘xxx’, done: false}]
+// 4. 注意点1： 本地存储 localStorage 里面只能存储字符串格式 ，因此需要把对象转换为字符串 JSON.stringify(data)。
+// 5. 注意点2： 获取本地存储数据，需要把里面的字符串转换为对象格式JSON.parse() 我们才能使用里面的数据。
+```
+
+### 1.7.3 案例：toDoList 按下回车把新数据添加到本地存储里面 
+
+```javascript
+// 1.切记： 页面中的数据，都要从本地存储里面获取，这样刷新页面不会丢失数据，所以先要把数据保存到本地存储里面。
+// 2.利用事件对象.keyCode判断用户按下回车键（13）。
+// 3.声明一个数组，保存数据。
+// 4.先要读取本地存储原来的数据（声明函数 getData()），放到这个数组里面。
+// 5.之后把最新从表单获取过来的数据，追加到数组里面。
+// 6.最后把数组存储给本地存储 (声明函数 savaDate())
+```
+
+### 1.7.4 案例：toDoList 本地存储数据渲染加载到页面
+
+```javascript
+// 1.因为后面也会经常渲染加载操作，所以声明一个函数 load，方便后面调用
+// 2.先要读取本地存储数据。（数据不要忘记转换为对象格式）
+// 3.之后遍历这个数据（$.each()），有几条数据，就生成几个小li 添加到 ol 里面。
+// 4.每次渲染之前，先把原先里面 ol 的内容清空，然后渲染加载最新的数据。
+```
+
+### 1.7.5 案例：toDoList 删除操作
+
+```javascript
+// 1.点击里面的a链接，不是删除的li，而是删除本地存储对应的数据。
+// 2.核心原理：先获取本地存储数据，删除对应的数据，保存给本地存储，重新渲染列表li
+// 3.我们可以给链接自定义属性记录当前的索引号
+// 4.根据这个索引号删除相关的数据----数组的splice(i, 1)方法
+// 5.存储修改后的数据，然后存储给本地存储
+// 6.重新渲染加载数据列表
+// 7.因为a是动态创建的，我们使用on方法绑定事件
+```
+
+### 1.7.6 案例：toDoList  正在进行和已完成选项操作
+
+```javascript
+// 1.当我们点击了小的复选框，修改本地存储数据，再重新渲染数据列表。
+// 2.点击之后，获取本地存储数据。
+// 3.修改对应数据属性 done 为当前复选框的checked状态。
+// 4.之后保存数据到本地存储
+// 5.重新渲染加载数据列表
+// 6.load 加载函数里面，新增一个条件,如果当前数据的done为true 就是已经完成的，就把列表渲染加载到 ul 里面
+// 7.如果当前数据的done 为false， 则是待办事项，就把列表渲染加载到 ol 里面
+```
+
+### 1.7.7 案例：toDoList 统计正在进行个数和已经完成个数
+
+```javascript
+// 1.在我们load 函数里面操作
+// 2.声明2个变量 ：todoCount 待办个数  doneCount 已完成个数   
+// 3.当进行遍历本地存储数据的时候， 如果 数据done为 false， 则 todoCount++, 否则 doneCount++
+// 4.最后修改相应的元素 text() 
+```
+
+
 
