@@ -1014,24 +1014,16 @@ hover([over,]out)     // 其中over和out为两个函数
 > 5.判断的条件：  被卷去的头部 大于等于 内容区域里面每个模块的offset().top
 > 6.就利用这个索引号找到相应的电梯导航小li添加类。
 
-# day03 - jQuery
+# 
 
-> 学习目标：
->
-> 能够说出4种常见的注册事件 
-> 能够说出 on 绑定事件的优势
-> 能够说出 jQuery 事件委派的优点以及方式
-> 能够说出绑定事件与解绑事件
-> 能够说出 jQuery 对象的拷贝方法
-> 能够说出 jQuery 多库共存的2种方法
-> 能够使用 jQuery 插件
 
-## 1.1. jQuery 事件注册
+
+##  jQuery 事件注册
 
 ​	jQuery 为我们提供了方便的事件注册机制，是开发人员抑郁操作优缺点如下：
 
 - 优点: 操作简单，且不用担心事件覆盖等问题。
-- 缺点: 普通的事件注册不能做事件委托，且无法实现事件解绑，需要借助其他方法。
+- 缺点: **普通的事件注册不能做事件委托，且无法实现事件解绑，**需要借助其他方法。
 
 **语法**
 
@@ -1056,15 +1048,15 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-## 1.2. jQuery 事件处理
+## jQuery 事件处理
 
 ​	因为普通注册事件方法的不足，jQuery又开发了多个处理方法，重点讲解如下：
 
-- on(): 用于事件绑定，目前最好用的事件绑定方法
-- off(): 事件解绑
+- **on(): 用于事件绑定，目前最好用的事件绑定方法**
+- **off(): 事件解绑**
 - trigger() / triggerHandler(): 事件触发
 
-### 1.2.1 事件处理 on() 绑定事件
+### 事件处理 on() 绑定事件
 
 ​	因为普通注册事件方法的不足，jQuery又创建了多个新的事件绑定方法bind() / live() / delegate() / on()等，其中最好用的是: on()
 
@@ -1075,6 +1067,12 @@ hover([over,]out)     // 其中over和out为两个函数
 ![on2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on2.png)
 
 ![on3](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on3.png)
+
+-  on可以绑定1个或者多个事件处理程序
+- on可以实现事件委托（委派）
+-  on可以给未来动态创建的元素绑定事件
+
+
 
 **演示代码**
 
@@ -1122,14 +1120,16 @@ hover([over,]out)     // 其中over和out为两个函数
 
 ```
 
-### 1.2.2. 案例：发布微博案例
+### 案例：发布微博案例
 
 > 1.点击发布按钮， 动态创建一个小li，放入文本框的内容和删除按钮， 并且添加到ul 中。
 > 2.点击的删除按钮，可以删除当前的微博留言。
 
 ​	代码实现略。(详情参考源代码)
 
-### 1.2.3. 事件处理 off() 解绑事件
+
+
+### 事件处理 off() 解绑事件
 
 ​	当某个事件上面的逻辑，在特定需求下不需要的时候，可以把该事件上的逻辑移除，这个过程我们称为事件解绑。jQuery 为我们提供 了多种事件解绑方法：die() / undelegate() / off() 等，甚至还有只触发一次的事件绑定方法 one()，在这里我们重点讲解一下 off() ;
 
@@ -1138,6 +1138,8 @@ hover([over,]out)     // 其中over和out为两个函数
 ![off](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/off.png)
 
 
+
+- .one只触发一次
 
 **演示代码**
 
@@ -1179,11 +1181,17 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-### 1.2.4. 事件处理 trigger() 自动触发事件
 
-​	有些时候，在某些特定的条件下，我们希望某些事件能够自动触发, 比如轮播图自动播放功能跟点击右侧按钮一致。可以利用定时器自动触发右侧按钮点击事件，不必鼠标点击触发。由此 jQuery 为我们提供了两个自动触发事件 trigger() 和 triggerHandler() ; 
+
+### 事件处理 trigger() 自动触发事件
+
+​	有些时候，在某些特定的条件下，我们希望某些事件能够自动触发, 比如轮播图自动播放功能跟点击右侧按钮一致。可以利用定时器自动触发右侧按钮点击事件，不必鼠标点击触发。由此 jQuery 为我们提供了两个自动触发事件 `trigger()` 和 `triggerHandler()` ; 
 
 **语法**
+
+- $("div").click();会触发元素的默认行为
+-  $("div").trigger("click");会触发元素的默认行为
+- $("div").triggerHandler("事件") 不会触发元素的默认行为
 
 ![t1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/t1.png)
 
@@ -1223,13 +1231,15 @@ hover([over,]out)     // 其中over和out为两个函数
 </body>
 ```
 
-## 1.3. jQuery 事件对象
+##  jQuery 事件对象
 
 ​	jQuery 对DOM中的事件对象 event 进行了封装，兼容性更好，获取更方便，使用变化不大。事件被触发，就会有事件对象的产生。
 
 **语法**
 
 ![event](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/event.png)
+
+- event.stopPropagation();//阻止向上冒泡
 
 **演示代码**
 
@@ -1254,7 +1264,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 注意：jQuery中的 event 对象使用，可以借鉴 API 和 DOM 中的 event 。
 
-## 1.4.  jQuery 拷贝对象
+## jQuery 拷贝对象
 
 ​	jQuery中分别为我们提供了两套快速获取和设置元素尺寸和位置的API，方便易用，内容如下。
 
@@ -1262,9 +1272,13 @@ hover([over,]out)     // 其中over和out为两个函数
 
 ![extend](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/extend.png)
 
+- **浅拷贝**把原来对象里面的**复杂数据类型地址**拷贝给目标对象
+  - 修改目标对象的值,会影响原来对象
+- **深拷贝**把里面的**数据完全复制一份**给目标对象(会覆盖) 如果里面有不冲突的属性,会合并到一起 
+
 **演示代码**
 
-```javascript
+```html
  <script>
         $(function() {
    			// 1.合并数据
@@ -1292,13 +1306,17 @@ hover([over,]out)     // 其中over和out为两个函数
     </script>
 ```
 
-## 1.5.  jQuery 多库共存
+## jQuery 多库共存
 
 ​	实际开发中，很多项目连续开发十多年，jQuery版本不断更新，最初的 jQuery 版本无法满足需求，这时就需要保证在旧有版本正常运行的情况下，新的功能使用新的jQuery版本实现，这种情况被称为，jQuery 多库共存。
 
 **语法**
 
 ![noconfig](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/noconfig.png)
+
+```js
+let x=jQuery.noConflict();
+```
 
 **演示代码**
 
@@ -1312,7 +1330,7 @@ hover([over,]out)     // 其中over和out为两个函数
 </script>
 ```
 
-## 1.6.  jQuery 插件
+## jQuery 插件
 
 ​	jQuery 功能比较有限，想要更复杂的特效效果，可以借助于 jQuery 插件完成。 这些插件也是依赖于jQuery来完成的，所以必须要先引入
 
@@ -1330,7 +1348,7 @@ jQuery文件，因此也称为 jQuery 插件。
 
 4. 复制相关html、css、js (调用插件)。
 
-### 1.4.1.  瀑布流插件（重点讲解）
+### 瀑布流插件（重点讲解）
 
 ​	我们学习的第一个插件是jQuery之家的开源插件，瀑布流。我们将重点详细讲解，从找到插件所在网页，然后点击下载代码，到插件的使用等，后面的插件使用可参考瀑布流插件的使用。
 

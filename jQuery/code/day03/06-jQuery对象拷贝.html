@@ -37,7 +37,8 @@
                 id: 1,
                 name: "andy",
                 msg: {
-                    age: 18
+                    age: 18,
+                    sex:'女'
                 }
             };
             // // $.extend(target, obj);
@@ -47,7 +48,7 @@
             // targetObj.msg.age = 20;
             // console.log(targetObj);
             // console.log(obj);
-            // 2. 深拷贝把里面的数据完全复制一份给目标对象 如果里面有不冲突的属性,会合并到一起 
+            // 2. 深拷贝把里面的数据完全复制一份给目标对象(会覆盖) 如果里面有不冲突的属性,会合并到一起 
             $.extend(true, targetObj, obj);
             // console.log(targetObj); // 会覆盖targetObj 里面原来的数据
             targetObj.msg.age = 20;

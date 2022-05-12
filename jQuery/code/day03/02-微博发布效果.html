@@ -64,9 +64,9 @@
             //     alert(11);
             // })
             // on可以给动态创建的元素绑定事件
-            $("ul").on("click", "a", function() {
-                $(this).parent().slideUp(function() {
-                    $(this).remove();
+            $("ul").on("click", "a", function() {  
+                $(this).parent().slideUp(function(){ //回调
+                $(this).remove();//this为$(this).parent()
                 });
             })
 
