@@ -22,32 +22,23 @@
         var o = {};
         // 封装函数 
         function deepCopy(newobj, oldobj) {
-            for (var k in oldobj) {
-                // 判断我们的属性值属于那种数据类型
-                // 1. 获取属性值  oldobj[k]
-                var item = oldobj[k];
-                // 2. 判断这个值是否是数组
-                if (item instanceof Array) {
-                    newobj[k] = [];
-                    deepCopy(newobj[k], item)
-                } else if (item instanceof Object) {
-                    // 3. 判断这个值是否是对象
-                    newobj[k] = {};
-                    deepCopy(newobj[k], item)
-                } else {
-                    // 4. 属于简单数据类型
-                    newobj[k] = item;
+            for(let k in oldobj){
+                let item=oldobj[k];
+                    console.log(newobj);
+                if(item instanceof Array){
+                    // console.log(item);
+                    newobj[k]=[];
+                    deepCopy(newobj[k],item)
+                }else if(item instanceof Object){
+                    newobj[k]={};
+                    deepCopy(newobj[k],item)
+                }else{
+                    newobj[k]=item;
                 }
-
             }
         }
         deepCopy(o, obj);
-        console.log(o);
-
-        var arr = [];
-        console.log(arr instanceof Object);
-        o.msg.age = 20;
-        console.log(obj);
+        console.log(o)
     </script>
 </body>
 

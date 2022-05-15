@@ -40,6 +40,7 @@
                 if (item.id == id) {
                     // console.log(item);
                     o = item;
+                    return item;
                     // 2. 我们想要得里层的数据 11 12 可以利用递归函数
                     // 里面应该有goods这个数组并且数组的长度不为 0 
                 } else if (item.goods && item.goods.length > 0) {
