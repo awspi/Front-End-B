@@ -11,7 +11,6 @@
 <body>
     <script>
         // 思考题 1：
-
         var name = "The Window";
         var object = {
             name: "My Object",
@@ -21,28 +20,26 @@
                 };
             }
         };
-
-        console.log(object.getNameFunc()())
+        console.log(object.getNameFunc()())//相当于立即执行函数,this是window
         var f = object.getNameFunc();
         // 类似于
-        var f = function() {
-            return this.name;
-        }
-        f();
+        // var f = function() {
+        //     return this.name;
+        // }
+        // f();
 
         // 思考题 2：
-
-        // var name = "The Window";　　
-        // var object = {　　　　
-        //     name: "My Object",
-        //     getNameFunc: function() {
-        //         var that = this;
-        //         return function() {
-        //             return that.name;
-        //         };
-        //     }
-        // };
-        // console.log(object.getNameFunc()())
+        var name = "The Window";
+        var object = {
+            name: "My Object",
+            getNameFunc: function() {
+                var that = this;//object
+                return function() {
+                    return that.name;
+                };
+            }
+        };
+        console.log(object.getNameFunc()())
     </script>
 </body>
 

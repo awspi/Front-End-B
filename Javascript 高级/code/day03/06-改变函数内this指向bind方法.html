@@ -46,8 +46,8 @@
             btns[i].onclick = function() {
                 this.disabled = true;
                 setTimeout(function() {
-                    this.disabled = false;
-                }.bind(this), 2000);
+                    this.disabled = false;//定时器this指向window
+                }.bind(this), 2000);//bind修改this指向btn[i]
             }
         }
     </script>

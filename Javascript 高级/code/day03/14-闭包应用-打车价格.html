@@ -21,7 +21,7 @@
             var total = 0; // 总价  局部变量
             return {
                 // 正常的总价
-                price: function(n) {
+                price: function(n) {//匿名函数 闭包
                     if (n <= 3) {
                         total = start;
                     } else {
@@ -30,7 +30,7 @@
                     return total;
                 },
                 // 拥堵之后的费用
-                yd: function(flag) {
+                yd: function(flag) {//匿名函数 闭包
                     return flag ? total + 10 : total;
                 }
             }
