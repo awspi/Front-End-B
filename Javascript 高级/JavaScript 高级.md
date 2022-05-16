@@ -1481,7 +1481,7 @@ jQuery 手册：正则表达式部分
 
 [正则测试工具]( <http://tool.oschina.net/regex)
 
-### 3.2边界符
+### 边界符
 
 正则表达式中的边界符（位置符）用来提示字符所处的位置，主要有两个字符
 
@@ -1493,31 +1493,38 @@ jQuery 手册：正则表达式部分
 如果 ^和 $ 在一起，表示必须是精确匹配。
 
 ```js
-var rg = /abc/; // 正则表达式里面不需要加引号 不管是数字型还是字符串型
-// /abc/ 只要包含有abc这个字符串返回的都是true
-console.log(rg.test('abc'));
-console.log(rg.test('abcd'));
-console.log(rg.test('aabcd'));
-console.log('---------------------------');
-var reg = /^abc/;
-console.log(reg.test('abc')); // true
-console.log(reg.test('abcd')); // true
-console.log(reg.test('aabcd')); // false
-console.log('---------------------------');
-var reg1 = /^abc$/; // 精确匹配 要求必须是 abc字符串才符合规范
-console.log(reg1.test('abc')); // true
-console.log(reg1.test('abcd')); // false
-console.log(reg1.test('aabcd')); // false
-console.log(reg1.test('abcabc')); // false
+  // 边界符 ^ $ 
+        var rg = /abc/; // 正则表达式里面不需要加引号 不管是数字型还是字符串型
+        // /abc/ 只要包含有abc这个字符串返回的都是true
+        console.log(rg.test('abc'));
+        console.log(rg.test('abcd'));
+        console.log(rg.test('aabcd'));
+        console.log('---------------------------');
+        var reg = /^abc/;
+        console.log(reg.test('abc')); // true
+        console.log(reg.test('abcd')); // true
+        console.log(reg.test('aabcd')); // false
+        console.log('---------------------------');
+        var reg1 = /abc$/; 
+        console.log(reg1.test('abc')); // true
+        console.log(reg1.test('aaabc')); // true
+        console.log(reg1.test('aabc')); // true
+        console.log(reg1.test('abcab')); // false
+        console.log('---------------------------');
+        var reg1 = /^abc$/; // 精确匹配 要求必须是 abc字符串才符合规范
+        console.log(reg1.test('abc')); // true
+        console.log(reg1.test('abcd')); // false
+        console.log(reg1.test('aabcd')); // false
+        console.log(reg1.test('abcabc')); // false
 ```
 
-### 3.3字符类
+### 字符类
 
 字符类表示有一系列字符可供选择，只要匹配其中一个就可以了。所有可供选择的字符都放在方括号内。
 
-#### 3.3.1 [] 方括号
+####  [] 方括号
 
-表示有一系列字符可供选择，只要匹配其中一个就可以了
+**表示有一系列字符可供选择，只要匹配其中一个就可以了**
 
 ```js
 var rg = /[abc]/; // 只要包含有a 或者 包含有b 或者包含有c 都返回为true
@@ -1548,9 +1555,9 @@ console.log(reg2.test(8));//false
 console.log(reg2.test('!'));//true
 ```
 
-#### 3.3.2量词符
+#### 量词符
 
-量词符用来设定某个模式出现的次数。
+**量词符用来设定某个模式出现的次数。**
 
 | 量词  | 说明            |
 | ----- | --------------- |
@@ -1560,6 +1567,47 @@ console.log(reg2.test('!'));//true
 | {n}   | 重复n次         |
 | {n,}  | 重复n次或更多次 |
 | {n,m} | 重复n到m次      |
+
+```js
+  var reg=/^a*$/;//重复0次或更多次
+    console.log(reg.test(''));//true
+    console.log(reg.test('aaa'));//true
+    console.log('------------------');  
+
+    var reg=/^a+$/;//重复1次或更多次
+    console.log(reg.test(''));//false
+    console.log(reg.test('aaa'));//true
+    console.log('------------------');  
+
+    var reg=/^a?$/;//重复0次或1次
+    console.log(reg.test(''));//true
+    console.log(reg.test('a'));//true
+    console.log(reg.test('aaa'));//false
+    console.log('------------------');  
+
+    var reg=/^a{3}$/;//{}重复指定次
+    console.log(reg.test(''));//false
+    console.log(reg.test('a'));//false
+    console.log(reg.test('aaa'));//true
+    console.log('------------------');  
+
+    var reg=/^a{3,}$/;//{n.}重复n以上次
+    console.log(reg.test(''));//false
+    console.log(reg.test('a'));//false
+    console.log(reg.test('aaa'));//true
+    console.log(reg.test('aaaa'));//true
+    console.log('------------------');  
+
+    var reg=/^a{3,4}$/;//{n.m}重复[3,4]以上次
+    console.log(reg.test(''));//trfalseue
+    console.log(reg.test('a'));//false
+    console.log(reg.test('aaa'));//true
+    console.log(reg.test('aaaa'));//true
+    console.log(reg.test('aaaaa'));//false
+    console.log('------------------');  
+```
+
+
 
 #### 用户名表单验证
 
@@ -1601,21 +1649,46 @@ console.log(reg2.test('!'));//true
 </script>
 ```
 
-#### 3.3.4 括号总结
+#### 括号总结
 
-1.大括号  量词符.  里面表示重复次数
+- 大括号  量词符.  里面表示重复次数
+- 中括号 字符集合。匹配方括号中的任意字符. 
+- 小括号表示优先级
 
-2.中括号 字符集合。匹配方括号中的任意字符. 
-
-3.小括号表示优先级
 
 [正则表达式在线测试](https://c.runoob.com/)
 
-### 3.4预定义类
+```js
+        // 中括号 字符集合.匹配方括号中的任意字符. 
+        var reg = /^[abc]$/;
+        // a 也可以 b 也可以 c 可以  a ||b || c
+        // 大括号  量词符. 里面表示重复次数
+        var reg = /^abc{3}$/; // 没有中括号它只是让c重复三次   abccc
+        console.log(reg.test('abc'));
+        console.log(reg.test('abcabcabc'));
+        console.log(reg.test('abccc'));
+
+        // 小括号 表示优先级
+        var reg = /^(abc){3}$/; // 它是让abcc重复三次
+        console.log(reg.test('abc'));
+        console.log(reg.test('abcabcabc'));
+        console.log(reg.test('abccc'));
+```
+
+
+
+### 预定义类
 
 预定义类指的是某些常见模式的简写方式.
 
+- `\`
+
 ![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day04（11小节）/4-笔记/images/img3.png)
+
+```js
+// 正则里面的或者 符号  |  
+ var reg = /^\d{3}-\d{8}|\d{4}-\d{7}$/;
+```
 
 **案例:验证座机号码**
 
@@ -1664,7 +1737,15 @@ var reg = /^\d{3,4}-\d{7,8}$/;
 //再次输入密码只需匹配与上次输入的密码值 是否一致
 ```
 
-### 3.5正则替换replace
+### 正则表达式参数
+
+`/表达式/[switch]`
+
+- g 全局匹配
+- i 忽略大小写
+- gi 全局匹配+忽略大小写
+
+### 正则替换replace
 
 replace() 方法可以实现替换字符串操作，用来替换的参数可以是一个字符串或是一个正则表达式。
 
