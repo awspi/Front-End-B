@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<button>test</button>
+<button>test</button>
+<script>
+  var btn = document.querySelectorAll('button');
+  btn[0].onclick = function(){
+    setTimeout(function(){
+                console.log(this);//window
+            }, 100)
+  }
+  btn[1].onclick = function(){
+    setTimeout(()=>{
+                console.log(this);//buuton
+            }, 100)
+  }
+</script>
+</body>
+</html>
