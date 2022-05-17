@@ -1070,7 +1070,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 -  on可以绑定1个或者多个事件处理程序
 - on可以实现事件委托（委派）
--  on可以给未来动态创建的元素绑定事件
+-  **on可以给未来动态创建的元素绑定事件**
 
 
 
@@ -1239,7 +1239,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 ![event](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/event.png)
 
-- event.stopPropagation();//阻止向上冒泡
+- **event.stopPropagation();//阻止向上冒泡**
 
 **演示代码**
 
