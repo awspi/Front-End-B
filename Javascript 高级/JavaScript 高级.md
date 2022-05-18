@@ -1783,6 +1783,42 @@ var newStr = str.replace(/a/gi,'哈哈')//"哈哈哈哈bc哈哈b哈哈"
 </script>
 ```
 
+### 正则与字符串操作
+
+#### exec()
+
+exec() 函数用于检索字符串中的正则表达式的匹配。
+
+如果字符串中有匹配的值，则返回该匹配值，否则返回 null。
+
+`RegExpObject.exec(string)`
+
+```js
+var str = 'hello'
+var pattern = /o/
+// 输出的结果["o", index: 4, input: "hello", groups: undefined]
+console.log(pattern.exec(str)) 
+
+```
+
+
+
+#### 分组
+
+正则表达式中 ( ) 包起来的内容表示一个分组，可以通过分组来**提取自己想要的内容**，示例代码如下：
+
+```js
+ var str = '<div>我是{{name}}</div>'
+ var pattern = /{{([a-zA-Z]+)}}/
+
+ var patternResult = pattern.exec(str)
+ console.log(patternResult)
+ // 得到 name 相关的分组信息
+ // ["{{name}}", "name", index: 7, input: "<div>我是{{name}}</div>", groups: undefined]
+```
+
+
+
 
 
 # ES6语法

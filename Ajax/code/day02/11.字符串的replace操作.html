@@ -14,7 +14,7 @@
     var pattern = /{{([a-zA-Z]+)}}/
 
     var patternResult = pattern.exec(str)
-    // console.log(patternResult)
+    // ['{{name}}', 'name', index: 7, input: '<div>我是{{name}}</div>', groups: undefined]
     str = str.replace(patternResult[0], patternResult[1])
 
     console.log(str)
