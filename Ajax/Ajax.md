@@ -126,3 +126,187 @@ http://www.liulongbin.top:3006/api/addbook   添加图书的接口（POST请求�
 - **参数格式**：接口需要传递的参数，每个参数必须包含参数名称、参数类型、是否必选、参数说明这4项内容。
 - **响应格式**：接口的返回值的详细描述，一般包含数据名称、数据类型、说明3项内容。
 - 返回示例（可选）：通过对象的形式，例举服务器返回数据的结构。
+
+# 表单
+
+表单在网页中主要负责数据采集功能。HTML中的`<form>`标签，就是用于采集用户输入的信息，并通过`<form>`标签的提交操作，把采集到的信息提交到服务器端进行处理。
+
+```html
+<form>
+    <input type="text" name="email_or_mobile" />
+    <input type="password" name="password" />
+    <input type="checkbox" name="remember_me" checked />
+    <button type="submit">提交</button>
+</form>
+
+```
+
+表单由三个基本部分组成：
+
+- 表单标签
+- 表单域
+- 表单按钮
+
+`<form>`标签用来采集数据，`<form>`标签的属性则是用来规定如何把采集到的数据发送到服务器。
+
+| **属性** | **值**                                                       | **描述**                                   |
+| -------- | ------------------------------------------------------------ | ------------------------------------------ |
+| action   | URL地址                                                      | 规定当提交表单时，向何处发送表单数据       |
+| method   | get或post                                                    | 规定以何种方式把表单数据提交到 action  URL |
+| enctype  | application/x-www-form-urlencoded  multipart/form-data  text/plain | 规定在发送表单数据之前如何对其进行编码     |
+| target   | _blank  _self  _parent  _top  *framename*                    | 规定在何处打开 action  URL                 |
+
+
+
+## `<form>`标签的属性
+
+### action
+
+**`action` 属性用来规定当提交表单时，向何处发送表单数据。**
+
+`action` 属性的值应该是后端提供的一个 URL 地址，这个 URL 地址专门负责接收表单提交过来的数据。
+
+当 `<form>` 表单在未指定 action 属性值的情况下，`action` 的默认值为当前页面的 URL 地址。
+
+- 注意：当提交表单后，页面会立即跳转到 action 属性指定的 URL 地址
+
+### target
+
+target 属性用来规定在何处打开 action URL。
+
+它的可选值有5个，默认情况下，target 的值是 _self，表示在相同的框架中打开 action URL。
+
+
+
+| **值**      | **描述**                       |
+| ----------- | ------------------------------ |
+| **_blank**  | **在新窗口中打开。**           |
+| **_self**   | **默认。在相同的框架中打开。** |
+| _parent     | 在父框架集中打开。（很少用）   |
+| _top        | 在整个窗口中打开。（很少用）   |
+| *framename* | 在指定的框架中打开。（很少用） |
+
+ 
+
+### method
+
+**method 属性用来规定以何种方式把表单数据提交到 action URL。**
+
+它的可选值有两个，分别是 get 和 post。
+
+默认情况下，method 的值为 get，表示通过URL地址的形式，把表单数据提交到 action URL。
+
+**注意：**
+
+- get 方式适合用来提交少量的、简单的数据。
+- post 方式适合用来提交大量的、复杂的、或包含文件上传的数据。
+- 在实际开发中，`<form>` 表单的 post 提交方式用的最多，很少用 get。
+  - 例如登录、注册、添加数据等表单操作，都需要使用 post 方式来提交表单。
+
+
+
+### enctype 
+
+enctype 属性用来规定在**发送表单数据之前如何对数据进行编码**。
+
+它的可选值有三个，默认情况下，enctype 的值为 application/x-www-form-urlencoded，表示在发送前编码所有的字符。
+
+
+
+| **值**                            | **描述**                                                     |
+| --------------------------------- | ------------------------------------------------------------ |
+| application/x-www-form-urlencoded | 在发送前编码所有字符（默认）                                 |
+| multipart/form-data               | 不对字符编码。  在使用包含文件上传控件的表单时，必须使用该值。 |
+| text/plain                        | 空格转换为 “+”  加号，但不对特殊字符编码。（很少用）         |
+
+**注意：**
+
+- 在涉及到**文件上传**的操作时，必须将 enctype 的值设置为 **multipart/form-data**
+- 如果表单的提交**不涉及到文件上传**操作，则直接将 enctype 的值设置为 **application/x-www-form-urlencoded** 即可！
+
+
+
+## 表单的同步提交
+
+通过点击 submit 按钮，触发表单提交的操作，从而使页面跳转到 action URL 的行为，叫做表单的同步提交。
+
+**缺点**
+
+- `<form>`表单同步提交后，整个页面会发生跳转，跳转到 action URL 所指向的地址，用户体验很差。
+- `<form>`表单同步提交后，页面之前的状态和数据会丢失。
+
+**解决方案：表单只负责采集数据，Ajax 负责将数据提交到服务器。**
+
+
+
+## 通过Ajax提交表单数据
+
+### 监听表单提交事件
+
+在 jQuery 中，可以使用如下两种方式，监听到表单的提交事件：
+
+```js
+$('#form1').submit(function(e) {
+   alert('监听到了表单的提交事件')
+})
+
+$('#form1').on('submit', function(e) {
+   alert('监听到了表单的提交事件')
+})
+
+```
+
+
+
+### 阻止表单默认提交行为
+
+当监听到表单的提交事件以后，可以调用事件对象的 **`event.preventDefault()`** 函数，来阻止表单的提交和页面的跳转，示例代码如下：
+
+```js
+$('#form1').submit(function(e) {
+   // 阻止表单的提交和页面的跳转
+   e.preventDefault()
+})
+
+$('#form1').on('submit', function(e) {
+   // 阻止表单的提交和页面的跳转
+   e.preventDefault()
+})
+
+```
+
+
+
+### 快速获取表单中的数据
+
+**serialize()函数**
+
+为了简化表单中数据的获取操作，jQuery 提供了 serialize() 函数，其语法格式如下：
+
+- **`$(selector).serialize()`**
+
+**serialize() 函数的好处：可以一次性获取到表单中的所有的数据。**
+
+注意：在使用 serialize() 函数快速获取表单数据时，**必须为每个表单元素添加** **name** **属性**！
+
+```html
+<body>
+  <form id='f1' action="/login">
+    <input type="text" name="uname">
+    <input type="password" name="password">
+    <button type="submit">submit</button>
+  </form>
+  <script>
+    $(function () {
+     $('#f1').submit(function(e){
+       e.preventDefault();
+      let data=$(this).serialize();
+      console.log(data);
+     })
+    })
+  </script>
+</body>
+```
+
+
+
