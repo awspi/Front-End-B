@@ -12,9 +12,18 @@
 <body>
   <script>
     $(function () {
+      $.ajax({
+        url: "http://www.liulongbin.top:3006/api/jsonp?name=p&age=1",
+        dataType: "jsonp",
+        //默认回调函数回调函数名称是 jQueryxxxxx
+        success: function (res){
+          console.log(res);
+        }
+      })
+      /////////////////////////////////////////////////////////
       // 发起JSONP的请求
       $.ajax({
-        url: 'http://ajax.frontend.itheima.net:3006/api/jsonp?name=zs&age=20',
+        url: 'http://www.liulongbin.top:3006/api/jsonp?name=zs&age=20',
         // 代表我们要发起JSONP的数据请求
         dataType: 'jsonp',
         jsonp: 'callback',

@@ -1,7 +1,10 @@
-ÊµÏÖ¼òµ¥µÄJSONPÊý¾ÝÇëÇó½Ó¿Ú¸üÐÂËµÃ÷£º
-Ô­½Ó¿Ú£ºhttp://ajax.frontend.itheima.net:3006/api/jsonp?callback=abc&name=ls&age=30
-ÐÂ½Ó¿Ú£ºhttp://www.liulongbin.top:3006/api/jsonp?callback=abc&name=ls&age=30
+Êµï¿½Ö¼òµ¥µï¿½JSONPï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Ú¸ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½
+Ô­ï¿½Ó¿Ú£ï¿½http://ajax.frontend.itheima.net:3006/api/jsonp?callback=abc&name=ls&age=30
+ï¿½Â½Ó¿Ú£ï¿½http://www.liulongbin.top:3006/api/jsonp?callback=abc&name=ls&age=30
 
-ÌØÊâËµÃ÷£º
-Èç¹ûºóÆÚ´ó¼ÒÔÚÊ¹ÓÃÒÔhttp://ajax.frontend.itheima.net:3006¿ªÍ·µÄ½Ó¿Ú²»ºÃÓÃµÄ»°´ó¼Ò¿ÉÒÔÊÔ×Å½«ÆäÌæ»»³Éhttp://www.liulongbin.top:3006£¬Èç¹ûÔÙÓÐÎÊÌâ¿ÉÁªÏµµ±Ç°µ¼Ê¦
+ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½http://ajax.frontend.itheima.net:3006ï¿½ï¿½Í·ï¿½Ä½Ó¿Ú²ï¿½ï¿½ï¿½ï¿½ÃµÄ»ï¿½ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å½ï¿½ï¿½ï¿½ï¿½æ»»ï¿½ï¿½http://www.liulongbin.top:3006ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½Ç°ï¿½ï¿½Ê¦
 
+
+
+    <!-- <script src="http://ajax.frontend.itheima.net:3006/api/jsonp?callback=abc&name=ls&age=30"></script> -->

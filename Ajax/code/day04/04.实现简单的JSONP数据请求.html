@@ -9,13 +9,12 @@
 
   <body>
     <script>
-      function abc(data) {
+      function success(data) {
         console.log('JSONP响应回来的数据是：')
         console.log(data)
       }
     </script>
-
-    <!-- <script src="http://ajax.frontend.itheima.net:3006/api/jsonp?callback=abc&name=ls&age=30"></script> -->
-    <script src="http://www.liulongbin.top:3006 /api/jsonp?callback=abc&name=ls&age=30"></script>
+    <!-- callback=abc -->
+    <script src="http://www.liulongbin.top:3006/api/jsonp?callback=success&name=ls&age=30"></script>
   </body>
 </html>
