@@ -1275,6 +1275,15 @@ JSONP (JSON with Padding) 是 JSON 的一种“使用模式”，可用于解决
 
 ## jQuery中的JSONP
 
+### jq实现过程
+
+jQuery 中的 JSONP，也是通过 `<script>` 标签的 src 属性实现跨域数据访问的，只不过，jQuery 采用的是动态创建和移除 `<script>` 标签的方式，来发起 JSONP 数据请求。
+
+1. 在发起 JSONP 请求的时候，动态向 `<header>` 中 append 一个 `<script>` 标签；
+2. 在 JSONP 请求成功以后，动态从 `<header>` 中移除刚才 append 进去的 `<script>` 标签；
+
+
+
 jQuery 提供的 $.ajax() 函数，除了可以发起真正的 Ajax 数据请求之外，还能够发起 JSONP 数据请求
 
 - `dataType: 'jsonp`
@@ -1312,5 +1321,189 @@ jQuery 提供的 $.ajax() 函数，除了可以发起真正的 Ajax 数据请求
        console.log(res)
     }
  })
+```
+
+
+
+# 防抖和节流
+
+**区别**
+
+- 防抖：如果事件被频繁触发，防抖能保证只有最有一次触发生效！前面 N 多次的触发都会被忽略！
+- 节流：如果事件被频繁触发，节流能够减少事件触发的频率，因此，节流是有选择性地执行一部分事件！
+
+## 防抖
+
+**防抖策略**（debounce）是当**事件被触发后，延迟 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。**
+
+![image-20220522132102764](/Users/wsp/Library/Application Support/typora-user-images/image-20220522132102764.png)
+
+- 例如用户在输入框中连续输入一串字符时，可以通过防抖策略，只在输入完后，才执行查询的请求，这样可以有效减少请求次数，节约请求资源；
+
+**实现输入框的防抖**
+
+```js
+ var timer = null                    // 1. 防抖动的 timer
+
+ function debounceSearch(keywords) { // 2. 定义防抖的函数
+    timer = setTimeout(function() {
+    // 发起 JSONP 请求
+    getSuggestList(keywords)
+    }, 500)
+ }
+
+ $('#ipt').on('keyup', function() {  // 3. 在触发 keyup 事件时，立即清空 timer
+    clearTimeout(timer)//清空timer 让请求不被发起
+    // ...省略其他代码
+    debounceSearch(keywords)
+ })
+```
+
+
+
+## 节流
+
+**节流策略**（throttle），顾名思义，可以减少一段时间内事件的触发频率。
+
+例如
+
+- 鼠标连续不断地触发某事件（如点击），只在单位时间内只触发一次；
+- 懒加载时要监听计算滚动条的位置，但不必每次滑动都触发，可以降低计算的频率，而不必去浪费 CPU 资源；
+
+**节流阀**
+
+**节流阀为空，表示可以执行下次操作；不为空，表示不能执行下次操作。**
+
+- 当前操作执行完，必须将节流阀**重置**为空，表示可以执行下次操作了。
+- 每次执行操作前，必须**先判断节流阀是否为空**。
+
+### **节流案例** **–** **鼠标跟随效果**
+
+```js
+$(function() {
+   // 获取图片元素
+   var angel = $('#angel')
+   // 监听文档的 mousemove 事件
+   $(document).on('mousemove', function(e) {      // 设置图片的位置
+      $(angel).css('left', e.pageX + 'px').css('top', e.pageY + 'px')
+   })
+})
+```
+
+**节流版:**
+
+```js
+$(function() {
+  var angel = $('#angel')
+  var timer = null // 1.预定义一个 timer 节流阀
+  $(document).on('mousemove', function(e) {
+    if (timer) { return } // 3.判断节流阀是否为空，如果不为空，则证明距离上次执行间隔不足16毫秒
+    timer = setTimeout(function() {
+      $(angel).css('left', e.pageX + 'px').css('top', e.pageY + 'px')
+      timer = null // 2.当设置了鼠标跟随效果后，清空 timer 节流阀，方便下次开启延时器
+    }, 16)
+  })
+})
+```
+
+**节流案例** **–** **鼠标跟随效果**
+
+```html
+<!-- UI 结构 -->
+<img src="./assets/angel.gif" alt="" id="angel" />
+
+/* CSS 样式 */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#angel {
+  position: absolute;
+}
+```
+
+```js
+$(function() {
+  var angel = $('#angel')
+  var timer = null // 1.预定义一个 timer 节流阀
+  $(document).on('mousemove', function(e) {
+    if (timer) { return } // 3.判断节流阀是否为空，如果不为空，则证明距离上次执行间隔不足16毫秒
+    timer = setTimeout(function() {//开启就不为null
+      $(angel).css('left', e.pageX + 'px').css('top', e.pageY + 'px')
+      timer = null // 2.当设置了鼠标跟随效果后，清空 timer 节流阀，方便下次开启延时器
+    }, 16)
+  })
+})
+
+```
+
+
+
+# 淘宝搜索案例
+
+## **输入框防抖**
+
+```js
+  $('#ipt').keyup(function(){
+    let keywords=$(this).val().trim();
+    if(keywords.length<=0) return $('#suggest-list').empty().hide();
+    clearTimeout(timer);//清空timer 让请求不被发起
+    debounceSearch(keywords);
+  })  
+//防抖
+  let timer=null;
+  function debounceSearch(keywords){
+    timer=setTimeout(function () {
+      getSuggestList(keywords);
+    },500)
+  }
+
+  function getSuggestList(keywords){
+    $.ajax({
+      url:'https://suggest.taobao.com/sug?q='+keywords,
+      dataType: 'Jsonp',
+      success: function(res){
+        renderSuggestList(res);
+      }
+    })
+  }
+  function renderSuggestList(res){
+    let key=$('#ipt').val().trim();
+    if(res.length<=0){
+      return $('#tpl-suggestList').empty().hide();
+    }
+    let htmlStr=template('tpl-suggestList',res)
+    $('#suggest-list').html(htmlStr).show();
+  }
+```
+
+## **缓存搜索的建议列表**
+
+```js
+  // 缓存对象
+  var cacheObj = {}
+////////////////////////////////////////////////////////////////////////////////////////////
+ // 渲染建议列表
+ function renderSuggestList(res) {
+    // ...省略其他代码
+   // 将搜索的结果，添加到缓存对象中
+    var k = $('#ipt').val().trim()
+    cacheObj[k] = res
+ }
+//////////////////////////////////////////////////////////////////
+ // 监听文本框的 keyup 事件
+ $('#ipt').on('keyup', function() {
+    // ...省略其他代码
+
+    // 优先从缓存中获取搜索建议
+    if (cacheObj[keywords]) {
+       return renderSuggestList(cacheObj[keywords])
+    }
+   // 获取搜索建议列表
+    debounceSearch(keywords)
+  })
+
+
 ```
 

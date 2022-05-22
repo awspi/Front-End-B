@@ -27,7 +27,7 @@
   <script>
     $(function () {
       // 1. 获取到图片
-      var angel = $('#angel')
+      // var angel = $('#angel')
       // 步骤1. 定义节流阀
       var timer = null
       // 2. 绑定 mousemove 事件
@@ -36,10 +36,10 @@
         if (timer) { return }
         // 3. 设置图片的位置
         // 步骤2：开启延时器
-        timer = setTimeout(function () {
-          $(angel).css('top', e.pageY + 'px').css('left', e.pageX + 'px')
+        timer = setTimeout(function () {//开启就不为null
+          $('#angel').css('top', e.pageY + 'px').css('left', e.pageX + 'px')
           console.log('ok')
-          timer = null
+          timer = null//释放节流阀
         }, 16)
 
       })
