@@ -412,6 +412,33 @@ element.style 行内样式操作
 
 element.className 类名样式操作
 
+#### **cssText**
+
+**element.style.cssText='css样式’**
+
+```
+<style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+</style>
+
+<div id="box" class="box" title="ahahah">
+        盒子
+</div>
+<script>
+		var box=document.getElementByClassName('box');
+		/*方法一*/
+		box.style.width='200px';
+		box.style.backgroundColor='black';
+		/*方法二*/
+		box.style.cssText='width:200px;background-color:black;';
+</script>
+
+```
+
 
 
 #### 方式1：通过操作style属性
@@ -2058,10 +2085,9 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 - **setTimeout()** 
 - **setInterval()**  
 
-> 返回值`timeoutID`是一个正整数，表示定时器的编号。这个值可以传递给[`clearTimeout()`](https://developer.mozilla.org/zh-CN/docs/Web/API/clearTimeout)来取消该定时器。
->
-> 需要注意的是`setTimeout()`和[`setInterval()`](https://developer.mozilla.org/zh-CN/docs/Web/API/setInterval)共用一个编号池，技术上，`clearTimeout()`和 [`clearInterval()`](https://developer.mozilla.org/zh-CN/docs/Web/API/clearInterval) 可以互换。但是，为了避免混淆，不要混用取消定时函数。
->
+返回值`timeoutID`是一个正整数，表示定时器的编号。这个值可以传递给[`clearTimeout()`](https://developer.mozilla.org/zh-CN/docs/Web/API/clearTimeout)来取消该定时器。
+
+需要注意的是`setTimeout()`和[`setInterval()`](https://developer.mozilla.org/zh-CN/docs/Web/API/setInterval)共用一个编号池，技术上，`clearTimeout()`和 [`clearInterval()`](https://developer.mozilla.org/zh-CN/docs/Web/API/clearInterval) 可以互换。但是，为了避免混淆，不要混用取消定时函数。
 
 #### setTimeout() 炸弹定时器
 
