@@ -4,6 +4,10 @@
 
 ## jQuery中的Ajax
 
+![jQuery中的Ajax](/Users/wsp/Documents/Front-End-b/资料/第四阶段：前后端交互阶段资料新/大事件项目课程资料/day2（3-7小节）/笔记/jQuery中的Ajax.png)
+
+
+
 浏览器中提供的 XMLHttpRequest 用法比较复杂，所以 jQuery 对 XMLHttpRequest 进行了封装，提供了一系列 Ajax 相关的函数，极大地降低了 Ajax 的使用难度。
 
 jQuery 中发起 Ajax 请求最常用的三个方法如下：
@@ -62,6 +66,10 @@ $.ajax({
 
 ```
 
+```js
+headers: { },// 请求头配置对象
+```
+
 
 
 ### 6.4 使用$.ajax()发起GET请求
@@ -96,6 +104,83 @@ $.ajax({
    }
 })
 ```
+
+##  ajaxPrefilter
+
+```js
+$.ajaxPrefilter(function(options) {
+  // 在发起真正的 Ajax 请求之前，统一拼接请求的根路径
+  options.url = 'http://ajax.frontend.itheima.net' + options.url
+  // 统一为有权限的接口，设置 headers 请求头
+  if (options.url.indexOf('/my/') !== -1) {
+    options.headers = {
+      Authorization: localStorage.getItem('token') || ''
+    }
+  }
+})
+```
+
+## complete回调实现权限控制
+
+AJAX请求结束后无论成功或者失败都会调用complete回调
+
+```
+在 complete 回调函数中，可以使用 res.responseJSON 拿到服务器响应回来的数据
+```
+
+### exp
+
+1. 在调用有权限接口的时候，指定`complete`回调函数：
+
+   ```js
+       // 不论成功还是失败，最终都会调用 complete 回调函数
+       complete: function(res) {
+         // console.log('执行了 complete 回调：')
+         // console.log(res)
+         // 在 complete 回调函数中，可以使用 res.responseJSON 拿到服务器响应回来的数据
+         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+           // 1. 强制清空 token
+           localStorage.removeItem('token')
+           // 2. 强制跳转到登录页面
+           location.href = '/login.html'
+         }
+       }
+   ```
+
+### 优化权限控制的代码
+
+1. 将权限控制的代码，从每个请求中，抽离到 `ajaxPrefilter` 中：
+
+   ```js
+   // 注意：每次调用 $.get() 或 $.post() 或 $.ajax() 的时候，
+   // 会先调用 ajaxPrefilter 这个函数
+   // 在这个函数中，可以拿到我们给Ajax提供的配置对象
+   $.ajaxPrefilter(function(options) {
+     // 在发起真正的 Ajax 请求之前，统一拼接请求的根路径
+     options.url = 'http://ajax.frontend.itheima.net' + options.url
+   
+     // 统一为有权限的接口，设置 headers 请求头
+     if (options.url.indexOf('/my/') !== -1) {
+       options.headers = {
+         Authorization: localStorage.getItem('token') || ''
+       }
+     }
+   
+     // 全局统一挂载 complete 回调函数
+     options.complete = function(res) {
+       // console.log('执行了 complete 回调：')
+       // console.log(res)
+       // 在 complete 回调函数中，可以使用 res.responseJSON 拿到服务器响应回来的数据
+       if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+         // 1. 强制清空 token
+         localStorage.removeItem('token')
+         // 2. 强制跳转到登录页面
+         location.href = '/login.html'
+       }
+     }
+   })
+   
+   ```
 
 # 接口
 

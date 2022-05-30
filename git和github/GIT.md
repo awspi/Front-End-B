@@ -525,10 +525,10 @@ git push origin --delete pay
 
 - **能够掌握 Git 分支的基本使用**
 
-  - **`git checkout -b 新分支名称`**
+  - **`git checkout -b 新分支名称`** 新建并切换到该分支
 
-  - **`git push -u origin 新分支名称`**  
+  - **`git push -u origin 新分支名称`**   将本地分支推送到远程仓库
 
-  - **`git checkout 分支名称`**
+  - **`git checkout 分支名称`** 切换分支
 
-  - **`git branch`**
+  - **`git branch`** 查看分支
