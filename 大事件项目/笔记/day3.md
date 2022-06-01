@@ -1014,7 +1014,8 @@ $('tbody').on('click', '.btn-delete', function() {
 ### 5.13 将开发完成的项目代码推送到GitHub
 
 1. 运行 `git add .` 命令
-2. 运行 `git commit -m "完成文章管理相关功能的开发"` 命令
+2. 运行 `g`
+2.  命令
 3. 运行 `git push -u origin article` 命令
 4. 运行 `git checkout master` 命令
 5. 运行 `git merge article` 命令
