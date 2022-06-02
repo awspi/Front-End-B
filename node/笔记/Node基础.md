@@ -387,3 +387,255 @@ function resolveHTML(htmlStr){
 
 
 
+##  http 模块
+
+![image-20220602182551556](/Users/wsp/Library/Application Support/typora-user-images/image-20220602182551556.png)
+
+http 模块是 Node.js 官方提供的、**用来创建 web 服务器**的模块。通过 http 模块提供的 `http.createServer()` 方法，就 能方便的把一台普通的电脑，变成一台 Web 服务器，从而对外提供 Web 资源服务。
+
+``` 
+const http = require('http')
+```
+
+在 Node.js 中，我们不需要使用 IIS、Apache 等这些第三方 web 服务器软件。因为我们可以基于 Node.js 提供的 http 模块，**通过几行简单的代码，就能轻松的手写一个服务器软件**，从而对外提供 web 服务。
+
+### 创建 基本web 服务器
+
+**创建 web 服务器的基本步骤**
+
+1. 导入 http 模块
+2. 创建 web 服务器实例
+3. 为服务器实例绑定 **request** 事件，监听客户端的请求
+4. 启动服务器
+
+```js
+// 1. 导入 http 模块
+const hlogttp = require('http')
+// 2. 创建 web 服务器实例
+const server = http.createServer()
+// 3. 为服务器实例绑定 request 事件，监听客户端的请求
+server.on('request', function (req, res) {
+  console.log('Someone visit our web server.')
+})
+// 4. 启动服务器
+server.listen(8080, function () {  //默认80 可以省略
+  console.log('server running at http://127.0.0.1:8080')
+})
+```
+
+####  req 请求对象
+
+只要服务器接收到了客户端的请求，就会调用通过 `server.on()` 为服务器绑定的 `request` 事件处理函数。 如果想在事件处理函数中，访问与客户端相关的**数据**或**属性**，可以使用如下的方式:
+
+```js
+const http = require('http')
+const server = http.createServer()
+// req 是请求对象，包含了与客户端相关的数据和属性
+server.on('request', (req, res) => {
+  // req.url 是客户端请求的 URL 地址
+  const url = req.url
+  // req.method 是客户端请求的 method 类型
+  const method = req.method
+  const str = `Your request url is ${url}, and request method is ${method}`
+  console.log(str)
+  // 调用 res.end() 方法，向客户端响应一些内容
+  res.end(str)
+})
+server.listen(80, () => {
+  console.log('server running at http://127.0.0.1')
+})
+
+```
+
+#### res响应对象
+
+在服务器的 request 事件处理函数中，如果想访问与服务器相关的**数据**或**属性**，可以使用如下的方式:
+
+```js
+const http = require('http')
+const server = http.createServer()
+
+server.on('request', (req, res) => {
+  // 定义一个字符串，包含中文的内容
+  const str = `您请求的 URL 地址是 ${req.url}，请求的 method 类型为 ${req.method}`
+  // 调用 res.setHeader() 方法，设置 Content-Type 响应头，解决中文乱码的问题
+  res.setHeader('Content-Type', 'text/html; charset=utf-8')
+  // res.end() 将内容响应给客户端
+  res.end(str)
+})
+
+server.listen(80, () => {
+  console.log('server running at http://127.0.0.1')
+})
+```
+
+
+
+#### 解决中文乱码问题
+
+**Header** `Content-Type:text/html; charset=utf-8`
+
+```js
+ // 调用 res.setHeader() 方法，设置 Content-Type 响应头，解决中文乱码的问题
+  res.setHeader('Content-Type', 'text/html; charset=utf-8')
+```
+
+### 路由
+
+**根据不同的 url 响应不同的 html 内容**
+
+1. 获取请求的 url 地址
+2. 设置默认的响应内容为 404 Not found
+3. 判断用户请求的是否为 / 或 /index.html 首页
+4. 判断用户请求的是否为 /about.html 关于页面
+5. 设置 Content-Type 响应头，防止中文乱码
+6. 使用 res.end() 把内容响应给客户端
+
+```js
+const http = require('http')
+const server = http.createServer()
+
+server.on('request', (req, res) => {
+  // 1. 获取请求的 url 地址
+  const url = req.url
+  // 2. 设置默认的响应内容为 404 Not found
+  let content = '<h1>404 Not found!</h1>'
+  // 3. 判断用户请求的是否为 / 或 /index.html 首页
+  // 4. 判断用户请求的是否为 /about.html 关于页面
+  if (url === '/' || url === '/index.html') {
+    content = '<h1>首页</h1>'
+  } else if (url === '/about.html') {
+    content = '<h1>关于页面</h1>'
+  }
+  // 5. 设置 Content-Type 响应头，防止中文乱码
+  res.setHeader('Content-Type', 'text/html; charset=utf-8')
+  // 6. 使用 res.end() 把内容响应给客户端
+  res.end(content)
+})
+
+server.listen(80, () => {
+  console.log('server running at http://127.0.0.1')
+})
+
+```
+
+
+
+### 案例:时钟web服务器案例
+
+1. 导入需要的模块
+2. 创建基本的 web 服务器
+3. 将资源的请求 url 地址映射为文件的存放路径 4 读取文件内容并响应给客户端
+4. 优化资源的请求路径
+
+```js
+const http=require('http');
+const fs=require('fs');
+const path= require('path');
+
+const server= http.createServer();
+server.on('request',(req,res)=>{
+  const url = req.url;
+  let fpath=''
+  if(req.url=='/'){
+    fpath=path.join(__dirname,'./clock/index.html')
+  }else(
+    fpath=path.join(__dirname,'./clock',url)
+  )
+  fs.readFile(fpath,'utf-8',(err,dataStr)=>{
+    if(err) return res.end('404')
+    res.end(dataStr);
+  })
+})
+server.listen(80,()=>{
+  console.log('server running at 80 port');
+})
+```
+
+
+
+## 模块化
+
+编程领域中的模块化，就是**遵守固定的规则**，把一个大文件拆成独立并互相依赖的多个小模块。
+
+把代码进行模块化拆分的好处: 
+
+1. 提高了代码的复用性
+2. 提高了代码的可维护性
+3. 可以实现按需加载
+
+### **模块化规范**
+
+Node.js 遵循了 CommonJS 模块化规范，CommonJS 规定了模块的特性和各模块之间如何相互依赖。
+
+CommonJS 规定:
+
+- 每个模块内部，**module 变量**代表当前模块。
+- module 变量是一个对象，它的 exports 属性(**即 module.exports)是对外的接口。**
+- 加载某个模块，其实是加载该模块的 **module.exports** 属性。**require() 方法用于加载模块。**
+
+
+
+例如:
+
+- 使用什么样的语法格式来引用模块
+- 在模块中使用什么样的语法格式向外暴露成员
+
+ **Node.js** **中模块的分类**
+
+Node.js 中根据模块来源的不同，将模块分为了 3 大类，分别是:
+
+- 内置模块(内置模块是由 Node.js 官方提供的，例如 fs、path、http 等)
+- 自定义模块(用户创建的每个 .js 文件，都是自定义模块)
+- 第三方模块(由第三方开发出来的模块，并非官方提供的内置模块，也不是用户创建的自定义模块，使用前需要先下载)
+
+###  **加载模块**
+
+使用 require() 方法，可以加载需要的**内置模块、用户自定义模块、第三方模块**进行使用。例如:
+
+- **注意**：在使用 require 加载用户自定义模块期间可以省略 .js 的后缀名
+
+### **模块作用域**
+
+和函数作用域类似，在自定义模块中定义的变量、方法等成员，只能在当前模块内被访问，这种模块级别的访问限制，叫做**模块 作用域**。
+
+- 防止全局变量污染
+
+###  向外共享模块作用域中的成员
+
+#### module 对象
+
+在每个 .js 自定义模块中都有一个 module 对象，它里面存储了和当前模块有关的信息，打印如下:
+
+![image-20220602191918753](/Users/wsp/Library/Application Support/typora-user-images/image-20220602191918753.png)
+
+#### module.exports 对象
+
+在自定义模块中，可以使用 **`module.exports`** 对象，**将模块内的成员共享出去，供外界使用。** 
+
+**外界用 `require()` 方法导入自定义模块时，得到的就是 `module.exports` 所指向的对象。**
+
+![image-20220602192450251](/Users/wsp/Library/Application Support/typora-user-images/image-20220602192450251.png)
+
+- **指向全新对象`{ }` 则之前挂载的方法和属性都无效**
+
+
+
+####  exports 对象 
+
+由于 module.exports 单词写起来比较复杂，为了**简化**向外共享成员的代码，Node 提供了 `exports` 对象。
+
+![image-20220602192615706](/Users/wsp/Library/Application Support/typora-user-images/image-20220602192615706.png)
+
+#### exports 和 module.exports 的使用误区
+
+**默认情况 下，exports 和 module.exports 指向同一个对象。最终共享的结果，还是以 <u>module.exports 指向的对象</u>为准。**
+
+- 时刻谨记，require() 模块时，得到的永远是 module.exports 指向的对象:
+
+![image-20220602224450201](/Users/wsp/Library/Application Support/typora-user-images/image-20220602224450201.png)
+
+> exports是module.exports的引用,如果给module.exports赋值了一个对象{},则给exports赋值无效
+>
+> 为了防止混乱，建议不要在同一个模块中同时使用 exports 和 module.exports
+
