@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.post('/user', (req, res) => {
   // 在服务器，可以使用 req.body 这个属性，来接收客户端发送过来的请求体数据
-  // 默认情况下，如果不配置解析表单数据的中间件，则 req.body 默认等于 undefined
+  // 默认情况下，如果不配置解析表单数据的中间件，则 req.body 默认等于{}
   console.log(req.body)
   res.send('ok')
 })

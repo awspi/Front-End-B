@@ -4,6 +4,7 @@
 
 ```bash
 npm i express
+#笔记中使用的版本
 ```
 
 ## nodemon
@@ -430,6 +431,8 @@ app.get('/user', (req, res) => {//不生效
 
 可以在路由中，通过如下两种等价的方式，使用多个局部中间件:
 
+**`(url,任意个中间件,处理函数)`**
+
 ```js
 app.get('/', [mw1, mw2], (req, res) => {
   res.send('Home page.')
@@ -462,25 +465,72 @@ app.get('/', mw1, mw2, (req, res) => {
 
 #### 应用级别的中间件
 
-通过 app.use() 或 app.get() 或 app.post() ，绑定到 app 实例上的中间件，叫做应用级别的中间件，代码示例如下:
+通过 `app.use()` 或 `app.get()` 或 `app.post()` ，**绑定到 app 实例上的中间件**，叫做应用级别的中间件，代码示例如下:
+
+```js
+// 应用级别的中间件(全局中间件)
+app.use((req, res, next)=>{
+	next()
+})
+//应用级别的中间件(局部中间件)
+app.get('/'，mw1, (req, res) => {
+res. send(' Home page.')
+})
+```
 
 
 
 #### 路由级别的中间件
 
-绑定到 express.Router() 实例上的中间件，叫做路由级别的中间件。
+绑定到 **`express.Router()`** 实例上的中间件，叫做路由级别的中间件。
 
 它的用法和应用级别中间件没有任何区别。只不过，应用级别中间件是绑定到 app 实例上，**路由级别中间件绑定到 router 实例上，**代码示例如下:
+
+```js
+const app = express()
+const router = express.Router()
+router.use(function (req, res, next){
+  console.log('Time:', Date.now())
+  next()
+})
+app.use('/',router)
+```
 
 
 
 #### 错误级别的中间件
 
-错误级别中间件的作用:**专门用来捕获整个项目中发生的异常错误，从而防止项目异常崩溃的问题。**
+错误级别中间件的作用:**专门用来捕获整个项目中发生的异常错误，<u>从而防止项目异常崩溃的问题</u>。**
 
 格式:错误级别中间件的 function 处理函数中，必须有 **4 个形参**，**形参顺序从前到后，分别是 (err, req, res, next)。**
 
 - **注意:错误级别的中间件， 必须注册在所有路由之后!**
+
+```js
+// 导入 express 模块
+const express = require('express')
+// 创建 express 的服务器实例
+const app = express()
+
+// 1. 定义路由
+app.get('/', (req, res) => {
+  // 1.1 人为的制造错误
+  throw new Error('服务器内部发生了错误！')
+  res.send('Home page.')
+})
+
+// 2. 定义错误级别的中间件，捕获整个项目的异常错误，从而防止程序的崩溃
+app.use((err, req, res, next) => {
+  console.log('发生了错误！' + err.message)
+  res.send('Error：' + err.message)
+})
+
+// 调用 app.listen 方法，指定端口号并启动web服务器
+app.listen(80, function () {
+  console.log('Express server running at http://127.0.0.1')
+})
+
+```
 
 
 
@@ -490,7 +540,41 @@ app.get('/', mw1, mw2, (req, res) => {
 
 - **`express.static`** 快速托管静态资源的内置中间件，例如: HTML 文件、图片、CSS 样式等(无兼容性)
 - **`express.json`** 解析 JSON 格式的请求体数据(**有兼容性**，仅在 4.16.0+ 版本中可用)
+  - ![image-20220604005229845](/Users/wsp/Library/Application Support/typora-user-images/image-20220604005229845.png)
 - **`express.urlencoded`** 解析 URL-encoded 格式的请求体数据(**有兼容性**，仅在 4.16.0+ 版本中可用)
+  - ![image-20220604005202026](/Users/wsp/Library/Application Support/typora-user-images/image-20220604005202026.png)
+
+```js
+// 导入 express 模块
+const express = require('express')
+// 创建 express 的服务器实例
+const app = express()
+
+// 注意：除了错误级别的中间件，其他的中间件，必须在路由之前进行配置
+// 通过 express.json() 这个中间件，解析表单中的 JSON 格式的数据
+app.use(express.json())
+// 通过 express.urlencoded() 这个中间件，来解析 表单中的 url-encoded 格式的数据
+app.use(express.urlencoded({ extended: false })) //{ extended: false }默认写法
+
+app.post('/user', (req, res) => {
+  // 在服务器，可以使用 req.body 这个属性，来接收客户端发送过来的请求体数据
+  // 默认情况下，如果不配置解析表单数据的中间件，则 req.body 默认等于 {}
+  console.log(req.body)//{ username: 'pithy', password: '1' }
+  res.send('ok')
+})
+
+app.post('/book', (req, res) => {
+  // 在服务器端，可以通过 req,body 来获取 JSON 格式的表单数据和 url-encoded 格式的数据
+  console.log(req.body) //[Object: null prototype] { bookname: '活着', author: '余华' }
+  res.send('ok')
+})
+
+// 调用 app.listen 方法，指定端口号并启动web服务器
+app.listen(80, function () {
+  console.log('Express server running at http://127.0.0.1')
+})
+
+```
 
 
 
@@ -502,11 +586,35 @@ app.get('/', mw1, mw2, (req, res) => {
 
 使用步骤如下:
 
-1. 运行 npm install body-parser 安装中间件
+1. 运行 `npm install body-parser` 安装中间件
 2. 使用 require 导入中间件
 3. 调用 app.use() 注册并使用中间件
 
 - 注意:Express 内置的 **`express.urlencoded`** 中间件，就是基于 body-parser 这个第三方中间件进一步封装出来的。
+
+```js
+// 导入 express 模块
+const express = require('express')
+// 创建 express 的服务器实例
+const app = express()
+
+// 1. 导入解析表单数据的中间件 body-parser
+const parser = require('body-parser')
+// 2. 使用 app.use() 注册中间件
+app.use(parser.urlencoded({ extended: false }))
+// app.use(express.urlencoded({ extended: false }))
+
+app.post('/user', (req, res) => {
+  // 如果没有配置任何解析表单数据的中间件，则 req.body 默认等于 undefined
+  console.log(req.body)
+  res.send('ok')
+})
+
+// 调用 app.listen 方法，指定端口号并启动web服务器
+app.listen(80, function () {
+  console.log('Express server running at http://127.0.0.1')
+})
+```
 
 
 
@@ -522,3 +630,291 @@ app.get('/', mw1, mw2, (req, res) => {
 4. 使用 querystring 模块解析请求体数据
 5. 将解析出来的数据对象挂载为 req.body
 6. 将自定义中间件封装为模块
+
+#### 定义中间件
+
+使用 app.use() 来定义全局生效的中间件，代码如下:
+
+```js
+// 这是解析表单数据的中间件
+app.use((req,res,next)=>{
+	//定义中间件具体的业务逻辑
+})
+```
+
+#### 监听 req 的 data 事件
+
+在中间件中，需要监听 req 对象的 data 事件，来获取客户端发送到服务器的数据。
+
+如果数据量比较大，无法一次性发送完毕，则客户端会**把数据切割后，分批发送**到服务器。
+
+所以 data 事件可能会触 发多次，每一次触发 data 事件时，获取到数据只是完整数据的一部分，需要手动对接收到的数据进行拼接。
+
+```js
+//定义一个 str 字符串，专门用来存储客户端发送过来的请求体数据
+let str=''
+//监听 req 的 data 事件
+req.on('data',(chunk)=>{
+  str+=chunk
+})
+```
+
+
+
+####  监听 req 的 end 事件
+
+当请求体数据接收完毕之后，会自动触发 req 的 end 事件。
+
+因此，我们可以在 req 的 end 事件中，**拿到并处理完整的请求体数据**。示例代码如下:
+
+```js
+// 3. 监听 req 的 end 事件
+req.on('end', () => {
+  // 在 str 中存放的是完整的请求体数据
+	console.log(str)
+})
+```
+
+#### 使用 querystring 模块解析请求体数据
+
+Node.js 内置了一个 querystring 模块，专门用来处理查询字符串。
+
+通过这个模块提供的 parse() 函数，可以轻松把 查询字符串，解析成对象的格式。示例代码如下:
+
+```js
+//导入querystring 的 Node.js内置模块
+const qs = require('querystring' )
+//调用qs.parse() 方法，把查询字符串解析为对象
+const body = qs.parse(str)
+```
+
+#### 将解析出来的数据对象挂载为 req.body
+
+上游的中间件和下游的中间件及路由之间，**共享同一份** **req** **和** **res**。因此，我们可以将解析出来的数据，挂载为 req 的自定义属性，命名为 req.body，供下游使用。示例代码如下:
+
+```js
+req.on('end', () => {
+  // 在 str 中存放的是完整的请求体数据
+  const body = qs.parse(str)
+  req.body = body
+  next()
+})
+```
+
+#### 将自定义中间件封装为模块
+
+为了优化代码的结构，我们可以把自定义的中间件函数，封装为独立的模块，示例代码如下:
+
+**custom-body-parser.js**
+
+```js
+// 导入 Node.js 内置的 querystring 模块
+const qs = require('querystring')
+
+const bodyParser = (req, res, next) => {
+  // 定义中间件具体的业务逻辑
+  // 1. 定义一个 str 字符串，专门用来存储客户端发送过来的请求体数据
+  let str = ''
+  // 2. 监听 req 的 data 事件
+  req.on('data', (chunk) => {
+    str += chunk
+  })
+  // 3. 监听 req 的 end 事件
+  req.on('end', () => {
+    // 在 str 中存放的是完整的请求体数据
+    const body = qs.parse(str)
+    req.body = body
+    next()
+  })
+}
+
+module.exports = bodyParser
+```
+
+index.js
+
+```js
+// 导入 express 模块
+const express = require('express')
+// 创建 express 的服务器实例
+const app = express()
+
+// 1. 导入自己封装的中间件模块
+const customBodyParser = require('./14.custom-body-parser')
+// 2. 将自定义的中间件函数，注册为全局可用的中间件
+app.use(customBodyParser)
+
+app.post('/user', (req, res) => {
+  res.send(req.body)
+})
+
+// 调用 app.listen 方法，指定端口号并启动web服务器
+app.listen(80, function () {
+  console.log('Express server running at http://127.0.0.1')
+})
+```
+
+
+
+## 使用 Express 写接口
+
+**apiRouter.js**
+
+```js
+const express = require('express')
+const router = express.Router()
+
+// 在这里挂载对应的路由
+router.get('/get', (req, res) => {
+  // 通过 req.query 获取客户端通过查询字符串，发送到服务器的数据
+  const query = req.query
+  // 调用 res.send() 方法，向客户端响应处理的结果
+  res.send({
+    status: 0, // 0 表示处理成功，1 表示处理失败
+    msg: 'GET 请求成功！', // 状态的描述
+    data: query, // 需要响应给客户端的数据
+  })
+})
+
+// 定义 POST 接口
+router.post('/post', (req, res) => {
+  // 通过 req.body 获取请求体中包含的 url-encoded 格式的数据
+  const body = req.body
+  // 调用 res.send() 方法，向客户端响应结果
+  res.send({
+    status: 0,
+    msg: 'POST 请求成功！',
+    data: body,
+  })
+})
+
+// 定义 DELETE 接口
+router.delete('/delete', (req, res) => {
+  res.send({
+    status: 0,
+    msg: 'DELETE请求成功',
+  })
+})
+
+module.exports = router
+
+```
+
+**app.js**
+
+```js
+// 导入 express
+const express = require('express')
+// 创建服务器实例
+const app = express()
+
+// 配置解析表单数据的中间件
+app.use(express.urlencoded({ extended: false }))
+
+// 必须在配置 cors 中间件之前，配置 JSONP 的接口
+app.get('/api/jsonp', (req, res) => {
+  // TODO: 定义 JSONP 接口具体的实现过程
+  // 1. 得到函数的名称
+  const funcName = req.query.callback
+  // 2. 定义要发送到客户端的数据对象
+  const data = { name: 'zs', age: 22 }
+  // 3. 拼接出一个函数的调用
+  const scriptStr = `${funcName}(${JSON.stringify(data)})`
+  // 4. 把拼接的字符串，响应给客户端
+  res.send(scriptStr)
+})
+
+// 一定要在路由之前，配置 cors 这个中间件，从而解决接口跨域的问题
+const cors = require('cors')
+app.use(cors())
+
+// 导入路由模块
+const router = require('./16.apiRouter')
+// 把路由模块，注册到 app 上
+app.use('/api', router)
+
+// 启动服务器
+app.listen(80, () => {
+  console.log('express server running at http://127.0.0.1')
+})
+
+```
+
+
+
+### 创建基本的服务器
+
+```js
+// 导入 express
+const express = require('express')
+// 创建服务器实例
+const app = express()
+
+//code 
+
+// 启动服务器
+app.listen(80, () => {
+  console.log('express server running at http://127.0.0.1')
+})
+
+```
+
+
+
+### 创建 API 路由模块
+
+```js
+const express = require('express')
+const router = express.Router()
+
+// 在这里挂载对应的路由
+
+module.exports = router
+```
+
+```js
+// 导入路由模块
+const router = require('./16.apiRouter')
+// 把路由模块，注册到 app 上
+app.use('/api', router)
+```
+
+### 编写 GET 接口
+
+```js
+router.get('/get', (req, res) => {
+  // 通过 req.query 获取客户端通过查询字符串，发送到服务器的数据
+  const query = req.query
+  // 调用 res.send() 方法，向客户端响应处理的结果
+  res.send({
+    status: 0, // 0 表示处理成功，1 表示处理失败
+    msg: 'GET 请求成功！', // 状态的描述
+    data: query, // 需要响应给客户端的数据
+  })
+})
+```
+
+
+
+### 编写 POST 接口
+
+```js
+// 定义 POST 接口
+router.post('/post', (req, res) => {
+  // 通过 req.body 获取请求体中包含的 url-encoded 格式的数据
+  const body = req.body
+  // 调用 res.send() 方法，向客户端响应结果
+  res.send({
+    status: 0,
+    msg: 'POST 请求成功！',
+    data: body,
+  })
+})
+```
+
+- 注意:如果要获取 URL-encoded 格式的请求体数据，必须配置中间件 **app.use(express.urlencoded({ extended: false }))**
+
+### CORS 跨域资源共享
+
+
+

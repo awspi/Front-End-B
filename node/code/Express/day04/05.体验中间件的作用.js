@@ -7,6 +7,7 @@ app.use((req, res, next) => {
   const time = Date.now()
   // 为 req 对象，挂载自定义属性，从而把时间共享给后面的所有路由
   req.startTime = time
+  // console.log(req);
   next()
 })
 
