@@ -20,5 +20,16 @@ router.post('/post',(req,res)=>{
     data:body
   })
 })
+// del
+router.delete('/delete',(req,res)=>{
+  // res.setHeader('Access-Control-Allow-Method','DELETE')
+  const body=req.body
+  // 通过 req.body 获取请求体中包含的 url-encoded 格式的数据
+  res.send({
+    status:0,
+    msg:'DEL success',
+    data:body
+  })
+})
 
 module.exports=router
