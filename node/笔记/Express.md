@@ -554,7 +554,8 @@ const app = express()
 // 通过 express.json() 这个中间件，解析表单中的 JSON 格式的数据
 app.use(express.json())
 // 通过 express.urlencoded() 这个中间件，来解析 表单中的 url-encoded 格式的数据
-app.use(express.urlencoded({ extended: false })) //{ extended: false }默认写法
+app.use(express.urlencoded({ extended: false })) 
+//{ extended: false }表示使用系统模块querystring来处理，也是官方推荐的
 
 app.post('/user', (req, res) => {
   // 在服务器，可以使用 req.body 这个属性，来接收客户端发送过来的请求体数据
@@ -1101,7 +1102,7 @@ app.get(' /api/ jsonp', (req, res) => {
   // 2.得到要通过JSONP 形式发送给客户端的数据
   const data = { name :'pithy'，age:20 }
   // 3.根据前两步得到的数据，拼接出一个函数调用的字符串
-  const scriptStr=`${funcName}(${JSON.stringify(data)})`
+  const scriptStr=``${funcName}(${JSON.stringify(data)})`
   // 4.把上一步拼接得到的字符串，响应给客户端的<script>标签进行解析执行
   res. send( scriptStr)
 })

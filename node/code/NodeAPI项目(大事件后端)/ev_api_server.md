@@ -104,9 +104,7 @@ app.use('/api', userRouter)
 1. 在 `/router_handler/user.js` 中，使用 `exports` 对象，分别向外共享如下两个 `路由处理函数` ：
 
 ```js
-/**
- * 在这里定义和用户相关的路由处理函数，供 /router/user.js 模块进行调用
- */
+reg
 
 // 注册用户的处理函数
 exports.regUser = (req, res) => {
@@ -141,7 +139,7 @@ module.exports = router
 ### 2.1 新建 ev_users 表
 
 1. 在 `my_db_01` 数据库中，新建 `ev_users` 表如下：
-   ![ev_users表结构](./images/1.jpg)
+   ![image-20220607221553088](/Users/wsp/Library/Application Support/typora-user-images/image-20220607221553088.png)
 
 ### 2.2 安装并配置 mysql 模块
 
@@ -178,7 +176,7 @@ module.exports = db
 1. 检测表单数据是否合法
 2. 检测用户名是否被占用
 3. 对密码进行加密处理
-4. 插入新用户
+4. 插入新用户s;
 
 #### 2.3.1 检测表单数据是否合法
 
@@ -323,8 +321,8 @@ npm i @escook/express-joi
 3. 新建 `/schema/user.js` 用户信息验证规则模块，并初始化代码如下：
 
 ```js
-const joi = require('@hapi/joi')
-
+//const joi = require('@hapi/joi')
+const joi = require('joi'//用法更新了
 /**
  * string() 值必须是字符串
  * alphanum() 值只能是包含 a-zA-Z0-9 的字符串
@@ -457,12 +455,12 @@ if (!compareResult) {
 
 #### 2.6.4 生成 JWT 的 Token 字符串
 
-> 核心注意点：在生成 Token 字符串的时候，一定要剔除 **密码** 和 **头像** 的值
+> 核心注意点：在生成 Token 字符串的时候，.u
 
 1. 通过 ES6 的高级语法，快速剔除 `密码` 和 `头像` 的值：
 
 ```js
-// 剔除完毕之后，user 中只保留了用户的 id, username, nickname, email 这四个属性的值
+// 剔除完毕之后，user 中j
 const user = { ...results[0], password: '', user_pic: '' }
 ```
 
@@ -623,7 +621,7 @@ const db = require('../db/index')
 ```js
 // 根据用户的 id，查询用户的基本信息
 // 注意：为了防止用户的密码泄露，需要排除 password 字段
-const sql = `select id, username, nickname, email, user_pic from ev_users where id=?`
+
 ```
 
 3. 调用 `db.query()` 执行 SQL 语句：
@@ -632,7 +630,7 @@ const sql = `select id, username, nickname, email, user_pic from ev_users where 
 // 注意：req 对象上的 user 属性，是 Token 解析成功，express-jwt 中间件帮我们挂载上去的
 db.query(sql, req.user.id, (err, results) => {
   // 1. 执行 SQL 语句失败
-  if (err) return res.cc(err)
+ if
 
   // 2. 执行 SQL 语句成功，但是查询到的数据条数不等于 1
   if (results.length !== 1) return res.cc('获取用户信息失败！')
@@ -944,11 +942,11 @@ db.query(sql, [req.body.avatar, req.user.id], (err, results) => {
 
 #### 4.1.1 创建表结构
 
-![文章分类表结构](./images/2.jpg)
+![image-20220607221823988](/Users/wsp/Library/Application Support/typora-user-images/image-20220607221823988.png)
 
 #### 4.1.2 新增两条初始数据
 
-![文章分类表结构](./images/3.jpg)
+![image-20220607222459269](/Users/wsp/Library/Application Support/typora-user-images/image-20220607222459269.png)
 
 ### 4.2 获取文章分类列表
 
@@ -1403,7 +1401,6 @@ db.query(sql, [req.body, req.body.Id], (err, results) => {
   if (err) return res.cc(err)
 
   // SQL 语句执行成功，但是影响行数不等于 1
-  if (results.affectedRows !== 1) return res.cc('更新文章分类失败！')
 
   // 更新文章分类成功
   res.cc('更新文章分类成功！')
@@ -1414,7 +1411,7 @@ db.query(sql, [req.body, req.body.Id], (err, results) => {
 
 ### 5.1 新建 ev_articles 表
 
-![ev_articles表结构](./images/4.jpg)
+![image-20220608001118105](/Users/wsp/Library/Application Support/typora-user-images/image-20220608001118105.png)
 
 ### 5.2 发布新文章
 
@@ -1482,7 +1479,7 @@ module.exports = router
 
 #### 5.2.3 使用 multer 解析表单数据
 
-> 注意：使用 `express.urlencoded()` 中间件无法解析 `multipart/form-data` 格式的请求体数据。
+> 注意：**使用 `express.urlencoded()` 中间件无法解析 `multipart/form-data` 格式的请求体数据。**
 
 > 当前项目，推荐使用 multer 来解析 `multipart/form-data` 格式的表单数据。https://www.npmjs.com/package/multer
 
@@ -1513,6 +1510,14 @@ const upload = multer({ dest: path.join(__dirname, '../uploads') })
 // 将文本类型的数据，解析并挂载到 req.body 属性中
 router.post('/add', upload.single('cover_img'), article_handler.addArticle)
 ```
+
+```js
+  console.log(req.body) // 文本类型的数据
+  console.log('--------分割线----------')
+  console.log(req.file) // 文件类型的数据
+```
+
+![image-20220608003050980](/Users/wsp/Library/Application Support/typora-user-images/image-20220608003050980.png)
 
 4. 在 `/router_handler/article.js` 模块中的 `addArticle` 处理函数中，将 `multer` 解析出来的数据进行打印：
 
