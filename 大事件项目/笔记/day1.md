@@ -16,11 +16,12 @@
 
 1. 在 `code` 目录中运行 `git init` 命令
 2. 在 `code` 目录中运行 `git add .` 命令
-3. 在 `code` 目录下运行 `git commit -m "init project"` 命令
-4. 新建 Github 仓库 `web_bigevent`
-5. 将本地仓库和Github仓库建立关联关系
-6. 将本地仓库的代码推送到Github仓库中
-7. 运行 `git checkout -b login` 命令，创建并切换到 `login` 分支
+   1. 在 `code` 目录下运行 `git commit -m "init project"` 命令
+
+3. 新建 Github 仓库 `web_bigevent`
+4. 将本地仓库和Github仓库建立关联关系
+5. 将本地仓库的代码推送到Github仓库中
+6. 运行 `git checkout -b login` 命令，创建并切换到 `login` 分支
 
 ### 1.3 安装VSCode的Live Server插件辅助开发
 
