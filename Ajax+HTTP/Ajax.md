@@ -4,7 +4,7 @@
 
 ## jQuery中的Ajax
 
-![jQuery中的Ajax](/Users/wsp/Documents/Front-End-b/资料/第四阶段：前后端交互阶段资料新/大事件项目课程资料/day2（3-7小节）/笔记/jQuery中的Ajax.png)
+![jQuery中的Ajax](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549615.png)
 
 
 
@@ -193,9 +193,9 @@ http://www.liulongbin.top:3006/api/getbooks  获取图书列表的接口(GET请�
 http://www.liulongbin.top:3006/api/addbook   添加图书的接口（POST请求）
 ```
 
-![image-20220517172641316](/Users/wsp/Library/Application Support/typora-user-images/image-20220517172641316.png)
+![image-20220517172641316](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549616.png)
 
-![image-20220517172653930](/Users/wsp/Library/Application Support/typora-user-images/image-20220517172653930.png)
+![image-20220517172653930](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549617.png)
 
 ## 接口文档
 
@@ -415,7 +415,7 @@ $('#form1').on('submit', function(e) {
 
 **模板引擎，顾名思义，它可以根据程序员指定的模板结构和数据，自动生成一个完整的HTML页面。**
 
-![image-20220519003230731](/Users/wsp/Library/Application Support/typora-user-images/image-20220519003230731.png)
+![image-20220519003230731](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549618.png)
 
 **好处**
 
@@ -572,7 +572,7 @@ exp:
 
 **过滤器的本质，就是一个 function 处理函数。**
 
-![image-20220519005912775](/Users/wsp/Library/Application Support/typora-user-images/image-20220519005912775.png)
+![image-20220519005912775](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549619.png)
 
 ```
 {{value | filterName}}
@@ -616,7 +616,7 @@ template.defaults.imports.filterName = function(value){/*return处理的结果*/
 
 XML 的英文全称是 E**X**tensible **M**arkup **L**anguage，即**可扩展标记语言**。因此，XML 和 HTML 类似，也是一种标记语言。
 
-![image-20220519221913487](/Users/wsp/Library/Application Support/typora-user-images/image-20220519221913487.png)
+![image-20220519221913487](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549620.png)
 
 **XML和HTML的区别**
 
@@ -1318,7 +1318,7 @@ MDN 官方给定的概念：同源策略限制了从同一个源加载的文档�
 
 ### 浏览器对跨域请求的拦截
 
-![image-20220522120115545](/Users/wsp/Library/Application Support/typora-user-images/image-20220522120115545.png)
+![image-20220522120115545](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549621.png)
 
 - 浏览器允许发起跨域请求，但是，跨域请求回来的数据，会被浏览器拦截，无法被页面获取到！
 
@@ -1421,7 +1421,7 @@ jQuery 提供的 $.ajax() 函数，除了可以发起真正的 Ajax 数据请求
 
 **防抖策略**（debounce）是当**事件被触发后，延迟 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。**
 
-![image-20220522132102764](/Users/wsp/Library/Application Support/typora-user-images/image-20220522132102764.png)
+![image-20220522132102764](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261549622.png)
 
 - 例如用户在输入框中连续输入一串字符时，可以通过防抖策略，只在输入完后，才执行查询的请求，这样可以有效减少请求次数，节约请求资源；
 

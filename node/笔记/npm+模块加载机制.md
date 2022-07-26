@@ -98,7 +98,7 @@ npm 规定，在项目根目录中，**必须**提供一个叫做 **`package.jso
 
 #### **多人协作的问题**
 
-![image-20220602233119940](/Users/wsp/Library/Application Support/typora-user-images/image-20220602233119940.png)
+![image-20220602233119940](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553755.png)
 
 > 整个项目的体积是 30.4M 第三方包的体积是 28.8M 项目源代码的体积 1.6M
 
@@ -292,7 +292,7 @@ https://yarnpkg.com/zh-Hans/docs/package-json
 
 
 
-![image-20220603095251026](/Users/wsp/Library/Application Support/typora-user-images/image-20220603095251026.png)
+![image-20220603095251026](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553757.png)
 
 ### package.json
 
@@ -458,7 +458,7 @@ npm 账号注册完成后，可以在终端中执行 npm login 命令，依次�
 
 将终端**切换到包的根目录之后**，运行 `npm publish` 命令，即可将包发布到 npm 上(注意:包名不能雷同)。
 
-![image-20220603102915061](/Users/wsp/Library/Application Support/typora-user-images/image-20220603102915061.png)
+![image-20220603102915061](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553758.png)
 
 ### **删除已发布的包**
 

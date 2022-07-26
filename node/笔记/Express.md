@@ -182,7 +182,7 @@ app.METHOD(PATH,HANDLER)
 - 按照定义的**先后顺序**进行匹配 (前面的路由优先级高)
 - 请求类型和请求的URL**同时匹配成功**，才会调用对应的处理函数
 
-![image-20220603170452340](/Users/wsp/Library/Application Support/typora-user-images/image-20220603170452340.png)
+![image-20220603170452340](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553025.png)
 
 
 
@@ -280,13 +280,13 @@ app.use('/api',router) //app.use()函数的作用就是 注册全局中间件
 
 当一个请求到达 Express 的服务器之后，可以连续调用多个中间件，从而对这次请求进行**预处理**。
 
-![image-20220603173621558](/Users/wsp/Library/Application Support/typora-user-images/image-20220603173621558.png)
+![image-20220603173621558](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553027.png)
 
 **Express 中间件的格式**
 
 Express 的中间件，本质上就是一个 **function** **处理函数**，Express 中间件的格式如下:
 
-![image-20220603173723120](/Users/wsp/Library/Application Support/typora-user-images/image-20220603173723120.png)
+![image-20220603173723120](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553028.png)
 
 - 注意:**中间件函数的形参列表中，必须包含 `next` 参数**。而路由<u>处理函数中只包含 req 和 res</u>。
 
@@ -294,7 +294,7 @@ Express 的中间件，本质上就是一个 **function** **处理函数**，Exp
 
 **next** **函数**是实现**多个中间件连续调用**的关键，它表示**把流转关系转交给下一个中间件或路由。**
 
-![image-20220603173834250](/Users/wsp/Library/Application Support/typora-user-images/image-20220603173834250.png)
+![image-20220603173834250](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553029.png)
 
 ### 初体验
 
@@ -304,7 +304,7 @@ Express 的中间件，本质上就是一个 **function** **处理函数**，Exp
 
 基于这样的特性，我们可以在上游的中间件中，**统一**为 req 或 res 对象添加自定义的属性或方法，供下游的中间件或路由进行使用。
 
-![image-20220603175124188](/Users/wsp/Library/Application Support/typora-user-images/image-20220603175124188.png)
+![image-20220603175124188](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553030.png)
 
 ```js
 const express = require('express')
@@ -540,9 +540,9 @@ app.listen(80, function () {
 
 - **`express.static`** 快速托管静态资源的内置中间件，例如: HTML 文件、图片、CSS 样式等(无兼容性)
 - **`express.json`** 解析 JSON 格式的请求体数据(**有兼容性**，仅在 4.16.0+ 版本中可用)
-  - ![image-20220604005229845](/Users/wsp/Library/Application Support/typora-user-images/image-20220604005229845.png)
+  - ![image-20220604005229845](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553031.png)
 - **`express.urlencoded`** 解析 URL-encoded 格式的请求体数据(**有兼容性**，仅在 4.16.0+ 版本中可用)
-  - ![image-20220604005202026](/Users/wsp/Library/Application Support/typora-user-images/image-20220604005202026.png)
+  - ![image-20220604005202026](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553032.png)
 
 ```js
 // 导入 express 模块
@@ -917,7 +917,7 @@ router.post('/post', (req, res) => {
 
 ### 解决接口跨域问题CORS
 
-![image-20220604095323006](/Users/wsp/Library/Application Support/typora-user-images/image-20220604095323006.png)
+![image-20220604095323006](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553033.png)
 
 解决接口跨域问题的方案主要有两种:
 
@@ -953,7 +953,7 @@ CORS (Cross-Origin Resource Sharing，跨域资源共享)由一系列 HTTP 响�
 
 浏览器的同源安全策略默认会阻止网页“跨域”获取资源。但如果接口服务器**配置了 CORS 相关的 HTTP 响应头， 就可以解除浏览器端的跨域访问限制。**
 
-![image-20220604095552721](/Users/wsp/Library/Application Support/typora-user-images/image-20220604095552721.png)
+![image-20220604095552721](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553034.png)
 
 **注意事项** 
 
@@ -1032,7 +1032,7 @@ res.setHeader( 'Access-Control-Allow-Methods' , '*')
 
 **预检请求的特点**:客户端与服务器之间**会发生两次请求**，**OPTION 预检请求成功之后，才会发起真正的请求。**
 
-![image-20220604101326267](/Users/wsp/Library/Application Support/typora-user-images/image-20220604101326267.png)
+![image-20220604101326267](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553035.png)
 
 #### 简单请求
 
@@ -1068,7 +1068,7 @@ res.setHeader( 'Access-Control-Allow-Methods' , '*')
 - JSONP 仅支持 GET 请求，不支持 POST、PUT、DELETE 等请求。
 
 - 如果项目中已经配置了 CORS 跨域资源共享，为了**防止冲突**，**必须在配置 CORS 中间件之前声明 JSONP 的接口**。否则 JSONP 接口会被处理成开启了 CORS 的接口。
-  - ![image-20220604102318439](/Users/wsp/Library/Application Support/typora-user-images/image-20220604102318439.png)
+  - ![image-20220604102318439](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553036.png)
 
 
 

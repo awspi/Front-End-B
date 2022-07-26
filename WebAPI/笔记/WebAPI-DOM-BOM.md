@@ -24,7 +24,7 @@
 
 ### DOM树
 
-![1550731974575](images/1550731974575.png)
+![1550731974575](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261532519.png)
 
 DOM树 又称为文档树模型，把文档映射成树形结构，通过节点对象对其处理，处理的结果可以加入到当前的页面。
 
@@ -32,7 +32,7 @@ DOM树 又称为文档树模型，把文档映射成树形结构，通过节点�
 - 节点：网页中的所有内容，在文档树中都是节点（标签、属性、文本、注释等），使用node表示
 - 标签节点：网页中的所有标签，通常称为元素节点，又简称为“元素”，使用element表示
 
-![1550732362134](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550732362134.png)
+![1550732362134](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261534816.png)
 
 ## 获取元素
 
@@ -109,7 +109,7 @@ DOM树 又称为文档树模型，把文档映射成树形结构，通过节点�
 </body>
 ```
 
-![1550733441663](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550733441663.png)
+![1550733441663](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261534291.png)
 
 注意：getElementsByTagName()获取到是动态集合，即：当页面增加了标签，这个集合中也就增加了元素。
 
@@ -119,9 +119,9 @@ DOM树 又称为文档树模型，把文档映射成树形结构，通过节点�
 2. **querySelector** 返回指定选择器的第一个元素对象  切记 里面的选择器需要加符号 .box  #nav
 3. **querySelectorAll**返回指定选择器的所有元素对象集合
 
-![1550733518278](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550733518278.png)
+![1550733518278](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261534474.png)
 
-![1550733734425](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550733734425.png)
+![1550733734425](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261534268.png)
 
 
 
@@ -163,7 +163,7 @@ document.body
 
 document.documentElement
 
-![1550733794816](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550733794816.png)
+![1550733794816](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262121683.png)
 
 ## 事件基础
 
@@ -202,7 +202,7 @@ JavaScript 使我们有能力创建动态页面，而事件是可以被 JavaScri
 
 ### 执行事件的步骤
 
-![1550734387056](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550734387056.png)
+![1550734387056](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261535803.png)
 
 **案例代码**
 
@@ -250,11 +250,11 @@ JavaScript 使我们有能力创建动态页面，而事件是可以被 JavaScri
 
 ​	JavaScript的 DOM 操作可以改变网页内容、结构和样式，我们可以利用 DOM 操作元素来改变元素里面的内容、属性等。（注意：这些操作都是通过元素对象的属性实现的）
 
-![1550737354861](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550737354861.png)
+![1550737354861](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261535352.png)
 
 ### 改变元素内容（获取或设置）
 
-![1550735016756](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550735016756.png)
+![1550735016756](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261535820.png)
 
 ##### **innerText改变元素内容**
 
@@ -472,21 +472,21 @@ element.className 类名样式操作
 
 ##### 案例：淘宝点击关闭二维码
 
-![1550736843659](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550736843659.png)
+![1550736843659](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536737.png)
 
-![1550736881832](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550736881832.png)
+![1550736881832](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536297.png)
 
 ##### 案例：循环精灵图背景
 
-![1550736940082](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550736940082.png)
+![1550736940082](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536168.png)
 
-![1550736956754](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550736956754.png)
+![1550736956754](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536119.png)
 
 ##### 案例：显示隐藏文本框内容
 
-![1550737006593](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550737006593.png)
+![1550737006593](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536037.png)
 
-![1550737019729](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550737019729.png)
+![1550737019729](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536477.png)
 
 #### 方式2：通过操作className属性
 
@@ -526,9 +526,9 @@ element.className 类名样式操作
 
 ##### 案例：密码框格式提示错误信息
 
-![1550737269546](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550737269546.png)
+![1550737269546](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536245.png)
 
-![1550737284218](/Users/wsp/Documents/Front-End-b/Front-End-b/WebAPI/笔记/images/1550737284218.png)
+![1550737284218](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536720.png)
 
 ## 
 
@@ -540,7 +540,7 @@ element.className 类名样式操作
 
 ###  排他思想
 
-![1550914482628](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550914482628.png)
+![1550914482628](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536500.png)
 
 如果有同一组元素，我们想要某一个元素实现某种样式， 需要用到循环的排他思想算法：
 
@@ -578,9 +578,9 @@ element.className 类名样式操作
 
 ### 案例：百度换肤
 
-![1550914640677](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550914640677.png)
+![1550914640677](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536337.png)
 
-![1550914663042](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550914663042.png)
+![1550914663042](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536321.png)
 
 ```js
 <body>
@@ -609,9 +609,9 @@ element.className 类名样式操作
 
 ### 案例：表格隔行变色
 
-![1550914791881](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550914791881.png)
+![1550914791881](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536985.png)
 
-![1550914812202](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550914812202.png)
+![1550914812202](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536102.png)
 
 ```js
     <script>
@@ -634,9 +634,9 @@ element.className 类名样式操作
 
 ### 案例：全选
 
-![1550914980274](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550914980274.png)
+![1550914980274](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536237.png)
 
-![1550915005393](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915005393.png)
+![1550915005393](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536563.png)
 
 ```js
     <script>
@@ -678,7 +678,7 @@ element.className 类名样式操作
 
 ### 获取属性值 getAttribute
 
-![1550915376339](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915376339.png)
+![1550915376339](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536228.png)
 
 ```js
     <div id="demo" index="1" class="nav"></div>
@@ -697,7 +697,7 @@ element.className 类名样式操作
 
 ### 设置属性值 setAttribute
 
-![1550915445026](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915445026.png)
+![1550915445026](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261536072.png)
 
 ```js
         // 2. 设置元素属性值
@@ -715,7 +715,7 @@ element.className 类名样式操作
 
 ### 移出属性 removeAttribute
 
-![1550915513137](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915513137.png)
+![1550915513137](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261537182.png)
 
 ```js
 		// class 不是className
@@ -727,9 +727,9 @@ element.className 类名样式操作
 
 ### 案例：tab栏
 
-![1550915567627](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915567627.png)
+![1550915567627](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261539997.png)
 
-![1550915590707](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915590707.png)
+![1550915590707](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261539521.png)
 
 ```js
     <script>
@@ -783,9 +783,9 @@ element.dataset[data-开头的自定义后缀属性]
 
 - 如果自定义属性里面有多个-链接的单词，我们获取的时候采取 驼峰命名法
 
-![1550915798516](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915798516.png)
+![1550915798516](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261539433.png)
 
-![1550915815571](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550915815571.png)
+![1550915815571](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261539862.png)
 
 ```html
     <div getTime="20" data-index="2" data-list-name="andy"></div>
@@ -817,21 +817,21 @@ element.dataset[data-开头的自定义后缀属性]
 
 ​	HTML DOM 树中的所有节点均可通过 JavaScript 进行访问，所有 HTML 元素（节点）均可被修改，也可以创建或删除。
 
-![1550970944363](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550970944363.png)
+![1550970944363](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261539775.png)
 
 ​	一般地，节点至少拥有`nodeType`（节点类型）、`nodeName`（节点名称）和`nodeValue`（节点值）这三个基本属性。
 
-![1550970986988](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550970986988.png)
+![1550970986988](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261539086.png)
 
 ### 节点层级
 
 ​	利用 DOM 树可以把节点划分为不同的层级关系，常见的是**父子兄层级关系**。
 
-​    ![1550971058781](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550971058781.png)
+​    ![1550971058781](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261539195.png)
 
 ### 父级节点 parentNode
 
-![1550971196686](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550971196686.png)
+![1550971196686](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261540214.png)
 
 ```js
     <div class="demo">
@@ -852,11 +852,11 @@ element.dataset[data-开头的自定义后缀属性]
 
 **所有子节点childNodes**
 
-![1550971263925](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550971263925.png)
+![1550971263925](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261540498.png)
 
 **常用** **子元素节点children** 
 
-![1550971325828](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550971325828.png)
+![1550971325828](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262122097.png)
 
 ```js
     <ul>
@@ -880,23 +880,23 @@ element.dataset[data-开头的自定义后缀属性]
 
 **第1个子节点**firstChild
 
-![1550971774758](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550971774758.png)
+![1550971774758](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262122838.png)
 
 **最后1个子节点**lastChild
 
-![1550971825493](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550971825493.png)
+![1550971825493](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262122792.png)
 
 **第1个子元素节点**
 
-![1550972014509](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550972014509.png)
+![1550972014509](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262122826.png)
 
 **最后1个子元素节点**
 
-![1550972106485](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550972106485.png)
+![1550972106485](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262122890.png)
 
 ​	实际开发中，firstChild 和 lastChild 包含其他节点，操作不方便，而 firstElementChild 和 lastElementChild 又有兼容性问题，那么我们**如何获取第一个子元素节点或最后一个子元素节点**呢？
 
-![1550972648014](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550972648014.png)
+![1550972648014](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262122504.png)
 
 ```js
     <ol>
@@ -924,11 +924,11 @@ element.dataset[data-开头的自定义后缀属性]
 
 
 
-![1550974934894](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550974934894.png)
+![1550974934894](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123834.png)
 
-![1550975025608](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550975025608.png)
+![1550975025608](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123383.png)
 
-![1550975049176](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550975049176.png)
+![1550975049176](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123146.png)
 
 ```js
     <script>
@@ -953,11 +953,11 @@ element.dataset[data-开头的自定义后缀属性]
 
 **下一个兄弟节点nextSibling**
 
-![1550973538696](./images/1550973538696.png)
+![1550973538696](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123980.png)
 
 **上一个兄弟节点previousSibling**
 
-![1550973558511](./images/1550973558511.png)
+![1550973558511](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123578.png)
 
 ```js
     <div>我是div</div>
@@ -975,13 +975,13 @@ element.dataset[data-开头的自定义后缀属性]
 
 **下一个兄弟元素节点（有兼容性问题）**nextElementSibling
 
-![1550973610223](./images/1550973610223.png)
+![1550973610223](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123631.png)
 
 **上一个兄弟元素节点（有兼容性问题）**previousElementSibling
 
-![1550973630150](./images/1550973630150.png)
+![1550973630150](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123530.png)
 
-![1550973799759](./images/1550973799759.png)
+![1550973799759](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123935.png)
 
 ```js
    function getNextElementSibling(element) {
@@ -997,11 +997,11 @@ element.dataset[data-开头的自定义后缀属性]
 
 ### 创建节点 createElement
 
-![1550975514321](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550975514321.png)
+![1550975514321](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123874.png)
 
 ### 添加节点appendChild/insertBefore
 
-![1550975640170](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550975640170.png)
+![1550975640170](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123918.png)
 
 - 父级node.appendChild(追加的子元素);
 - 父级node.insertBefore(追加的子元素,指定的子元素); 插入到指定的子元素之前
@@ -1025,9 +1025,9 @@ element.dataset[data-开头的自定义后缀属性]
 
 ### 案例：简单版发布留言
 
-![1550975849302](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550975849302.png)
+![1550975849302](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262123972.png)
 
-![1550975887017](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day02（4-6小节）/4-笔记/images/1550975887017.png)
+![1550975887017](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124235.png)
 
 ```js
 <body>
@@ -1065,7 +1065,7 @@ element.dataset[data-开头的自定义后缀属性]
 
 ### 删除节点 node.removeChild
 
-![1551163384254](./images/1551163384254.png)
+![1551163384254](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124987.png)
 
 node.removeChild() 方法从 node节点中删除一个子节点，返回删除的节点。
 
@@ -1097,9 +1097,9 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 ### 案例：删除留言
 
-![1551163586475](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163586475.png)
+![1551163586475](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124175.png)
 
-![1551163635501](/Users/wsp/Documents/Front-End-b/%E8%B5%84%E6%96%99/02-WebAPI%E7%BC%96%E7%A8%8B%E8%B5%84%E6%96%99/Web%20APIs-day03%EF%BC%886-8%E5%B0%8F%E8%8A%82%EF%BC%89/4-%E7%AC%94%E8%AE%B0/images/1551163635501.png)
+![1551163635501](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124452.png)
 
 
 
@@ -1145,7 +1145,7 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 ### 复制（克隆）节点 cloneNode
 
-![1551163763825](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163763825.png)
+![1551163763825](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124216.png)
 
 -  node.cloneNode(); <u>括号内为空或者里面是false</u> **浅拷贝** 只复制标签不复制里面的内容
 -  node.cloneNode(true); 括号内为<u>true</u> **深拷贝** 复制标签复制里面的内容
@@ -1167,9 +1167,9 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 ### 案例：动态生成表格
 
-![1551163900675](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163900675.png)
+![1551163900675](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124063.png)
 
-![1551163924396](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551163924396.png)
+![1551163924396](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124463.png)
 
 ```js
     <script>
@@ -1232,7 +1232,7 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 ### 创建元素的三种方式
 
-![1551164214925](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164214925.png)
+![1551164214925](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124653.png)
 
 
 
@@ -1328,9 +1328,9 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 ## DOM的核心总结
 
-![1551164669434](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164669434.png)
+![1551164669434](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124685.png)
 
-![1551164715018](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164715018.png)
+![1551164715018](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124337.png)
 
 
 
@@ -1338,27 +1338,27 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 ### 创建
 
-![1551164797164](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164797164.png)
+![1551164797164](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124620.png)
 
 ### 增加
 
-![1551164829832](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164829832.png)
+![1551164829832](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124307.png)
 
 ### 删
 
-![1551164872533](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164872533.png)
+![1551164872533](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124656.png)
 
 ### 改
 
-![1551164907830](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164907830.png)
+![1551164907830](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124499.png)
 
 ### 查
 
-![1551164936214](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164936214.png)
+![1551164936214](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124477.png)
 
 ### 属性操作
 
-![1551164985383](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551164985383.png)
+![1551164985383](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124897.png)
 
 ### 事件操作（重点）
 
@@ -1375,25 +1375,25 @@ node.removeChild() 方法从 node节点中删除一个子节点，返回删除�
 
 ### 注册事件（2种方式）
 
-![1551165252019](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551165252019.png)
+![1551165252019](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124093.png)
 
 ### 事件监听
 
 #### addEventListener()事件监听（IE9以后支持）
 
-![1551165364122](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551165364122.png)
+![1551165364122](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124625.png)
 
 eventTarget.addEventListener()方法将指定的监听器注册到 eventTarget（目标对象）上，当该对象触发指定的事件时，就会执行事件处理函数。
 
-![1551165604792](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551165604792.png)
+![1551165604792](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262124985.png)
 
 #### attacheEvent()事件监听（IE678支持）
 
-![1551165781836](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551165781836.png)
+![1551165781836](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125016.png)
 
 ​	eventTarget.attachEvent()方法将指定的监听器注册到 eventTarget（目标对象） 上，当该对象触发指定的事件时，指定的回调函数就会被执行。
 
-![1551165843912](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551165843912.png)
+![1551165843912](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125335.png)
 
 ```js
 <button>传统注册事件</button>
@@ -1428,11 +1428,11 @@ eventTarget.addEventListener()方法将指定的监听器注册到 eventTarget�
 
 封装一个函数，函数中判断浏览器的类型：
 
-![1551166023885](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166023885.png)
+![1551166023885](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125882.png)
 
 ### 删除事件（解绑事件）
 
-![1551166185410](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166185410.png)
+![1551166185410](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125498.png)
 
 ```js
     <div>1</div>
@@ -1463,7 +1463,7 @@ eventTarget.addEventListener()方法将指定的监听器注册到 eventTarget�
 
 **删除事件兼容性解决方案 **
 
-![1551166332453](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166332453.png)
+![1551166332453](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125464.png)
 
 ### DOM事件流
 
@@ -1474,13 +1474,13 @@ eventTarget.addEventListener()方法将指定的监听器注册到 eventTarget�
 > 那么是先执行父元素的单击事件，还是先执行div的单击事件 ？？？
 > ```
 
-![1551166423144](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166423144.png)
+![1551166423144](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125718.png)
 
 > 比如：我们给页面中的一个div注册了单击事件，当你单击了div时，也就单击了body，单击了html，单击了document。
 
-![1551166555833](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166555833.png)
+![1551166555833](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125287.png)
 
-![1551166581552](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551166581552.png)
+![1551166581552](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125657.png)
 
 > ```
 > 当时的2大浏览器霸主谁也不服谁！
@@ -1505,9 +1505,9 @@ DOM 事件流会经历3个阶段：
 
 ​	我们向水里面扔一块石头，首先它会有一个下降的过程，这个过程就可以理解为从最顶层向事件发生的最具体元素（目标点）的捕获过程；之后会产生泡泡，会在最低点（ 最具体元素）之后漂浮到水面上，这个过程相当于事件冒泡。 
 
-![1551169007768](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551169007768.png)
+![1551169007768](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125219.png)
 
-![1551169042295](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551169042295.png)
+![1551169042295](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125130.png)
 
 **事件冒泡**
 
@@ -1582,7 +1582,7 @@ DOM 事件流会经历3个阶段：
 
 所以，在事件处理函数中声明1个形参用来接收事件对象。
 
-![1551169537789](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551169537789.png)
+![1551169537789](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125859.png)
 
 ```js
     div.addEventListener('click',fn);
@@ -1599,7 +1599,7 @@ DOM 事件流会经历3个阶段：
 
 2. 在 IE6~8 中，浏览器不会给方法传递参数，如果需要的话，需要到 window.event 中获取查找。
 
-![1551169680823](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551169680823.png)
+![1551169680823](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125547.png)
 
 ```
 只要“||”前面为false, 不管“||”后面是true 还是 false，都返回 “||” 后面的值。
@@ -1620,7 +1620,7 @@ DOM 事件流会经历3个阶段：
 
 #### 事件对象的属性和方法
 
-![1551169931778](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551169931778.png)
+![1551169931778](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125882.png)
 
 #### e.target 和 this 的区别
 
@@ -1695,7 +1695,7 @@ DOM 事件流会经历3个阶段：
 
 事件冒泡本身的特性，会带来的坏处，也会带来的好处。
 
-![1551171467194](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551171467194.png)
+![1551171467194](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125033.png)
 
 ```js
     <div class="father">
@@ -1724,7 +1724,7 @@ DOM 事件流会经历3个阶段：
 
 **阻止事件冒泡的兼容性处理**
 
-![1551171657513](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551171657513.png)
+![1551171657513](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125729.png)
 
 ### 事件委托
 
@@ -1745,11 +1745,11 @@ DOM 事件流会经历3个阶段：
 
 **生活中的代理：**
 
-![1551172082624](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551172082624.png)
+![1551172082624](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125427.png)
 
 **js事件中的代理：**
 
-![1551172159273](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551172159273.png)
+![1551172159273](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125758.png)
 
 #### 事件委托的原理
 
@@ -1781,11 +1781,11 @@ DOM 事件流会经历3个阶段：
 
 ## 常用鼠标事件
 
-![1551172699854](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551172699854.png)
+![1551172699854](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125332.png)
 
 ### 案例：禁止选中文字和禁止右键菜单
 
-![1551172755484](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551172755484.png)
+![1551172755484](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262125328.png)
 
 ```js
 <body>
@@ -1805,7 +1805,7 @@ DOM 事件流会经历3个阶段：
 
 ### 鼠标事件对象
 
-![1551173103741](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551173103741.png)
+![1551173103741](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126848.png)
 
 ### 获取鼠标在页面的坐标
 
@@ -1833,9 +1833,9 @@ DOM 事件流会经历3个阶段：
 
 ### 案例：跟随鼠标的天使
 
-![1551173172613](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551173172613.png)
+![1551173172613](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126328.png)
 
-![1551173186812](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day03（6-8小节）/4-笔记/images/1551173186812.png)
+![1551173186812](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126402.png)
 
 ```js
     <img src="images/angel.gif" alt="">
@@ -1863,9 +1863,9 @@ DOM 事件流会经历3个阶段：
 
 ### 键盘事件
 
-![1551318122855](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551318122855.png)
+![1551318122855](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126314.png)
 
-![1551318160371](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551318160371.png)
+![1551318160371](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126440.png)
 
 ```js
     <script>
@@ -1889,9 +1889,9 @@ DOM 事件流会经历3个阶段：
 
 ### 键盘事件对象
 
-![1551318355505](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551318355505.png)
+![1551318355505](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126540.png)
 
-![1551318404238](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551318404238.png)
+![1551318404238](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126148.png)
 
 **使用keyCode属性判断用户按下哪个键**
 
@@ -1918,7 +1918,7 @@ DOM 事件流会经历3个阶段：
 
 当我们按下 s 键， 光标就定位到搜索框（文本框获得焦点）。
 
-![1551318669520](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551318669520.png)
+![1551318669520](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126099.png)
 
 > 注意：触发获得焦点事件，可以使用 元素对象.focus()
 
@@ -1942,9 +1942,9 @@ DOM 事件流会经历3个阶段：
 
 要求：当我们在文本框中输入内容时，文本框上面自动显示大字号的内容。
 
-![1551318882189](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551318882189.png)
+![1551318882189](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126867.png)
 
-![1551318909264](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551318909264.png)
+![1551318909264](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262126665.png)
 
 ```html
     <div class="search">
@@ -1992,17 +1992,17 @@ DOM 事件流会经历3个阶段：
 
 ​	BOM 缺乏标准，JavaScript 语法的标准化组织是 ECMA，DOM 的标准化组织是 W3C，BOM 最初是Netscape 浏览器标准的一部分。
 
-![1551319264407](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551319264407.png)
+![1551319264407](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127536.png)
 
 ### BOM的构成
 
 BOM 比 DOM 更大，它包含 DOM。
 
-![1551319344183](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551319344183.png)
+![1551319344183](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127203.png)
 
 ### 顶级对象window
 
-![1551319372909](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551319372909.png)
+![1551319372909](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127748.png)
 
 ### window对象的常见事件
 
@@ -2010,15 +2010,15 @@ BOM 比 DOM 更大，它包含 DOM。
 
 **第1种**
 
-![1551319525109](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551319525109.png)
+![1551319525109](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127614.png)
 
 **window.onload** 是窗口 (页面）加载事件，**当文档内容完全加载完成**会触发该事件(包括图像、脚本文件、CSS 文件等), 就调用的处理函数。
 
-![1551319600263](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551319600263.png)
+![1551319600263](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127132.png)
 
 **第2种**
 
-![1551319620299](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551319620299.png)
+![1551319620299](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127191.png)
 
 ​	**DOMContentLoaded** 事件触发时，仅当DOM加载完成，不包括样式表，图片，flash等等。
 
@@ -2046,7 +2046,7 @@ BOM 比 DOM 更大，它包含 DOM。
 
 #### 调整窗口大小事件
 
-![1551319803117](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551319803117.png)
+![1551319803117](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127672.png)
 
 ​	window.onresize 是调整窗口大小加载事件,  当触发时就调用的处理函数。
 
@@ -2093,11 +2093,11 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ##### 开启定时器
 
-![1551320279307](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551320279307.png)
+![1551320279307](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127347.png)
 
-![1551320408854](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551320408854.png)
+![1551320408854](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127325.png)
 
-![1551320298981](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551320298981.png)
+![1551320298981](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127442.png)
 
 > ```
 > 普通函数是按照代码顺序直接调用。
@@ -2129,11 +2129,11 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ##### 案例：5秒后关闭广告
 
-![1551320924828](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551320924828.png)
+![1551320924828](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127980.png)
 
 
 
-![1551320959756](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551320959756.png)
+![1551320959756](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127391.png)
 
 ```js
 <body>
@@ -2151,9 +2151,9 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ##### 停止定时器clearTimeout
 
-![1551321051001](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321051001.png)
+![1551321051001](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127114.png)
 
-![1551321064154](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321064154.png)
+![1551321064154](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127393.png)
 
 ```js
     <button>点击停止定时器</button>
@@ -2177,7 +2177,7 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ##### 开启定时器
 
-![1551321162158](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321162158.png)
+![1551321162158](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127537.png)
 
 ```js
     <script>
@@ -2190,9 +2190,9 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ##### 案例：倒计时
 
-![1551321298787](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321298787.png)
+![1551321298787](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127685.png)
 
-![1551321322188](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321322188.png)
+![1551321322188](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127801.png)
 
 ```js
     <div>
@@ -2230,15 +2230,15 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ##### 停止定时器 clearInterval
 
-![1551321444559](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321444559.png)
+![1551321444559](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127483.png)
 
 #### 案例：发送短信倒计时
 
 ​	点击按钮后，该按钮60秒之内不能再次点击，防止重复发送短信。
 
-![1551321540676](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321540676.png)
+![1551321540676](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127466.png)
 
-![1551321564247](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551321564247.png)
+![1551321564247](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262127621.png)
 
 ```js
     手机号码： <input type="number"> <button>发送</button>
@@ -2344,7 +2344,7 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ###  JS 是单线程
 
-![1551415019322](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551415019322.png)
+![1551415019322](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128273.png)
 
 ```js
 	单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。
@@ -2365,7 +2365,7 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 ​	你在做一件事情时，因为这件事情会花费很长时间，在做这件事的同时，你还可以去处理其他事情。比如做饭的异步做法，我们在烧水的同时，利用这10分钟，去切菜，炒菜。
 
-![1551434295074](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551434295074.png)
+![1551434295074](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128419.png)
 
 > ```js
 > JS中所有任务可以分成两种，一种是同步任务（synchronous），另一种是异步任务（asynchronous）。
@@ -2376,15 +2376,15 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 > 	不进入主线程、而进入”任务队列”的任务，当主线程中的任务运行完了，才会从”任务队列”取出异步任务放入主线程执行。
 > ```
 
-![1551434972778](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551434972778.png)
+![1551434972778](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128690.png)
 
 ### JS执行机制（事件循环）
 
-![1551435335464](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551435335464.png)
+![1551435335464](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128020.png)
 
-![1551435398306](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551435398306.png)
+![1551435398306](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128097.png)
 
-![1551435449634](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551435449634.png)
+![1551435449634](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128270.png)
 
 ### 代码思考题
 
@@ -2406,25 +2406,25 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 #### 什么是 location 对象
 
-![1551322091638](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322091638.png)
+![1551322091638](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128895.png)
 
 #### URL
 
-![1551322373704](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322373704.png)
+![1551322373704](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128519.png)
 
-![1551322387201](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322387201.png)
+![1551322387201](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128077.png)
 
 #### location 对象的属性
 
-![1551322416716](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322416716.png)
+![1551322416716](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128243.png)
 
-![1551322438200](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322438200.png)
+![1551322438200](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128881.png)
 
 #### 案例：5分钟自动跳转页面
 
-![1551322496871](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322496871.png)
+![1551322496871](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128317.png)
 
-![1551322517605](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322517605.png)
+![1551322517605](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128323.png)
 
 ```html
     <button>点击</button>
@@ -2450,9 +2450,9 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 #### 案例：获取URL参数
 
-![1551322622640](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322622640.png)
+![1551322622640](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128475.png)
 
-![1551322639241](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322639241.png)
+![1551322639241](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128125.png)
 
 ```html
     <div></div>
@@ -2472,7 +2472,7 @@ window 对象给我们提供了 2 个非常好用的方法-定时器。
 
 #### location对象的常见方法
 
-![1551322750241](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322750241.png)
+![1551322750241](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128129.png)
 
 ```js
     <button>点击</button>
@@ -2506,11 +2506,11 @@ if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobil
 
 ​	window对象给我们提供了一个 history对象，与浏览器历史记录进行交互。该对象包含用户（在浏览器窗口中）访问过的URL。
 
-![1551322885216](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322885216.png)
+![1551322885216](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262128686.png)
 
 history对象一般在实际开发中比较少用，但是会在一些 OA 办公系统中见到。
 
-![1551322959148](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day04（8-12小节）/4-笔记/images/1551322959148.png)
+![1551322959148](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262130705.png)
 
 
 
@@ -2530,9 +2530,9 @@ offset 翻译过来就是偏移量， 我们使用 offset系列相关属性可�
 
 3. 注意：返回的数值都不带单位
 
-   ![图片1](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day05（12-14小节）/4-笔记/images\图片1.png)
+   ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262135627.png)
 
-![图片2](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day05（12-14小节）/4-笔记/images\图片2.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262135042.png)
 
 ```js
         // offset 系列
@@ -2750,9 +2750,9 @@ client 翻译过来就是客户端，我们使用 client 系列的相关属性�
 
 **element.clientWidth 不包括边框的宽度**
 
-![图片3](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day05（12-14小节）/4-笔记/images\图片3.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262135780.png)
 
-![图片4](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day05（12-14小节）/4-笔记/images\图片4.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262135362.png)
 
 
 
@@ -2802,9 +2802,9 @@ client 翻译过来就是客户端，我们使用 client 系列的相关属性�
 
 scroll 翻译过来就是滚动的，我们使用 scroll 系列的相关属性可以动态的得到该**元素的内容实际大小、滚动距离**等。
 
-![图片5](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day05（12-14小节）/4-笔记/images\图片5.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262135052.png)
 
-![图片6](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day05（12-14小节）/4-笔记/images\图片6.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262135906.png)
 
 ### 页面被卷去的头部
 
@@ -2883,7 +2883,7 @@ function getScroll() {
 
 ## 三大系列总结
 
-![图片7](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day05（12-14小节）/4-笔记/images\图片7.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262134940.png)
 
 **他们主要用法：**
 
@@ -3286,7 +3286,7 @@ window.addEventListener('load', function() {
 
 常见的触屏事件如下：
 
-![图片1](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\图片1.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262134685.png)
 
 ### 触摸事件对象（TouchEvent）
 
@@ -3296,7 +3296,7 @@ touchstart、touchmove、touchend 三个事件都会各自有事件对象。
 
 触摸事件对象重点我们看三个常见对象列表：
 
-![图片2](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\图片2.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262134686.png)
 
 > **因为平时我们都是给元素注册触摸事件，所以重点记住 targetTocuhes**
 
@@ -3334,7 +3334,7 @@ touchstart、touchmove、touchend 三个事件都会各自有事件对象。
 2. 开启定时器
 3. 移动端移动，可以使用translate 移动
 4. 想要图片优雅的移动，请添加过渡效果
-5. ![1551795152()](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551795152(1).jpg)
+5. ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262134499.jpg)
 
 
 1. 自动播放功能-无缝滚动
@@ -3351,7 +3351,7 @@ touchstart、touchmove、touchend 三个事件都会各自有事件对象。
 
 7. 此时图片，去掉过渡效果，然后移动
 
-   ![1551795483(](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551795483(1).jpg))
+   ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262134994.jpg))
 
 ## classList 属性
 
@@ -3395,7 +3395,7 @@ focus.classList.toggle('current');
 
 4. 但是，是等着过渡结束之后变化，所以这个写到 transitionend 事件里面
 
-   ![1551796072()](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551796072(1).jpg)
+   ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262133062.jpg)
 
 
 1. 手指滑动轮播图
@@ -3409,9 +3409,9 @@ focus.classList.toggle('current');
 9. 如果是左滑就播放下一张 （index++）
 10. 如果是右滑就播放上一张  (index--)
 
-![1551796363()](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551796363(1).jpg)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262133966.jpg)
 
-![1551796502()](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551796502(1).jpg)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262133940.jpg)
 
 
 
@@ -3430,7 +3430,7 @@ focus.classList.toggle('current');
 3. 如果被卷去的头部（window.pageYOffset ）大于某个数值
 4. 点击，window.scroll(0,0) 返回顶部
 
-![1551797003(/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551797003(1).jpg)](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551797003(1).jpg)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262133847.jpg)
 
 
 
@@ -3486,7 +3486,7 @@ function tap (obj, callback) {
 
 3. 使用插件。fastclick 插件解决300ms 延迟。 
 
-   ![1551797533(/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551797533(1).jpg)](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551797533(1).jpg)
+   ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262133171.jpg)
 
 ## 移动端常用开发插件
 
@@ -3681,5 +3681,5 @@ localStorage.clear()
 
 5. 如果勾选，就存储，否则就移除
 
-   ![1551800263(](/Users/wsp/Documents/Front-End-b/资料/02-WebAPI编程资料/Web APIs-day07（17-19小节）/4-笔记/images\1551800263(1).jpg))
+   ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207262132785.jpg)
 

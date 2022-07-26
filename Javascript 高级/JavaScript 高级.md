@@ -33,7 +33,7 @@ console.log(ldh);
 
 如上两行代码运行结果为:
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day01（1-2小节）/4-笔记/images/img3.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544653.png)
 
 ### 类
 
@@ -72,7 +72,7 @@ var xx = new name();
 
 以上代码运行结果: 
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day01（1-2小节）/4-笔记/images/img4.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544654.png)
 
 通过结果我们可以看出,运行结果和使用构造函数方式一样
 
@@ -98,7 +98,7 @@ ldh.sing('冰雨'); // 刘德华唱冰雨
 
  以上代码运行结果:
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day01（1-2小节）/4-笔记/images/img5.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544655.png)
 
 **注意:**
 
@@ -145,7 +145,7 @@ damao.say();      //结果为 你的姓是刘
 
 以上代码运行结果:
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day01（1-2小节）/4-笔记/images/img6.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544656.png)
 
 - **子类使用super关键字访问父类的方法**
 
@@ -209,7 +209,7 @@ damao.say();      //结果为 你的姓是刘
 
      以上代码运行结果为:
 
-     ![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day01（1-2小节）/4-笔记/images/img7.png)
+     ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544657.png)
 
   4. **时刻注意this的指向问题,类里面的共有的属性和方法一定要加this使用.**
 
@@ -217,9 +217,9 @@ damao.say();      //结果为 你的姓是刘
      2. **自定义的方法,一般也指向的new出来的实例对象**
      3. **绑定事件之后this指向的就是触发事件的事件源**
 
-  5. 在 ES6 中类没有变量提升，所以必须先定义类，才能通过类实例化对象![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day01（1-2小节）/4-笔记/images/img2.png)
+  5. 在 ES6 中类没有变量提升，所以必须先定义类，才能通过类实例化对象![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544658.png)
 
-     ## ![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day01（1-2小节）/4-笔记/images/img1.png)
+     ## ![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544659.png)
 
 ## 面向对象版tab 栏切换
 
@@ -398,7 +398,7 @@ console.log(ldh.sex); // 不能通过对象来访问
 
 构造函数方法很好用，但是存在浪费内存的问题。
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img1.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544660.png)
 
 ### 构造函数原型prototype
 
@@ -422,7 +422,7 @@ ldh.sing();//我会唱歌
 zxy.sing();//我会唱歌
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img7.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544661.png)
 
 - 一般情况下,我们的公共属性定义到构造函数里面, 公共的方法我们放到原型对象身上
 
@@ -434,7 +434,7 @@ __proto__对象原型和原型对象 prototype 是等价的
 __proto__对象原型的意义就在于为对象的查找机制提供一个方向，或者说一条路线，但是它是一个非标准属性，因此实际开发中，不可以使用这个属性，它只是内部指向原型对象 prototype
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img2.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544662.png)
 
 
 
@@ -470,7 +470,7 @@ console.log(zxy)
 
 以上代码运行结果,设置constructor属性如图:
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img8.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544663.png)
 
 
 
@@ -480,7 +480,7 @@ console.log(zxy)
 
 ​	每一个实例对象又有一个__proto__属性，指向的构造函数的原型对象，构造函数的原型对象也是一个对象，也有__proto__属性，这样一层一层往上找就形成了原型链。
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img5.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544664.png)
 
 ### 构造函数实例和原型对象三角关系
 
@@ -524,7 +524,7 @@ console.log(that === ldh);//true
 // 2.原型对象函数里面的this 指向的是 实例对象 ldh
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img6.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544665.png)
 
 ### 通过原型为数组扩展内置方法
 
@@ -568,7 +568,7 @@ console.log(that === ldh);//true
   fn.call(o, 1, 2);//调用了函数此时的this指向了对象o,
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img10.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544666.png)
 
 ### 子构造函数继承父构造函数中的属性
 
@@ -594,7 +594,7 @@ var son = new Son('刘德华', 18, 100);
 console.log(son);
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img11.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544667.png)
 
 ### 借用原型对象继承方法
 
@@ -633,7 +633,7 @@ Father.prototype.money = function() {
 
 如上代码结果如图:
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day02（3-6小节）/4-笔记/images/img12.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544668.png)
 
 ## ES5新增方法
 
@@ -905,7 +905,7 @@ setInterval(function() {}, 1000);  //这个函数是定时器自动1秒钟调用
 
 一般指向我们的调用者.
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day03（7-10小节）/4-笔记/images/img1.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544669.png)
 
 
 
@@ -931,7 +931,7 @@ fn.call(o,1,2)//此时的this指向的是对象o,参数使用逗号隔开,运行
 
 以上代码运行结果为:
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day03（7-10小节）/4-笔记/images/img4.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544670.png)
 
 #### apply方法
 
@@ -961,7 +961,7 @@ var min = Math.min.apply(Math, arr);
 console.log(max, min);
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day03（7-10小节）/4-笔记/images/img4.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544670.png)
 
 #### bind方法
 
@@ -984,7 +984,7 @@ var f = fn.bind(o, 1, 2); //此处的f是bind返回的新函数
 f();//调用新函数  this指向的是对象o 参数使用逗号隔开
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day03（7-10小节）/4-笔记/images/img5.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544671.png)
 
 ```js
 var btns = document.querySelectorAll('button');
@@ -1106,7 +1106,7 @@ setTimeout(function() {
 
 **高阶函数是对其他函数进行操作的函数，它接收函数作为参数或将函数作为返回值输出。**
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day03（7-10小节）/4-笔记/images/img2.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544672.png)
 
 此时fn 就是一个高阶函数
 
@@ -1128,7 +1128,7 @@ setTimeout(function() {
 
 **闭包（closure）指有权访问另一个函数作用域中变量的函数**。简单理解就是 ，一个作用域可以访问另外一个函数内部的局部变量。 
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day03（7-10小节）/4-笔记/images/img3.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544673.png)
 
 ### 闭包的作用
 
@@ -1260,7 +1260,7 @@ console.log(car.yd(true)); // 33
  console.log(fn(3));
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day03（7-10小节）/4-笔记/images/img6.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544674.png)
 
 ### 利用递归求斐波那契数列
 
@@ -1465,7 +1465,7 @@ console.log(rg.test(123));//匹配字符中是否出现123  出现结果为true
 console.log(rg.test('abc'));//匹配字符中是否出现123 未出现结果为false
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day04（11小节）/4-笔记/images/img4.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544675.png)
 
 ## 正则表达式中的特殊字符
 
@@ -1616,9 +1616,9 @@ console.log(reg2.test('!'));//true
 1. 如果用户名输入合法, 则后面提示信息为:  用户名合法,并且颜色为绿色
 2. 如果用户名输入不合法, 则后面提示信息为:  用户名不符合规范, 并且颜色为红色
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day04（11小节）/4-笔记/images/img2.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544676.png)
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day04（11小节）/4-笔记/images/img1.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544677.png)
 
 分析:
 
@@ -1683,7 +1683,7 @@ console.log(reg2.test('!'));//true
 
 - `\`
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day04（11小节）/4-笔记/images/img3.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544678.png)
 
 ```js
 // 正则里面的或者 符号  |  
@@ -1829,7 +1829,7 @@ console.log(pattern.exec(str))
 
 ES 的全称是 ECMAScript , 它是由 ECMA 国际标准化组织,制定的一项脚本语言的标准化规范。
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day05（12-17小节）/4-笔记/images/es-version.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544679.png)
 
 ### 为什么使用 ES6 ?
 
@@ -1888,7 +1888,7 @@ let a = 20;
 
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day05（12-17小节）/4-笔记/images/let面试题.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544680.png)
 
 **经典面试题图解：此题的关键点在于变量i是全局的，函数执行时输出的都是全局作用域下的i值。**
 
@@ -1904,7 +1904,7 @@ let a = 20;
 
 ```
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day05（12-17小节）/4-笔记/images/let面试题2.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544681.png)
 
 **经典面试题图解：**此题的关键点在于**每次循环都会产生一个块级作用域，每个块级作用域中的变量都是不同的**，函数执行时输出的是自己上一级（循环产生的块级作用域）作用域下的i值.
 
@@ -1963,7 +1963,7 @@ ary = ['a', 'b']; // Assignment to constant variable.
 - 使用 let 声明的变量，**其作用域为该语句所在的代码块内，不存在变量提升**
 - 使用 const 声明的是**常量**，在后面出现的代码中不能再修改该常量的值
 
-![](/Users/wsp/Documents/Front-End-b/资料/05-JavaScript高级资料/JavaScript 高级_day05（12-17小节）/4-笔记/images/var&let&const区别.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261544682.png)
 
 
 

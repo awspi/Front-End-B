@@ -18,17 +18,17 @@
 
 ## 使用 MySQL Workbench 管理数据库
 
-![image-20220604105825995](/Users/wsp/Library/Application Support/typora-user-images/image-20220604105825995.png)
+![image-20220604105825995](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553828.png)
 
-![image-20220604105832990](/Users/wsp/Library/Application Support/typora-user-images/image-20220604105832990.png)
+![image-20220604105832990](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553829.png)
 
 #### 创建数据库
 
-![image-20220604105844200](/Users/wsp/Library/Application Support/typora-user-images/image-20220604105844200.png)
+![image-20220604105844200](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553830.png)
 
 #### 创建数据表
 
-![image-20220604105905256](/Users/wsp/Library/Application Support/typora-user-images/image-20220604105905256.png)
+![image-20220604105905256](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553831.png)
 
 DataType 数据类型：
 
@@ -44,7 +44,7 @@ DataType 数据类型：
 
 #### 向表中写入数据
 
-![image-20220604105948793](/Users/wsp/Library/Application Support/typora-user-images/image-20220604105948793.png)
+![image-20220604105948793](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553832.png)
 
 ## 使用 SQL 管理数据库
 
@@ -209,7 +209,7 @@ DELETE FROM 表名称 WHERE 列运算符值
 
 **`= <> > < >= <= BETWEEN LIKE`**
 
-![image-20220604132814559](/Users/wsp/Library/Application Support/typora-user-images/image-20220604132814559.png)
+![image-20220604132814559](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553833.png)
 
 - 注意：在某些版本的 SQL 中，操作符 **`<>`** 可以写为 **`!=`**
 
@@ -305,7 +305,7 @@ select count(*) from users where status=0
 select count(*) as total from users where status=0;
 ```
 
-![image-20220604143010780](/Users/wsp/Library/Application Support/typora-user-images/image-20220604143010780.png)
+![image-20220604143010780](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553834.png)
 
 
 

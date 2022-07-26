@@ -90,9 +90,9 @@ fs.writeFile('node基础/day01/files/3.txt', 'ok123', function(err) {
 
 ### 案例:整理成绩
 
-![image-20220602125520115](/Users/wsp/Library/Application Support/typora-user-images/image-20220602125520115.png)
+![image-20220602125520115](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553432.png)
 
-![image-20220602125527740](/Users/wsp/Library/Application Support/typora-user-images/image-20220602125527740.png)
+![image-20220602125527740](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553433.png)
 
 ```js
 const fs = require('fs')
@@ -389,7 +389,7 @@ function resolveHTML(htmlStr){
 
 ##  http 模块
 
-![image-20220602182551556](/Users/wsp/Library/Application Support/typora-user-images/image-20220602182551556.png)
+![image-20220602182551556](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553435.png)
 
 http 模块是 Node.js 官方提供的、**用来创建 web 服务器**的模块。通过 http 模块提供的 `http.createServer()` 方法，就 能方便的把一台普通的电脑，变成一台 Web 服务器，从而对外提供 Web 资源服务。
 
@@ -607,7 +607,7 @@ Node.js 中根据模块来源的不同，将模块分为了 3 大类，分别是
 
 在每个 .js 自定义模块中都有一个 module 对象，它里面存储了和当前模块有关的信息，打印如下:
 
-![image-20220602191918753](/Users/wsp/Library/Application Support/typora-user-images/image-20220602191918753.png)
+![image-20220602191918753](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553436.png)
 
 #### module.exports 对象
 
@@ -615,7 +615,7 @@ Node.js 中根据模块来源的不同，将模块分为了 3 大类，分别是
 
 **外界用 `require()` 方法导入自定义模块时，得到的就是 `module.exports` 所指向的对象。**
 
-![image-20220602192450251](/Users/wsp/Library/Application Support/typora-user-images/image-20220602192450251.png)
+![image-20220602192450251](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553437.png)
 
 - **指向全新对象`{ }` 则之前挂载的方法和属性都无效**
 
@@ -625,7 +625,7 @@ Node.js 中根据模块来源的不同，将模块分为了 3 大类，分别是
 
 由于 module.exports 单词写起来比较复杂，为了**简化**向外共享成员的代码，Node 提供了 `exports` 对象。
 
-![image-20220602192615706](/Users/wsp/Library/Application Support/typora-user-images/image-20220602192615706.png)
+![image-20220602192615706](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553438.png)
 
 #### exports 和 module.exports 的使用误区
 
@@ -633,7 +633,7 @@ Node.js 中根据模块来源的不同，将模块分为了 3 大类，分别是
 
 - 时刻谨记，require() 模块时，得到的永远是 module.exports 指向的对象:
 
-![image-20220602224450201](/Users/wsp/Library/Application Support/typora-user-images/image-20220602224450201.png)
+![image-20220602224450201](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261553439.png)
 
 > exports是module.exports的引用,如果给module.exports赋值了一个对象{},则给exports赋值无效
 >

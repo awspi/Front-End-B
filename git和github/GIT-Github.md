@@ -96,7 +96,7 @@ git init 命令会创建一个名为 .git 的隐藏目录，**这个** **.git** 
 
 工作区中的每一个文件可能有 4 种状态，这四种状态共分为两大类，如图所示:
 
-![image-20220523001006051](/Users/wsp/Library/Application Support/typora-user-images/image-20220523001006051.png)
+![image-20220523001006051](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548097.png)
 
 - Git 操作的目的:让工作区中的文件都处于“未修改”的状态
 
@@ -104,7 +104,7 @@ git init 命令会创建一个名为 .git 的隐藏目录，**这个** **.git** 
 
 可以使用 git status 命令查看文件处于什么状态，例如
 
-![image-20220523001107854](/Users/wsp/Library/Application Support/typora-user-images/image-20220523001107854.png)
+![image-20220523001107854](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548098.png)
 
 在状态报告中可以看到新建的 index.html 文件出现在 **Untracked files(未跟踪的文件)** 下面。
 
@@ -126,7 +126,7 @@ git status -s
 
 此时再运行 git status 命令，会看到 index.html 文件在 Changes to be committed 这行的下面，说明已被 跟踪，并处于暂存状态:
 
-<img src="/Users/wsp/Library/Application Support/typora-user-images/image-20220523001558177.png" alt="image-20220523001558177" style="zoom:33%;" />
+<img src="https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548099.png" alt="image-20220523001558177" style="zoom:33%;" />
 
 #### 向暂存区中一次性添加多个文件
 
@@ -144,17 +144,17 @@ git status -s
 
 提交成功之后，再次检查文件的状态，得到提示如下:
 
-<img src="/Users/wsp/Library/Application Support/typora-user-images/image-20220523001939508.png" alt="image-20220523001939508" style="zoom:33%;" />
+<img src="https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548100.png" alt="image-20220523001939508" style="zoom:33%;" />
 
 证明工作区中所有的文件都处于“未修改”的状态，没有任何文件需要被提交。
 
-![image-20220523002000871](/Users/wsp/Library/Application Support/typora-user-images/image-20220523002000871.png)
+![image-20220523002000871](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548101.png)
 
 ### 对已提交的文件进行修改
 
 目前，index.html 文件已经被 Git 跟踪，并且工作区和 Git 仓库中的 index.html 文件内容保持一致。当我们 修改了工作区中 index.html 的内容之后，再次运行 git status 和 git status -s 命令，会看到如下的内容
 
-![image-20220523002113319](/Users/wsp/Library/Application Support/typora-user-images/image-20220523002113319.png)
+![image-20220523002113319](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548102.png)
 
 文件 index.html 出现在 Changes not staged for commit 这行下面，说明**已跟踪文件的内容发生了变化， 但还没有放到暂存区**。
 
@@ -168,15 +168,15 @@ git status -s
 2. 把已跟踪的、且已修改的文件**放到暂存区** 
 3. 把有冲突的文件标记为已解决状态
 
-![image-20220523002234078](/Users/wsp/Library/Application Support/typora-user-images/image-20220523002234078.png)
+![image-20220523002234078](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548103.png)
 
 ### 提交已暂存的文件
 
 再次运行 git commit -m "提交消息" 命令，即可将暂存区中记录的 index.html 的快照，提交到 Git 仓库中进 行保存:
 
-![image-20220523002259622](/Users/wsp/Library/Application Support/typora-user-images/image-20220523002259622.png)
+![image-20220523002259622](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548104.png)
 
-![image-20220523002307574](/Users/wsp/Library/Application Support/typora-user-images/image-20220523002307574.png)
+![image-20220523002307574](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548105.png)
 
 ### 撤销对文件的修改
 
@@ -184,7 +184,7 @@ git status -s
 
 操作的结果:所有的修改会丢失，且无法恢复!**危险性比较高，请慎重操作!**
 
-![image-20220523002345950](/Users/wsp/Library/Application Support/typora-user-images/image-20220523002345950.png)
+![image-20220523002345950](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548106.png)
 
 - **撤销操作的本质**:用 Git 仓库中保存的文件，覆盖工作区中指定的文件。
 
@@ -235,7 +235,7 @@ git rm --cached index.css
 
 ####  .gitignore 文件的例子
 
-![image-20220523003203269](/Users/wsp/Library/Application Support/typora-user-images/image-20220523003203269.png)
+![image-20220523003203269](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548107.png)
 
 ### 查看提交历史
 
@@ -292,7 +292,7 @@ Github 上的远程仓库，有两种访问方式，分别是 HTTPS 和 SSH。�
 
 ##  基于 HTTPS
 
-![image-20220523011002065](/Users/wsp/Library/Application Support/typora-user-images/image-20220523011002065.png)
+![image-20220523011002065](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548108.png)
 
 ## SSH key
 
@@ -327,11 +327,11 @@ ssh -T git@github.com
 
 上述的命令执行成功后，可能会看到如下的提示消息
 
-![image-20220523011710671](/Users/wsp/Library/Application Support/typora-user-images/image-20220523011710671.png)
+![image-20220523011710671](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548109.png)
 
 ## 基于 SSH 将本地仓库上传到 Github
 
-![image-20220523011548693](/Users/wsp/Library/Application Support/typora-user-images/image-20220523011548693.png)
+![image-20220523011548693](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548110.png)
 
 ## 将远程仓库克隆到本地
 
@@ -351,7 +351,7 @@ git clone 仓库地址
 
 在初始化本地 Git 仓库的时候，Git 默认已经帮我们创建了一个名字叫做 master 的分支。通常我们把这个 master 分支叫做主分支。
 
-![image-20220523012118074](/Users/wsp/Library/Application Support/typora-user-images/image-20220523012118074.png)
+![image-20220523012118074](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548111.png)
 
 ##  功能分支
 
@@ -359,7 +359,7 @@ git clone 仓库地址
 
 **功能分支**指的是专门用来开发新功能的分支，它是临时从 master 主分支上分叉出来的，当新功能开发且测试 完毕后，最终需要合并到 master 主分支上，如图所示:
 
-![image-20220523012242073](/Users/wsp/Library/Application Support/typora-user-images/image-20220523012242073.png)
+![image-20220523012242073](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548112.png)
 
 ## 本地分支操作
 
@@ -367,7 +367,7 @@ git clone 仓库地址
 
  **`git branch`**
 
-- <img src="/Users/wsp/Library/Application Support/typora-user-images/image-20220523012441334.png" alt="image-20220523012441334" style="zoom:33%;" />注意:分支名字前面的 ***** 号表示当前所处的分支。
+- <img src="https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548113.png" alt="image-20220523012441334" style="zoom:33%;" />注意:分支名字前面的 ***** 号表示当前所处的分支。
 
 
 
@@ -377,13 +377,13 @@ git clone 仓库地址
 
 基于当前分支，创建一个新的分支，此时，**新分支中的代码和当前分支完全一样:**
 
-![image-20220523012721481](/Users/wsp/Library/Application Support/typora-user-images/image-20220523012721481.png)
+![image-20220523012721481](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548114.png)
 
 ### 切换分支
 
 **`git checkout 要切换到的分支`**
 
-![image-20220523012849234](/Users/wsp/Library/Application Support/typora-user-images/image-20220523012849234.png)
+![image-20220523012849234](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548115.png)
 
 ### 分支的快速创建和切换
 
@@ -393,7 +393,7 @@ git clone 仓库地址
 git checkout -b 分支名称
 ```
 
-![image-20220523013215010](/Users/wsp/Library/Application Support/typora-user-images/image-20220523013215010.png)
+![image-20220523013215010](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548116.png)
 
 ### 合并分支
 
@@ -406,7 +406,7 @@ git checkout master
 git merge login
 ```
 
-![image-20220523014110212](/Users/wsp/Library/Application Support/typora-user-images/image-20220523014110212.png)
+![image-20220523014110212](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548117.png)
 
 ### 删除分支
 
@@ -414,7 +414,7 @@ git merge login
 
 **`git branch -d 分支名称`**
 
-![image-20220523014120421](/Users/wsp/Library/Application Support/typora-user-images/image-20220523014120421.png)
+![image-20220523014120421](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261548118.png)
 
 ### 遇到冲突时的分支合并
 

@@ -17,7 +17,7 @@
 - 客户端要以HTTP协议要求的格式把数据提交到服务器
 - 服务器要以HTTP协议要求的格式把内容响应给客户端
 
-![image-20220522210437197](/Users/wsp/Library/Application Support/typora-user-images/image-20220522210437197.png)
+![image-20220522210437197](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550115.png)
 
 ## HTTP请求消息
 
@@ -29,13 +29,13 @@ HTTP 请求消息又叫做 HTTP 请求报文。
 
 HTTP 请求消息由**请求行（request line）、请求头部（ header ） 、空行** 和 **请求体** 4 个部分组成。
 
-![image-20220522210552489](/Users/wsp/Library/Application Support/typora-user-images/image-20220522210552489.png)
+![image-20220522210552489](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550116.png)
 
 #### 请求行
 
 **请求行**由**请求方式、URL 和 HTTP 协议版本** 3 个部分组成，他们之间**使用空格隔开**。
 
-![image-20220522210624996](/Users/wsp/Library/Application Support/typora-user-images/image-20220522210624996.png)
+![image-20220522210624996](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550117.png)
 
 #### 请求头部
 
@@ -50,9 +50,9 @@ HTTP 请求消息由**请求行（request line）、请求头部（ header ） �
 - **`Accept`** 用来描述客户端能够接收什么类型的返回内容；
 - **`Accept-Language`** 用来描述客户端期望接收哪种人类语言的文本内容。
 
-![image-20220522210816014](/Users/wsp/Library/Application Support/typora-user-images/image-20220522210816014.png)
+![image-20220522210816014](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550118.png)
 
-![image-20220522210912474](/Users/wsp/Library/Application Support/typora-user-images/image-20220522210912474.png)
+![image-20220522210912474](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550119.png)
 
 **常见的请求头字段**
 
@@ -73,13 +73,13 @@ HTTP 请求消息由**请求行（request line）、请求头部（ header ） �
 
 请求消息中的空行，用来分隔请求头部与请求体。
 
-![image-20220522210941700](/Users/wsp/Library/Application Support/typora-user-images/image-20220522210941700.png)
+![image-20220522210941700](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550120.png)
 
 #### 请求体
 
 请求体中存放的，是要通过 **POST** 方式提交到服务器的数据。**GET方式没有请求体**
 
-![image-20220522211030659](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211030659.png)
+![image-20220522211030659](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550121.png)
 
 ## HTTP响应消息
 
@@ -89,21 +89,21 @@ HTTP 请求消息由**请求行（request line）、请求头部（ header ） �
 
 HTTP响应消息由**状态行、响应头部、空行 和 响应体** 4 个部分组成，如下图所示：
 
-![image-20220522211223132](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211223132.png)
+![image-20220522211223132](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550122.png)
 
 #### 状态行
 
 **状态行**由 **HTTP 协议版本、状态码和状态码的描述文本** 3 个部分组成，他们之间使用空格隔开;
 
-![image-20220522211248779](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211248779.png)
+![image-20220522211248779](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550123.png)
 
 #### 响应头部
 
 **响应头部**用来描述服务器的基本信息。响应头部由**多行 键/值对** 组成，**每行的键和值之间用英文的冒号分隔。**
 
-![image-20220522211315656](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211315656.png)
+![image-20220522211315656](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550124.png)
 
-![image-20220522211340733](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211340733.png)
+![image-20220522211340733](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550125.png)
 
 #### 空行
 
@@ -111,13 +111,13 @@ HTTP响应消息由**状态行、响应头部、空行 和 响应体** 4 个部�
 
 响应消息中的空行，用来分隔响应头部与响应体。
 
-![image-20220522211408289](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211408289.png)
+![image-20220522211408289](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550126.png)
 
 #### 响应体
 
 响应体中存放的，是服务器响应给客户端的资源内容。
 
-![image-20220522211432765](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211432765.png)
+![image-20220522211432765](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550127.png)
 
 ## HTTP请求方法
 
@@ -145,7 +145,7 @@ HTTP 请求方法，属于 HTTP 协议中的一部分，请求方法的作用是
 
 响应状态码会随着响应消息一起被发送至客户端浏览器，浏览器根据服务器返回的响应状态码，就能知道这次 HTTP 请求的结果是成功还是失败了。
 
-![image-20220522211543803](/Users/wsp/Library/Application Support/typora-user-images/image-20220522211543803.png)
+![image-20220522211543803](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261550128.png)
 
 HTTP 状态码由三个十进制数字组成，**第一个十进制数字定义了状态码的类型，后两个数字用来对状态码进行细分。**
 

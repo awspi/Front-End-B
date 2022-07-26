@@ -58,7 +58,7 @@ $(document).ready(function(){
 >
 > **只有 jQuery 对象才能使用 jQuery 方法，DOM 对象则使用原生的 JavaScirpt 方法。**
 
-![jQuery对象和DOM对象](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/jQuery对象和DOM对象.png)
+![jQuery对象和DOM对象](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541748.png)
 
 ### jQuery 对象和 DOM 对象转换
 
@@ -92,13 +92,13 @@ var domObject2 = $('div').get(0)
 $("选择器")   //  里面选择器直接写 CSS 选择器即可，但是要加引号 
 ```
 
-​	![基础选择器](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/基础选择器.png)
+​	![基础选择器](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541749.png)
 
 ### 层级选择器 > 
 
 ​	层级选择器最常用的两个分别为：后代选择器和子代选择器。
 
-​	![层级选择器](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/层级选择器.png)
+​	![层级选择器](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541750.png)
 
 **基础选择器和层级选择器案例代码**
 
@@ -125,7 +125,7 @@ $("选择器")   //  里面选择器直接写 CSS 选择器即可，但是要加
 
 ​	筛选选择器，顾名思义就是在所有的选项中选择满足条件的进行筛选选择。常见如下 :
 
-![筛选选择器](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/筛选选择器.png)
+![筛选选择器](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541751.png)
 
 ```
 :checked 选择器      :checked 查找被选中的表单元素。
@@ -168,7 +168,7 @@ $("选择器")   //  里面选择器直接写 CSS 选择器即可，但是要加
 
   jQuery中还有一些筛选方法，类似DOM中的通过一个节点找另外一个节点，父、子、兄以外有所加强。
 
-![筛选方法](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/relation.png)
+![筛选方法](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541752.png)
 
 - `.parents()`返回所有祖先
 
@@ -315,11 +315,11 @@ $("div").toggleClass("current");
 
 ​	语法规范如下:
 
-![show](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/show.png)
+![show](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541753.png)
 
-![hide](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/hide.png)
+![hide](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541754.png)
 
-![toggle](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/toggle.png)
+![toggle](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541755.png)
 
 **代码演示**
 
@@ -356,11 +356,11 @@ $("div").toggleClass("current");
 
 ​	语法规范如下:
 
-![slideDown](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/slideDown.png)
+![slideDown](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541756.png)
 
-![slideUp](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/slideUp.png)
+![slideUp](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541757.png)
 
-![slideToggle](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/slideToggle.png)
+![slideToggle](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541758.png)
 
 **代码演示**
 
@@ -397,13 +397,13 @@ $("div").toggleClass("current");
 
 ​	语法规范如下:
 
-![fadeIn](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/fadeIn.png)
+![fadeIn](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541759.png)
 
-![fadeOut](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/fadeOut.png)
+![fadeOut](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541760.png)
 
-![fadeToggle](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/fadeToggle.png)
+![fadeToggle](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541761.png)
 
-![fadeTo](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/fadeTo.png)
+![fadeTo](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541762.png)
 
 **代码演示**
 
@@ -445,7 +445,7 @@ $("div").toggleClass("current");
 
 ​	语法规范如下:
 
-![](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day01（1-4小节）/4-笔记/images/animate.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541763.png)
 
 **代码演示**
 
@@ -560,7 +560,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![prop](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/prop.png)
+![prop](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541764.png)
 
 ​	注意：prop() 除了普通属性操作，**更适合操作表单属性：disabled / checked / selected 等。**
 
@@ -570,7 +570,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![attr](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/attr.png)
+![attr](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541765.png)
 
 ​	注意：`attr()` 除了普通属性操作**，更适合操作自定义属性。**（该方法也可以获取 **H5** 自定义属性）
 
@@ -580,7 +580,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![data](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/data.png)
+![data](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541766.png)
 
 ​	注意：同时，还可以读取 HTML5 自定义属性  data-index ，得到的是数字型。
 
@@ -638,7 +638,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![html](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/html.png)
+![html](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541767.png)
 
 ​	注意：**html() 可识别标签**，text() 不识别标签。
 
@@ -701,7 +701,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 - 遍历dom对象
 
-![each1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/each1.png)
+![each1](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541768.png)
 
 
 
@@ -711,7 +711,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 - 遍历数据对象(key,val)
 
-![each2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/each2.png)
+![each2](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541769.png)
 
 
 
@@ -795,13 +795,13 @@ hover([over,]out)     // 其中over和out为两个函数
 
 
 
-![create](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/create.png)
+![create](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541770.png)
 
-![append1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/append1.png)
+![append1](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541771.png)
 
-![append2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/append2.png)
+![append2](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541772.png)
 
-![remove](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/remove.png)
+![remove](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541773.png)
 
 ​	注意：以上只是元素的创建、添加、删除方法的常用方法，其他方法请参详API。
 
@@ -870,7 +870,7 @@ hover([over,]out)     // 其中over和out为两个函数
 - outerWidth/outerHeight 包含padding border
   - (true) 包含padding border margin
 
-![size](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/size.png)
+![size](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541774.png)
 
 **代码演示**
 
@@ -922,11 +922,11 @@ hover([over,]out)     // 其中over和out为两个函数
 - scrollLeft()
 - 可以设置
 
-![offset](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/offset.png)
+![offset](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541775.png)
 
-![position](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/position.png)
+![position](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541776.png)
 
-![scroll](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day02（5-6小节）/4-笔记/images/scroll.png)
+![scroll](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541777.png)
 
 **代码演示**
 
@@ -1027,7 +1027,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![register](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/register.png)
+![register](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541778.png)
 
 **演示代码**
 
@@ -1062,11 +1062,11 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![on1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on1.png)
+![on1](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541779.png)
 
-![on2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on2.png)
+![on2](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541780.png)
 
-![on3](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/on3.png)
+![on3](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541781.png)
 
 -  on可以绑定1个或者多个事件处理程序
 - on可以实现事件委托（委派）
@@ -1135,7 +1135,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![off](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/off.png)
+![off](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541782.png)
 
 
 
@@ -1193,9 +1193,9 @@ hover([over,]out)     // 其中over和out为两个函数
 -  $("div").trigger("click");会触发元素的默认行为
 - $("div").triggerHandler("事件") 不会触发元素的默认行为
 
-![t1](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/t1.png)
+![t1](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541783.png)
 
-![t2](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/t2.png)
+![t2](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541784.png)
 
 **演示代码**
 
@@ -1237,7 +1237,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![event](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/event.png)
+![event](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541785.png)
 
 - **event.stopPropagation();//阻止向上冒泡**
 
@@ -1270,7 +1270,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![extend](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/extend.png)
+![extend](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541786.png)
 
 - **浅拷贝**把原来对象里面的**复杂数据类型地址**拷贝给目标对象
   - 修改目标对象的值,会影响原来对象
@@ -1312,7 +1312,7 @@ hover([over,]out)     // 其中over和out为两个函数
 
 **语法**
 
-![noconfig](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/noconfig.png)
+![noconfig](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541787.png)
 
 ```js
 let x=jQuery.noConflict();
@@ -1354,9 +1354,9 @@ jQuery文件，因此也称为 jQuery 插件。
 
 **下载位置**
 
-![water](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/water.png)
+![water](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541788.png)
 
-![](/Users/wsp/Documents/Front-End-b/资料/03-jQuery/jQuery_day03（7-9小节）/4-笔记/images/download.png)
+![](https://wsp-typora.oss-cn-hangzhou.aliyuncs.com/images/202207261541789.png)
 
 **代码演示**
 
